@@ -119,7 +119,6 @@ module.exports = function (eleventyConfig) {
     './_includes/assets/css/custom.css': 'css/custom.css',
 
     './_includes/images': 'images',
-    '../../others/egotech/logos': 'images/logos',
   });
 
   eleventyConfig.addGlobalData('environment', () => process.env.NODE_ENV);
