@@ -9,6 +9,16 @@ eleventyComputed:
   currentTitle: "{{ ship.name }}"
 ---
 
+{% macro linkIcon(url) %}
+  {% if r/github\.com/.test(url)  %}
+    <i class="fa-brands fa-github fa-lg fa-fw"></i>
+  {% elseif r/discord\.com/.test(url)  %}
+    <i class="fa-brands fa-discord fa-lg fa-fw"></i>
+  {% else %}
+    <i class="fa-solid fa-globe fa-lg fa-fw"></i>
+  {% endif %}
+{% endmacro %}
+
 <nord-header slot="header">
   <nord-stack direction="horizontal" wrap>
     <nord-button-group>
@@ -221,6 +231,10 @@ eleventyComputed:
           </table>
         </nord-table>
       </nord-card>
+      <nord-banner variant="warning">
+        EGOTech's free blueprints and any of its derivatives can be freely distributed but are not to be sold in game or otherwise.
+        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License</a>
+      </nord-banner>
     {% else %}
       <h1 id="purchase">Purchase Blueprint</h1>
       <nord-banner variant="info" style="width: 300px">Price: {{ ship.cost.toLocaleString() }} Credits</nord-banner>
@@ -257,8 +271,17 @@ eleventyComputed:
     <h1>Links</h1>
     <ul>
       {% for link in ship.links %}
-        <li><a href="{{link.url}}">{{link.text}}</a></li>
+        <li>
+          {{ linkIcon(link.url) }}
+          <a href="{{link.url}}" alt="{{link.text}}" target="_blank">{{link.text}}</a>
+        </li>
       {% endfor %}
+      {% if ship.discord %}
+        <li>
+          {{ linkIcon(ship.discord) }}
+          <a href="{{ship.discord}}" alt="EGOTech Discord Server Ship Information" target="_blank">EGOTech Discord Server Ship Information</a>
+        </li>
+      {% endif %}
     </ul>
   </nord-stack>
   <nord-stack id="changelog">

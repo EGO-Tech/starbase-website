@@ -36,6 +36,16 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
   }
 }
 
+#ship-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin-left: 20px;
+  }
+}
+
 #usage nord-table td {
   white-space: normal;
 }
