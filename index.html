@@ -1,0 +1,1001 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Starbase Ships by EGOTech - Home</title>
+
+    <meta property="og:title" content="Starbase Ships by EGOTech - Home" />
+    
+      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/others/egotech/logos/egotech_logo_dark.png" />
+      <meta property="og:description" content="EGOTech thrives to design various types of Starbase ships that are practical but fun to use." />
+    
+
+    
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VCMHC5R"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HK9VCMHC5R');
+      </script>
+    
+
+    <link rel="icon" type="image/png" href="/images/logos/egotech_logo_dark_favicon.png">
+    <link rel="stylesheet" href="/css/nord.min.css">
+    <link rel="stylesheet" href="/css/nord-dark.css">
+    <link rel="stylesheet" href="/css/fonts/fonts.css">
+    <link rel="stylesheet" href="/css/splide.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/js/nord-components.js"></script>
+    <script src="/js/splide.min.js"></script>
+    <script src="/js/qs.js"></script>
+    <script src="/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      const gaEvent = (event, params) => {
+        if (window.gtag) gtag('event', event, params);
+      }
+    </script>
+    
+    <script>
+      window.ships = [{"name":"Bugger","types":[{"type":"surface-miner","order":1}],"saleType":"free","version":"1.0.3","slug":"bugger","tags":[{"id":"t2-generator","label":"T3 Generators"},{"id":"t2-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/bugger"},{"name":"Clunker","types":[{"type":"hauler","order":2}],"saleType":"free","version":"1.0.2","slug":"clunker","tags":[{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"large-generator","label":"Large Generator"}],"popular":false,"webPath":"/ships/clunker"},{"name":"Crawler","types":[{"type":"surface-miner","order":3}],"saleType":"for-sale","version":"1.0.1","slug":"crawler","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"mining-laser","label":"Mining Laser"},{"id":"large-generator","label":"Large Generator"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/crawler"},{"name":"Flipper","types":[{"type":"asteroid-hauler","order":4}],"saleType":"free","version":"1.1.1","slug":"flipper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"large-asteroid-hold","label":"Large Asteroid Hold"}],"popular":false,"webPath":"/ships/flipper"},{"name":"Hopper","types":[{"type":"transport","order":1}],"saleType":"free","version":"1.1.0","slug":"hopper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"}],"popular":false,"webPath":"/ships/hopper"},{"name":"Jabber","types":[{"type":"fighter","order":1}],"saleType":"free","version":"1.1.0","slug":"jabber","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"laser-cannon","label":"Laser Cannon"},{"id":"isan","label":"ISAN"}],"popular":false,"webPath":"/ships/jabber"},{"name":"Mapper","types":[{"type":"explorer","order":1}],"saleType":"free","version":"1.0.4","slug":"mapper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"navigation-data-logger","label":"Navigation Data Logger"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":true,"popular":false,"webPath":"/ships/mapper"}];
+      window.shipTypes = {"list":[{"id":"miner","name":"Miner","label":"Miners"},{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners"},{"id":"starter","name":"Starter Ship","label":"Starter Ships"},{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers"},{"id":"hauler","name":"Hauler","label":"Haulers"},{"id":"salvager","name":"Salvager","label":"Salvagers"},{"id":"fighter","name":"Fighter","label":"Fighters"},{"id":"command-ship","name":"Command Ship","label":"Command Ships"},{"id":"transport","name":"Transport","label":"Transports"},{"id":"explorer","name":"Explorer","label":"Explorers"}],"byId":{"miner":{"id":"miner","name":"Miner","label":"Miners"},"surface-miner":{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners"},"starter":{"id":"starter","name":"Starter Ship","label":"Starter Ships"},"asteroid-hauler":{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers"},"hauler":{"id":"hauler","name":"Hauler","label":"Haulers"},"salvager":{"id":"salvager","name":"Salvager","label":"Salvagers"},"fighter":{"id":"fighter","name":"Fighter","label":"Fighters"},"command-ship":{"id":"command-ship","name":"Command Ship","label":"Command Ships"},"transport":{"id":"transport","name":"Transport","label":"Transports"},"explorer":{"id":"explorer","name":"Explorer","label":"Explorers"}}};
+    </script>
+  
+    
+    <script>
+      window.pages = [{"id":"commissions","label":"Ship Commissions","title":"Ship Commissions","slug":"commissions","webPath":"/pages/commissions"},{"id":"rentals","label":"Ship Rentals","title":"Ship Rentals","slug":"rentals","webPath":"/pages/rentals"},{"id":"faq","label":"FAQ","title":"Frequently Asked Questions","slug":"faq","webPath":"/pages/faq"}];
+    </script>
+  
+  </head>
+  <body class="n-reset">
+    <nord-command-menu></nord-command-menu>
+    <script>
+      const menu = document.querySelector("nord-command-menu");
+      menu.commands = ships.map((ship) => ({
+        id: ship.slug,
+        title: ship.name,
+        section: 'Ships',
+        keywords: `${ship.name} ${ship.saleType} ${ship.types.map(({ type }) => shipTypes.byId[type].label).join(' ')} ${ship.tags.map(({ label }) => label).join(' ')}`,
+        handler: () => window.location.href = ship.webPath,
+      })).concat(pages.map((page) => ({
+        id: page.id,
+        title: page.title,
+        section: 'Information',
+        keywords: `${page.id} ${page.label} ${page.title}`,
+        handler: () => window.location.href = page.webPath,
+      })));
+    </script>
+    <nord-layout padding="none" persist-nav-state sticky>
+      <nord-navigation slot="nav">
+        <nord-stack class="n-padding-be-l">
+          <nord-button class="search-button" variant="default" aria-describedby="nav-search" expand>
+            <i slot="start" class="fa-solid fa-magnifying-glass"></i>
+            <div style="text-align: left;">Search</div>
+          </nord-button>
+          <nord-tooltip id="nav-search">Shortcut: Ctrl+K</nord-tooltip>
+        </nord-stack>
+        <nord-nav-group heading="Ships For Sale">
+          
+            <nord-nav-item   href="/ships/crawler/">
+              Crawler
+            </nord-nav-item>
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Free Ships">
+          
+            <nord-nav-item   href="/ships/bugger/">
+              Bugger
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/clunker/">
+              Clunker
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/flipper/">
+              Flipper
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/hopper/">
+              Hopper
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/jabber/">
+              Jabber
+            </nord-nav-item>
+          
+            <nord-nav-item badge="UPDATED"  href="/ships/mapper/">
+              Mapper
+            </nord-nav-item>
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Information">
+          
+            <nord-nav-item  href="/pages/commissions/">
+              Ship Commissions
+            </nord-nav-item>
+          
+            <nord-nav-item  href="/pages/rentals/">
+              Ship Rentals
+            </nord-nav-item>
+          
+            <nord-nav-item  href="/pages/faq/">
+              FAQ
+            </nord-nav-item>
+          
+        </nord-nav-group>
+      </nord-navigation>
+      <nord-header slot="header">
+        <nord-stack direction="horizontal" style="min-width: 550px; width: 550px;">
+          <a href="/">
+            <nord-avatar size="xl" src="/images/logos/egotech_logo_dark.png" name="EGOTech" variant="square">B</nord-avatar>
+          </a>
+          <h1>Starbase Ships by EGOTech</h1>
+        </nord-stack>
+      </nord-header>
+
+      <nord-header slot="header">
+  <nord-stack direction="horizontal" wrap>
+    <nord-button-group>
+      
+        <nord-button id="button-section-miner" href="#miner" size="s" variant="plain">Miners</nord-button>
+      
+        <nord-button id="button-section-surface-miner" href="#surface-miner" size="s" variant="plain">Surface Miners</nord-button>
+      
+        <nord-button id="button-section-starter" href="#starter" size="s" variant="plain">Starter Ships</nord-button>
+      
+        <nord-button id="button-section-asteroid-hauler" href="#asteroid-hauler" size="s" variant="plain">Asteroid Haulers</nord-button>
+      
+        <nord-button id="button-section-hauler" href="#hauler" size="s" variant="plain">Haulers</nord-button>
+      
+        <nord-button id="button-section-salvager" href="#salvager" size="s" variant="plain">Salvagers</nord-button>
+      
+        <nord-button id="button-section-fighter" href="#fighter" size="s" variant="plain">Fighters</nord-button>
+      
+        <nord-button id="button-section-command-ship" href="#command-ship" size="s" variant="plain">Command Ships</nord-button>
+      
+        <nord-button id="button-section-transport" href="#transport" size="s" variant="plain">Transports</nord-button>
+      
+        <nord-button id="button-section-explorer" href="#explorer" size="s" variant="plain">Explorers</nord-button>
+      
+
+      <nord-button class="search-button" aria-describedby="tt-search" size="s" variant="plain">
+        <i slot="start" class="fa-solid fa-magnifying-glass fa-lg"></i>
+      </nord-button>
+      <nord-tooltip id="tt-search">Search ships by name and/or tags</nord-tooltip>
+
+      <nord-button id="filters-button" aria-describedby="tt-filter" size="s" variant="plain">
+        <i slot="start" class="fa-solid fa-filter fa-lg"></i>
+        <nord-badge id="filtered-badge" class="hide" variant="warning">Filtered</nord-badge>
+      </nord-button>
+      <nord-tooltip id="tt-filter">Filter ships by type and tags</nord-tooltip>
+
+      <nord-button class="clear-button hide" aria-describedby="tt-clear" size="s" variant="plain">
+        <i slot="start" class="fa-solid fa-xmark fa-lg"></i>
+      </nord-button>
+      <nord-tooltip id="tt-clear">Clear ship filters</nord-tooltip>
+    </nord-button-group>
+  </nord-stack>
+</nord-header>
+<nord-modal id="filters-modal" size="l" aria-labelledby="filters-modal-title">
+  <h2 slot="header" id="filters-modal-title">Ship Filters</h2>
+  <section class="n-grid-2">
+    <nord-stack direction="horizontal">
+      <nord-stack>
+        <p class="n-color-text-weaker n-font-size-s">Sale Type</p>
+        <nord-stack>
+          <nord-checkbox class="ship-filter ship-filter-sale-type" label="Free" value="free"></nord-checkbox>
+          <nord-checkbox class="ship-filter ship-filter-sale-type" label="For Sale" value="for-sale"></nord-checkbox>
+        </nord-stack>
+        <p class="n-color-text-weaker n-font-size-s">Status</p>
+        <nord-stack>
+          <nord-checkbox class="ship-filter ship-filter-status" label="New" value="new"></nord-checkbox>
+          <nord-checkbox class="ship-filter ship-filter-status" label="Updated" value="updated"></nord-checkbox>
+          <nord-checkbox class="ship-filter ship-filter-status" label="Popular" value="popular"></nord-checkbox>
+        </nord-stack>
+      </nord-stack>
+      <nord-stack>
+        <p class="n-color-text-weaker n-font-size-s">Ship Type</p>
+        <nord-stack>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Miners" value="miner"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Surface Miners" value="surface-miner"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Starter Ships" value="starter"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Asteroid Haulers" value="asteroid-hauler"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Haulers" value="hauler"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Salvagers" value="salvager"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Fighters" value="fighter"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Command Ships" value="command-ship"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Transports" value="transport"></nord-checkbox>
+          
+            <nord-checkbox class="ship-filter ship-filter-type" label="Explorers" value="explorer"></nord-checkbox>
+          
+        </nord-stack>
+      </nord-stack>
+    </nord-stack>
+    <nord-stack>
+      <p class="n-color-text-weaker n-font-size-s">Ship Tag</p>
+      <nord-stack direction="horizontal">
+        
+          <nord-stack>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Advanced Crafting Bench" value="advanced-bench"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Asteroid Avoidance" value="asteroid-avoidance"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Auto Pilot" value="auto-pilot"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Basic Crafting Bench" value="basic-bench"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Cargo Lock Beam" value="cargo-lock-beam"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="ISAN" value="isan"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Large Asteroid Hold" value="large-asteroid-hold"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Large Generator" value="large-generator"></nord-checkbox>
+            
+          </nord-stack>
+        
+          <nord-stack>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Laser Cannon" value="laser-cannon"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Mining Laser" value="mining-laser"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Navigation Data Logger" value="navigation-data-logger"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Plasma Thruster" value="plasma-thruster"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="T3 Generators" value="t2-generator"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="T3 Thrusters" value="t2-thruster"></nord-checkbox>
+            
+              <nord-checkbox class="ship-filter ship-filter-tag" label="Tools Crafting Bench" value="tools-bench"></nord-checkbox>
+            
+          </nord-stack>
+        
+      </nord-stack>
+    </nord-stack>
+  </section>
+  <nord-button slot="footer" expand id="filters-modal-clear">Clear</nord-button>
+  <nord-button slot="footer" expand id="filters-modal-apply" variant="primary" autofocus>Apply</nord-button>
+</nord-modal>
+<script>
+  const filtersModal = document.querySelector("#filters-modal");
+
+  const filtersButton = document.querySelector("#filters-button");
+  filtersButton.addEventListener("click", () => filtersModal.showModal());
+
+  const filtersApply = document.querySelector("#filters-modal-apply");
+  filtersApply.addEventListener("click", () => {
+    applyFilters();
+    filtersModal.close();
+  });
+
+  const filtersClear = document.querySelector("#filters-modal-clear");
+  filtersClear.addEventListener("click", () => {
+    clearFilters();
+  });
+
+  const clearFilters = () => {
+    document.querySelectorAll('.ship-filter').forEach((item) => {
+        item.checked = false;
+    });
+  };
+
+  const applyFilters = () => {
+    document.querySelectorAll('.ship-card').forEach((item) => {
+      item.classList.add('hide');
+    });
+
+    const saleTypes = document.querySelectorAll('.ship-filter-sale-type').values().filter((item) => item.checked).map(({ value }) => value).toArray();
+    const statuses = document.querySelectorAll('.ship-filter-status').values().filter((item) => item.checked).map(({ value }) => value).toArray();
+    const types = document.querySelectorAll('.ship-filter-type').values().filter((item) => item.checked).map(({ value }) => value).toArray();
+    const tags = document.querySelectorAll('.ship-filter-tag').values().filter((item) => item.checked).map(({ value }) => value).toArray();
+
+    const shipsToShow = ships
+      .filter((ship) => {
+        return !saleTypes.length || saleTypes.includes(ship.saleType)
+      }).filter((ship) => {
+        return !statuses.length || !_.isEmpty(_(ship).pick(statuses).pickBy(_.identity).value())
+      }).filter((ship) => {
+        return !types.length || ship.types.some(({ type }) => types.includes(type))
+      }).filter((ship) => {
+        return !tags.length || ship.tags.some(({ id }) => tags.includes(id))
+      });
+
+    const qs = Qs.stringify({ saleTypes, statuses, types, tags });
+    window.history.pushState({}, null, `?${qs}`)
+
+    shipsToShow.forEach((ship) => {
+      document.querySelectorAll(`.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+    });
+
+    document.querySelectorAll('.ship-section').forEach((section) => {
+      const shipCards = section.querySelectorAll('.ship-card');
+      const hiddenShipCards = section.querySelectorAll('.ship-card.hide');
+      if (shipCards.length === hiddenShipCards.length) {
+        section.classList.add('hide');
+        document.querySelector(`#button-${section.id}`).disabled = true;
+        return;
+      }
+      section.classList.remove('hide');
+      document.querySelector(`#button-${section.id}`).disabled = false;
+    })
+
+    document.querySelector('.reset-ship-filters').classList.add('hide');
+    if (shipsToShow.length === 0) document.querySelector('.reset-ship-filters').classList.remove('hide');
+
+    const filtered = document.querySelectorAll('#filtered-badge, .clear-button');
+    filtered.forEach((item) => item.classList.add('hide'));
+    if (shipsToShow.length !== ships.length) filtered.forEach((item) => item.classList.remove('hide'));
+  };
+</script>
+<nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+  <nord-stack gap="l" class="n-padding-i-l n-padding-b-l" style="min-width: 900px; width: 900px;">
+    <nord-card padding="none">
+      <nord-stack direction="horizontal" justify-content="center" align-items="stretch">
+        <nord-stack direction="horizontal" justify-content="center" align-items="stretch">
+          <img src="images/logos/egotech_logo_dark_transparent.png" alt="EGOTech Logo" />
+        </nord-stack>
+        <nord-divider direction="vertical"></nord-divider>
+        <nord-stack direction="vertical" align-items="stretch" class="n-padding-i-l n-padding-b-l">
+          <h1>EGOTech</h1>
+          <p class="n-font-size-l">
+            EGOTech thrives to design various types of Starbase ships that are practical but fun to use.
+            Free blueprints are available for download with premium versions available for sale for in game credits.
+          </p>
+          <a href="https://discord.gg/BKwVGvncmN">
+            <img alt="EGOTech Discord Server" src="https://camo.githubusercontent.com/a52557e3b6648630b7bf1f530c22745e510cbed885cff0c1e11fccb64e9c61da/68747470733a2f2f646973636f72646170702e636f6d2f6170692f6775696c64732f313031333332383638353536343137383437322f7769646765742e706e673f7374796c653d62616e6e657232" />
+          </a>
+          <nord-banner variant="info">
+            <p class="n-font-size-m">
+              <a href="https://www.starbasegame.com/">Starbase</a> is a MMO game developed by <a href="https://www.frozenbyte.com/">Frozenbyte</a>.
+            </p>
+        </nord-banner>
+        </nord-stack>
+      </nord-stack>
+    </nord-card>
+  </nord-stack>
+  <nord-stack class="reset-ship-filters n-padding-i-l n-padding-b-l hide" style="max-width: 1200px;"">
+    <nord-card>
+      <nord-empty-state>
+        <h2>No ships found</h2>
+        <p>Try adjusting your filter options to find what you’re looking for.</p>
+        <nord-button variant="primary">Clear filters</nord-button>
+      </nord-empty-state>
+    </nord-card>
+  </nord-stack>
+  <script>
+    document
+      .querySelectorAll('.reset-ship-filters nord-button, .clear-button')
+      .forEach((button) =>
+        button.addEventListener('click', () => {
+          clearFilters();
+          applyFilters();
+        })
+      );
+  </script>
+  
+    <nord-stack id="section-miner" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="miner">Miners</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-surface-miner" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="surface-miner">Surface Miners</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+          <nord-card class="ship-card ship-bugger" padding="none" style="width: 435px;">
+  <h1 slot="header">Bugger</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.0.3</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/bugger/photos/20220924104458_1.jpg" alt="20220924104458_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Material Crates</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            448
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Mining Lasers</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            10
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Bugger is a 448 ore crate capacity mining ship with 10 sweeping mining lasers drill for surface mining operations. It is designed to work in conjunction with a moon base and a separate hauler as it is not the quickest ship.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#surface-miner"><nord-badge variant="warning">Surface Miner</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T3 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T3 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Advanced Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/bugger/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+          <nord-card class="ship-card ship-crawler" padding="none" style="width: 435px;">
+  <h1 slot="header">Crawler</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.0.1</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/crawler/photos/20221121192814_1.jpg" alt="20221121192814_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Material Crates</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            704
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Mining Lasers</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            10
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Crawler is a 704 ore crate capacity mining ship with 10 sweeping mining lasers drill for surface mining operations. It is a larger version of the Bugger X but uses a large generator system. It is designed to work in conjunction with a moon base and a separate hauler as it is not the quickest ship.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="info">For Sale</nord-badge>
+    <nord-badge variant="info">2,000,000 Credits</nord-badge>
+  
+  
+    <a href="/#surface-miner"><nord-badge variant="warning">Surface Miner</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
+  
+    <nord-badge variant="highlight">Large Generator</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Advanced Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/crawler/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-starter" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="starter">Starter Ships</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-asteroid-hauler" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="asteroid-hauler">Asteroid Haulers</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+          <nord-card class="ship-card ship-flipper" padding="none" style="width: 435px;">
+  <h1 slot="header">Flipper</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.1</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/flipper/photos/20220721142859_1.jpg" alt="20220721142859_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Asteroid Capacity</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            1 x T10
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Loading Speed</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            Fast
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Flipper is a ship for hauling a single T10 asteroid, designed to be used in the safe zone. It flies in one direction to easily load the asteroid and then you can flip around and fly load in the opposite direction, still with decent speed.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#asteroid-hauler"><nord-badge variant="warning">Asteroid Hauler</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Cargo Lock Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Large Asteroid Hold</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/flipper/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-hauler" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="hauler">Haulers</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+          <nord-card class="ship-card ship-clunker" padding="none" style="width: 435px;">
+  <h1 slot="header">Clunker</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.0.2</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/clunker/photos/20221209152710_1.jpg" alt="20221209152710_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Material Crates</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            948 
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Clunker is a 948 crate hauler with two 13 ring plasma thrusters serving as its main engines to provide decent speed. The ship is no frills and with double the upwards thrust, it is mainly designed to haul ore between a capital ship and the moon surface.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#hauler"><nord-badge variant="warning">Hauler</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Plasma Thruster</nord-badge>
+  
+    <nord-badge variant="highlight">Large Generator</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/clunker/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-salvager" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="salvager">Salvagers</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-fighter" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="fighter">Fighters</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+          <nord-card class="ship-card ship-jabber" padding="none" style="width: 435px;">
+  <h1 slot="header">Jabber</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.0</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/jabber/photos/20220107211217_1.jpg" alt="20220107211217_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Laser Cannons</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            4
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Jabber is a fast light fighter with four lasers. Although it has very light armour, it is very fast and quite manoeuvrable.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#fighter"><nord-badge variant="warning">Fighter</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Laser Cannon</nord-badge>
+  
+    <nord-badge variant="highlight">ISAN</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/jabber/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-command-ship" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="command-ship">Command Ships</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-transport" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="transport">Transports</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+          <nord-card class="ship-card ship-hopper" padding="none" style="width: 435px;">
+  <h1 slot="header">Hopper</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.0</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201746_1.jpg" alt="20220724201746_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Hopper is small personal transport that can be used to quickly get around a station or taking short trips.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#transport"><nord-badge variant="warning">Transport</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/hopper/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+    <nord-stack id="section-explorer" class="ship-section">
+      <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
+        <h1 id="explorer">Explorers</h1>
+        <nord-stack direction="horizontal" wrap>
+        
+          <nord-card class="ship-card ship-mapper" padding="none" style="width: 435px;">
+  <h1 slot="header">Mapper</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+    <nord-badge variant="danger">UPDATED</nord-badge>
+  
+  
+  <nord-badge>v1.0.4</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/mapper/photos/20221022105027_1.jpg" alt="20221022105027_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Mapper is an explorer ship with an estimated range of 13,000km capable at travelling at close to maximum speed. It has a navigation logger for logging capital ship navigation chips.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#explorer"><nord-badge variant="warning">Explorer</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">ISAN</nord-badge>
+  
+    <nord-badge variant="highlight">Auto Pilot</nord-badge>
+  
+    <nord-badge variant="highlight">Asteroid Avoidance</nord-badge>
+  
+    <nord-badge variant="highlight">Navigation Data Logger</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/mapper/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+        
+        </nord-stack>
+      </nord-stack>
+      <nord-divider></nord-divider>
+    </nord-stack>
+  
+</nord-stack>
+<script>
+  const qsObj = Qs.parse(window.location.search.replace(/^\?/, ''));
+
+  if (qsObj.saleTypes)
+    document.querySelectorAll('.ship-filter-sale-type').forEach((node) => {
+      if (qsObj.saleTypes.includes(node.value)) node.checked = true;
+    });
+
+  if (qsObj.statuses)
+    document.querySelectorAll('.ship-filter-status').forEach((node) => {
+      if (qsObj.statuses.includes(node.value)) node.checked = true;
+    });
+
+  if (qsObj.types)
+    document.querySelectorAll('.ship-filter-type').forEach((node) => {
+      if (qsObj.types.includes(node.value)) node.checked = true;
+    });
+
+  if (qsObj.tags)
+    document.querySelectorAll('.ship-filter-tag').forEach((node) => {
+      if (qsObj.tags.includes(node.value)) node.checked = true;
+    });
+
+  applyFilters();
+</script>
+
+
+      <nord-footer slot="footer" size="m">
+        <nord-stack gap="l">
+          <section class="n-grid-2">
+            <div>
+              <section class="n-grid-2 n-margin-be-xxl">
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    EGOTech
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-discord fa-xl fa-fw"></i>
+                    <a href="https://discord.gg/BKwVGvncmN">Discord</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-github fa-xl fa-fw"></i>
+                    <a href="https://github.com/EGO-Tech/starbase-ships">GitHub</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-youtube fa-xl fa-fw"></i>
+                    <a href="https://www.youtube.com/@ego-tech">YouTube</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-creative-commons-nc fa-xl fa-fw"></i>
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License</a>
+                  </nord-stack>
+                </nord-stack>
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    Starbase Game
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Starbase</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Frozenbyte</a>
+                  </nord-stack>
+                </nord-stack>
+              </section>
+            </div>
+            <div>
+              <p>Copyright <i class="fa-regular fa-copyright"></i> 2024 Vincent Teo</p>
+              <p>Built with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://nordhealth.design/">Nord.</a></p>
+            </div>
+          </section>
+        </nord-stack>
+      </nord-footer>
+    </nord-layout>
+    <script>
+      document.querySelectorAll('.search-button')
+        .forEach((button) =>
+          button.addEventListener("click", () => {
+            menu.show();
+          })
+        );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,214 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Starbase Ships by EGOTech - Ship Commissions</title>
+
+    <meta property="og:title" content="Starbase Ships by EGOTech - Ship Commissions" />
+    
+      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/others/egotech/logos/egotech_logo_dark.png" />
+      <meta property="og:description" content="EGOTech thrives to design various types of Starbase ships that are practical but fun to use." />
+    
+
+    
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VCMHC5R"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HK9VCMHC5R');
+      </script>
+    
+
+    <link rel="icon" type="image/png" href="/images/logos/egotech_logo_dark_favicon.png">
+    <link rel="stylesheet" href="/css/nord.min.css">
+    <link rel="stylesheet" href="/css/nord-dark.css">
+    <link rel="stylesheet" href="/css/fonts/fonts.css">
+    <link rel="stylesheet" href="/css/splide.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/js/nord-components.js"></script>
+    <script src="/js/splide.min.js"></script>
+    <script src="/js/qs.js"></script>
+    <script src="/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      const gaEvent = (event, params) => {
+        if (window.gtag) gtag('event', event, params);
+      }
+    </script>
+    
+    <script>
+      window.ships = [{"name":"Bugger","types":[{"type":"surface-miner","order":1}],"saleType":"free","version":"1.0.3","slug":"bugger","tags":[{"id":"t2-generator","label":"T3 Generators"},{"id":"t2-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/bugger"},{"name":"Clunker","types":[{"type":"hauler","order":2}],"saleType":"free","version":"1.0.2","slug":"clunker","tags":[{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"large-generator","label":"Large Generator"}],"popular":false,"webPath":"/ships/clunker"},{"name":"Crawler","types":[{"type":"surface-miner","order":3}],"saleType":"for-sale","version":"1.0.1","slug":"crawler","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"mining-laser","label":"Mining Laser"},{"id":"large-generator","label":"Large Generator"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/crawler"},{"name":"Flipper","types":[{"type":"asteroid-hauler","order":4}],"saleType":"free","version":"1.1.1","slug":"flipper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"large-asteroid-hold","label":"Large Asteroid Hold"}],"popular":false,"webPath":"/ships/flipper"},{"name":"Hopper","types":[{"type":"transport","order":1}],"saleType":"free","version":"1.1.0","slug":"hopper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"}],"popular":false,"webPath":"/ships/hopper"},{"name":"Jabber","types":[{"type":"fighter","order":1}],"saleType":"free","version":"1.1.0","slug":"jabber","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"laser-cannon","label":"Laser Cannon"},{"id":"isan","label":"ISAN"}],"popular":false,"webPath":"/ships/jabber"},{"name":"Mapper","types":[{"type":"explorer","order":1}],"saleType":"free","version":"1.0.4","slug":"mapper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"navigation-data-logger","label":"Navigation Data Logger"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":true,"popular":false,"webPath":"/ships/mapper"}];
+      window.shipTypes = {"list":[{"id":"miner","name":"Miner","label":"Miners"},{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners"},{"id":"starter","name":"Starter Ship","label":"Starter Ships"},{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers"},{"id":"hauler","name":"Hauler","label":"Haulers"},{"id":"salvager","name":"Salvager","label":"Salvagers"},{"id":"fighter","name":"Fighter","label":"Fighters"},{"id":"command-ship","name":"Command Ship","label":"Command Ships"},{"id":"transport","name":"Transport","label":"Transports"},{"id":"explorer","name":"Explorer","label":"Explorers"}],"byId":{"miner":{"id":"miner","name":"Miner","label":"Miners"},"surface-miner":{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners"},"starter":{"id":"starter","name":"Starter Ship","label":"Starter Ships"},"asteroid-hauler":{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers"},"hauler":{"id":"hauler","name":"Hauler","label":"Haulers"},"salvager":{"id":"salvager","name":"Salvager","label":"Salvagers"},"fighter":{"id":"fighter","name":"Fighter","label":"Fighters"},"command-ship":{"id":"command-ship","name":"Command Ship","label":"Command Ships"},"transport":{"id":"transport","name":"Transport","label":"Transports"},"explorer":{"id":"explorer","name":"Explorer","label":"Explorers"}}};
+    </script>
+  
+    
+    <script>
+      window.pages = [{"id":"commissions","label":"Ship Commissions","title":"Ship Commissions","slug":"commissions","webPath":"/pages/commissions"},{"id":"rentals","label":"Ship Rentals","title":"Ship Rentals","slug":"rentals","webPath":"/pages/rentals"},{"id":"faq","label":"FAQ","title":"Frequently Asked Questions","slug":"faq","webPath":"/pages/faq"}];
+    </script>
+  
+  </head>
+  <body class="n-reset">
+    <nord-command-menu></nord-command-menu>
+    <script>
+      const menu = document.querySelector("nord-command-menu");
+      menu.commands = ships.map((ship) => ({
+        id: ship.slug,
+        title: ship.name,
+        section: 'Ships',
+        keywords: `${ship.name} ${ship.saleType} ${ship.types.map(({ type }) => shipTypes.byId[type].label).join(' ')} ${ship.tags.map(({ label }) => label).join(' ')}`,
+        handler: () => window.location.href = ship.webPath,
+      })).concat(pages.map((page) => ({
+        id: page.id,
+        title: page.title,
+        section: 'Information',
+        keywords: `${page.id} ${page.label} ${page.title}`,
+        handler: () => window.location.href = page.webPath,
+      })));
+    </script>
+    <nord-layout padding="none" persist-nav-state sticky>
+      <nord-navigation slot="nav">
+        <nord-stack class="n-padding-be-l">
+          <nord-button class="search-button" variant="default" aria-describedby="nav-search" expand>
+            <i slot="start" class="fa-solid fa-magnifying-glass"></i>
+            <div style="text-align: left;">Search</div>
+          </nord-button>
+          <nord-tooltip id="nav-search">Shortcut: Ctrl+K</nord-tooltip>
+        </nord-stack>
+        <nord-nav-group heading="Ships For Sale">
+          
+            <nord-nav-item   href="/ships/crawler/">
+              Crawler
+            </nord-nav-item>
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Free Ships">
+          
+            <nord-nav-item   href="/ships/bugger/">
+              Bugger
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/clunker/">
+              Clunker
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/flipper/">
+              Flipper
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/hopper/">
+              Hopper
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/jabber/">
+              Jabber
+            </nord-nav-item>
+          
+            <nord-nav-item badge="UPDATED"  href="/ships/mapper/">
+              Mapper
+            </nord-nav-item>
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Information">
+          
+            <nord-nav-item active href="/pages/commissions/">
+              Ship Commissions
+            </nord-nav-item>
+          
+            <nord-nav-item  href="/pages/rentals/">
+              Ship Rentals
+            </nord-nav-item>
+          
+            <nord-nav-item  href="/pages/faq/">
+              FAQ
+            </nord-nav-item>
+          
+        </nord-nav-group>
+      </nord-navigation>
+      <nord-header slot="header">
+        <nord-stack direction="horizontal" style="min-width: 550px; width: 550px;">
+          <a href="/">
+            <nord-avatar size="xl" src="/images/logos/egotech_logo_dark.png" name="EGOTech" variant="square">B</nord-avatar>
+          </a>
+          <h1>Starbase Ships by EGOTech</h1>
+        </nord-stack>
+      </nord-header>
+
+      
+<nord-stack gap="l" class="info-page n-padding-i-l n-padding-b-l">
+  <h1>Ship Commissions</h1>
+
+  <p>To enquire about custom ship comissions, please join the EGOTech Discord server.</p>
+
+  <a href="https://discord.gg/BKwVGvncmN">
+    <img alt="EGOTech Discord Server" src="https://camo.githubusercontent.com/a52557e3b6648630b7bf1f530c22745e510cbed885cff0c1e11fccb64e9c61da/68747470733a2f2f646973636f72646170702e636f6d2f6170692f6775696c64732f313031333332383638353536343137383437322f7769646765742e706e673f7374796c653d62616e6e657232" />
+  </a>
+
+</nord-stack>
+
+
+
+      <nord-footer slot="footer" size="m">
+        <nord-stack gap="l">
+          <section class="n-grid-2">
+            <div>
+              <section class="n-grid-2 n-margin-be-xxl">
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    EGOTech
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-discord fa-xl fa-fw"></i>
+                    <a href="https://discord.gg/BKwVGvncmN">Discord</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-github fa-xl fa-fw"></i>
+                    <a href="https://github.com/EGO-Tech/starbase-ships">GitHub</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-youtube fa-xl fa-fw"></i>
+                    <a href="https://www.youtube.com/@ego-tech">YouTube</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-creative-commons-nc fa-xl fa-fw"></i>
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License</a>
+                  </nord-stack>
+                </nord-stack>
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    Starbase Game
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Starbase</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Frozenbyte</a>
+                  </nord-stack>
+                </nord-stack>
+              </section>
+            </div>
+            <div>
+              <p>Copyright <i class="fa-regular fa-copyright"></i> 2024 Vincent Teo</p>
+              <p>Built with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://nordhealth.design/">Nord.</a></p>
+            </div>
+          </section>
+        </nord-stack>
+      </nord-footer>
+    </nord-layout>
+    <script>
+      document.querySelectorAll('.search-button')
+        .forEach((button) =>
+          button.addEventListener("click", () => {
+            menu.show();
+          })
+        );
+    </script>
+  </body>
+</html>
