@@ -6,13 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Starbase Ships by EGOTech - Fisher</title>
+    <title>Starbase Ships by EGOTech - Stocker</title>
 
-    <meta property="og:title" content="Starbase Ships by EGOTech - Fisher" />
+    <meta property="og:title" content="Starbase Ships by EGOTech - Stocker" />
     
       
-      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140258_1.jpg" />
-      <meta property="og:description" content="The Fisher is a larger salvager ship with enough power generation to tow a ship of up to 20,000,000kg at up to 50m/s. The pilot seat can be spun to face the back, looking out the back window for ease of locking on ships using the back facing tow beam. It also has exposed frames to easily bolt on salvaged parts on each side." />
+      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211013183139_1.jpg" />
+      <meta property="og:description" content="The Stocker is a 232 ore crate capacity mining ship. It is designed as a direct upgrade for those who have outgrown the Rigger." />
     
 
     
@@ -124,7 +124,7 @@
               Clunker
             </nord-nav-item>
           
-            <nord-nav-item  active href="/ships/fisher/">
+            <nord-nav-item   href="/ships/fisher/">
               Fisher
             </nord-nav-item>
           
@@ -188,7 +188,7 @@
               Sower
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/stocker/">
+            <nord-nav-item  active href="/ships/stocker/">
               Stocker
             </nord-nav-item>
           
@@ -237,11 +237,15 @@
       <nord-button href="#ship-photos" size="s" variant="default">Photos</nord-button>
       <nord-button href="#description" size="s" variant="default">Features</nord-button>
       
+        <nord-button href="#ship-videos" size="s" variant="default">Videos</nord-button>
+      
       <nord-button href="#build-cost" size="s" variant="default">Build Cost</nord-button>
       
         <nord-button href="#download" size="s" variant="primary">Download</nord-button>
       
       <nord-button href="#usage" size="s" variant="default">Usage</nord-button>
+      
+        <nord-button href="#known-issues" size="s" variant="default">Known Issues</nord-button>
       
       <nord-button href="#faq" size="s" variant="default">FAQ</nord-button>
       <nord-button href="#ship-links" size="s" variant="default">Links</nord-button>
@@ -253,11 +257,11 @@
 <nord-stack id="ship-page" gap="l" class="n-padding-i-l n-padding-b-l">
   <nord-stack>
     <h1 id="ship-name">
-      <span class="n-font-size-xxxl">Fisher</span>
+      <span class="n-font-size-xxxl">Stocker</span>
       <nord-stack direction="horizontal" gap="s">
   
   
-  <nord-badge>v1.0.1</nord-badge>
+  <nord-badge>v1.1.2</nord-badge>
 </nord-stack>
 
     </h1>
@@ -267,14 +271,16 @@
     <nord-badge variant="success">Free</nord-badge>
   
   
-    <a href="/#salvager"><nord-badge variant="warning">Salvager</nord-badge></a>
+    <a href="/#miner"><nord-badge variant="warning">Miner</nord-badge></a>
   
+  
+    <nord-badge variant="highlight">Rando Ship Shop</nord-badge>
   
     <nord-badge variant="highlight">T2 Generators</nord-badge>
   
     <nord-badge variant="highlight">T2 Thrusters</nord-badge>
   
-    <nord-badge variant="highlight">Tow Beam</nord-badge>
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
   
     <nord-badge variant="highlight">ISAN</nord-badge>
   
@@ -284,8 +290,6 @@
   
     <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
   
-    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
-  
 </nord-stack>
 
   <nord-stack id="ship-photos" class="info-page">
@@ -294,45 +298,67 @@
         <div class="splide__track">
           <ul class="splide__list">
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140258_1.jpg" alt="20220806140258_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211013183139_1.jpg" alt="20211013183139_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806125932_1.jpg" alt="20220806125932_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211013183158_1.jpg" alt="20211013183158_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806125938_1.jpg" alt="20220806125938_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204006_1.jpg" alt="20211020204006_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806125944_1.jpg" alt="20220806125944_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204010_1.jpg" alt="20211020204010_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806130410_1.jpg" alt="20220806130410_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204018_1.jpg" alt="20211020204018_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140306_1.jpg" alt="20220806140306_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204317_1.jpg" alt="20211020204317_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140327_1.jpg" alt="20220806140327_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204320_1.jpg" alt="20211020204320_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140348_1.jpg" alt="20220806140348_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204321_1.jpg" alt="20211020204321_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140420_1.jpg" alt="20220806140420_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204329_1.jpg" alt="20211020204329_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140436_1.jpg" alt="20220806140436_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020215236_1.jpg" alt="20211020215236_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140520_1.jpg" alt="20220806140520_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020215238_1.jpg" alt="20211020215238_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140521_1.jpg" alt="20220806140521_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020215245_1.jpg" alt="20211020215245_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140524_1.jpg" alt="20220806140524_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020222130_1.jpg" alt="20211020222130_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806141009_1.jpg" alt="20220806141009_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020222134_1.jpg" alt="20211020222134_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151220_1.jpg" alt="20220810151220_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020222145_1.jpg" alt="20211020222145_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151310_1.jpg" alt="20220810151310_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223238_1.jpg" alt="20211020223238_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151313_1.jpg" alt="20220810151313_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223304_1.jpg" alt="20211020223304_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151323_1.jpg" alt="20220810151323_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223324_1.jpg" alt="20211020223324_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151327_1.jpg" alt="20220810151327_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223335_1.jpg" alt="20211020223335_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810152636_1.jpg" alt="20220810152636_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223344_1.jpg" alt="20211020223344_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223358_1.jpg" alt="20211020223358_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223416_1.jpg" alt="20211020223416_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223509_1.jpg" alt="20211020223509_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223540_1.jpg" alt="20211020223540_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223618_1.jpg" alt="20211020223618_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223639_1.jpg" alt="20211020223639_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223656_1.jpg" alt="20211020223656_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223717_1.jpg" alt="20211020223717_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211022222630_1.jpg" alt="20211022222630_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211022222641_1.jpg" alt="20211022222641_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211022233219_1.jpg" alt="20211022233219_1.jpg" /></li>
             
           </ul>
         </div>
@@ -341,45 +367,67 @@
         <div class="splide__track">
           <ul class="splide__list">
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140258_1.jpg" alt="20220806140258_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211013183139_1.jpg" alt="20211013183139_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806125932_1.jpg" alt="20220806125932_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211013183158_1.jpg" alt="20211013183158_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806125938_1.jpg" alt="20220806125938_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204006_1.jpg" alt="20211020204006_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806125944_1.jpg" alt="20220806125944_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204010_1.jpg" alt="20211020204010_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806130410_1.jpg" alt="20220806130410_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204018_1.jpg" alt="20211020204018_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140306_1.jpg" alt="20220806140306_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204317_1.jpg" alt="20211020204317_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140327_1.jpg" alt="20220806140327_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204320_1.jpg" alt="20211020204320_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140348_1.jpg" alt="20220806140348_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204321_1.jpg" alt="20211020204321_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140420_1.jpg" alt="20220806140420_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020204329_1.jpg" alt="20211020204329_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140436_1.jpg" alt="20220806140436_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020215236_1.jpg" alt="20211020215236_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140520_1.jpg" alt="20220806140520_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020215238_1.jpg" alt="20211020215238_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140521_1.jpg" alt="20220806140521_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020215245_1.jpg" alt="20211020215245_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806140524_1.jpg" alt="20220806140524_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020222130_1.jpg" alt="20211020222130_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220806141009_1.jpg" alt="20220806141009_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020222134_1.jpg" alt="20211020222134_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151220_1.jpg" alt="20220810151220_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020222145_1.jpg" alt="20211020222145_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151310_1.jpg" alt="20220810151310_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223238_1.jpg" alt="20211020223238_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151313_1.jpg" alt="20220810151313_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223304_1.jpg" alt="20211020223304_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151323_1.jpg" alt="20220810151323_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223324_1.jpg" alt="20211020223324_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810151327_1.jpg" alt="20220810151327_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223335_1.jpg" alt="20211020223335_1.jpg" /></li>
             
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/photos/20220810152636_1.jpg" alt="20220810152636_1.jpg" /></li>
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223344_1.jpg" alt="20211020223344_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223358_1.jpg" alt="20211020223358_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223416_1.jpg" alt="20211020223416_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223509_1.jpg" alt="20211020223509_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223540_1.jpg" alt="20211020223540_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223618_1.jpg" alt="20211020223618_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223639_1.jpg" alt="20211020223639_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223656_1.jpg" alt="20211020223656_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211020223717_1.jpg" alt="20211020223717_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211022222630_1.jpg" alt="20211022222630_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211022222641_1.jpg" alt="20211022222641_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/photos/20211022233219_1.jpg" alt="20211022233219_1.jpg" /></li>
             
           </ul>
         </div>
@@ -406,43 +454,67 @@
     </nord-card>
   </nord-stack>
   <nord-stack id="description" class="info-page">
-    <p>The Fisher is a larger salvager ship with enough power generation to tow a ship of up to 20,000,000kg at up to 50m/s. The pilot seat can be spun to face the back, looking out the back window for ease of locking on ships using the back facing tow beam. It also has exposed frames to easily bolt on salvaged parts on each side.</p>
+    <p>The Stocker is a 232 ore crate capacity mining ship. It is designed as a direct upgrade for those who have outgrown the Rigger.<br />
+<br />
+The Stocker is also available to buy in game at Scenery Showroom of Rando 4 Ship Shop at stations with Rando ship shops.</p>
   </nord-stack>
   <nord-stack id="features">
     <h1><a id="features" class="anchor" href="#features" aria-hidden="true"></a>Features</h1>
 <ul>
-<li>Back facing tow beam for towing ships, with a towing capacity of 20,000,000kg</li>
-<li>Spinning pilot chair to view out generous sized back window</li>
+<li>232 ore crates</li>
 <li>Standard Cruise function</li>
 <li>Turtle and Sloth functions with adjustable rates</li>
 <li>Transponder system with ping function</li>
-<li>One external and two internal resource bridges</li>
+<li>Four mining lasers on turrets that point towards asteroids with sweeping</li>
+<li>Two ore collectors that point towards asteroids</li>
+<li>Material scanner that will point towards asteroids</li>
+<li>Approach and auto mine functions</li>
+<li>Two external and two internal resource bridges</li>
 <li>Auto generator rate script with adjustable minimum rate</li>
-<li>Button to automatically adjust the minimum generator rate according to towed mass</li>
-<li>Frames on either side of the ship to bolt on salvages parts</li>
-<li>23 ore crates</li>
-<li>60 T3 generators (with 60 T2 enhancers) with 20 T3 fuel chambers and 40 spare rods on racks</li>
-<li>Radiators and heat sink that provide more than adequate cooling</li>
-<li>12 large tanks with 144,000,000 units of propellant</li>
+<li>32 T2 generators with 12 T2 fuel chambers and 20 spare rods on racks</li>
+<li>Radiators and heat sinks that provide more than adequate cooling</li>
+<li>12 medium and 22 small propellant tanks with 70,000,000 units of propellant</li>
+<li>Estimated flight time of 6 hours and range of 3,000km</li>
 <li>Propellant time and fuel time panels</li>
-<li>196 batteries</li>
-<li>72 T2 triangle thrusters and 24 T2 box thrusters providing forward thrust</li>
-<li>24 T2 maneuver thrusters providing braking thrust</li>
-<li>32 T2 maneuver thrusters</li>
-<li>Basic crafting bench to craft refills plus the tools bench</li>
+<li>104 batteries</li>
+<li>38 T2 box and 104 T2 triangle thrusters providing forward thrust</li>
+<li>32 T2 triangle thrusters providing braking thrust</li>
+<li>32 T2 triangle thrusters for maneuvers</li>
+<li>Basic crafting bench to craft refills</li>
+<li>Extra two small propellant tank with its own resource bridge for emergency refueling</li>
+<li>Two extra hardpoints (all cabled and piped)</li>
 <li><a href="https://github.com/pcbennion/starbase-navgrid">NavGrid by StandPeter</a></li>
 <li><a href="https://github.com/fixerid/sb-projects/tree/main/NavCas">NavCas by fixerid</a>, using custom avoidance system and ISAN 3 in 1 from <a href="https://gitlab.com/Firestar99/yolol/-/blob/master/src/compass/README.md">Compass by Firestar99</a>, with ability to load target from NavGrid</li>
-<li>Warning lights and alarm for obstacle detection and avoidance, powered by 27 rangefinders</li>
+<li>Warning lights and alarm for obstacle detection and avoidance, powered by 34 rangefinders</li>
 <li>Speedometer</li>
 <li>Timer panel</li>
 <li>Odometer panel</li>
-<li>Top speed of 140 m/s while not towing</li>
+<li>Many extra slots for YOLOL or memory chips, with two subnetworks setup</li>
 </ul>
 
     <nord-banner>
       A premium version, the <a href="/ships/undefined/"></a> is available for purchase.
     </nord-banner>
   </nord-stack>
+  
+    <nord-stack id="ship-videos">
+      <h1>Videos</h1>
+      <nord-stack direction="horizontal">
+        
+          <nord-card padding="none" style="width: 560px">
+            <h1 slot="header">Starbase - Community Ship Showcase - 3 Ships by &quot;Egomaniac&quot; ( The moon Crasher) 😉😁</h1>
+            <div style=overflow:hidden;resize:none;max-width:100%;>
+              <div id=embed-google-map style="height:100%; width:100%;max-width:100%;">
+                <iframe src="https://www.youtube.com/embed/RXAccUqcWhI" width=560 height=315 frameborder=0 allowfullscreen> </iframe>
+              </div>
+            </div>
+            <small slot="footer">
+              Channel: <a href="https://www.youtube.com/channel/UCCqloSZ0VHn0BCFhIlJNS8A">Krawll Unchained</a>
+            </small>
+          </nord-card>
+        
+      </nord-stack>
+    </nord-stack>
   
   <nord-stack id="build-cost">
     <h1>Build Cost</h1>
@@ -470,8 +542,8 @@
                     
                   </td>
                   <td>Aegisium Ore</td>
-                  <td class="n-table-align-right">94,221</td>
-                  <td class="n-table-align-right">54.5</td>
+                  <td class="n-table-align-right">99,886</td>
+                  <td class="n-table-align-right">57.8</td>
                 </tr>
               
                 <tr class="">
@@ -483,8 +555,8 @@
                     
                   </td>
                   <td>Ajatite Ore</td>
-                  <td class="n-table-align-right">9,713</td>
-                  <td class="n-table-align-right">5.6</td>
+                  <td class="n-table-align-right">15,741</td>
+                  <td class="n-table-align-right">9.1</td>
                 </tr>
               
                 <tr class="">
@@ -496,8 +568,8 @@
                     
                   </td>
                   <td>Arkanium Ore</td>
-                  <td class="n-table-align-right">49,378</td>
-                  <td class="n-table-align-right">28.6</td>
+                  <td class="n-table-align-right">2,995</td>
+                  <td class="n-table-align-right">1.7</td>
                 </tr>
               
                 <tr class="">
@@ -509,8 +581,8 @@
                     
                   </td>
                   <td>Bastium Ore</td>
-                  <td class="n-table-align-right">172,301</td>
-                  <td class="n-table-align-right">99.7</td>
+                  <td class="n-table-align-right">251,725</td>
+                  <td class="n-table-align-right">145.7</td>
                 </tr>
               
                 <tr class="">
@@ -522,21 +594,8 @@
                     
                   </td>
                   <td>Charodium Ore</td>
-                  <td class="n-table-align-right">127,118</td>
-                  <td class="n-table-align-right">73.6</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/corazium.png" alt="Corazium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Corazium Ore</td>
-                  <td class="n-table-align-right">7,425</td>
-                  <td class="n-table-align-right">4.3</td>
+                  <td class="n-table-align-right">187,109</td>
+                  <td class="n-table-align-right">108.3</td>
                 </tr>
               
                 <tr class="">
@@ -548,7 +607,7 @@
                     
                   </td>
                   <td>Exorium Ore</td>
-                  <td class="n-table-align-right">19,507</td>
+                  <td class="n-table-align-right">19,465</td>
                   <td class="n-table-align-right">11.3</td>
                 </tr>
               
@@ -561,8 +620,8 @@
                     
                   </td>
                   <td>Glass</td>
-                  <td class="n-table-align-right">6,093</td>
-                  <td class="n-table-align-right">3.5</td>
+                  <td class="n-table-align-right">2,301</td>
+                  <td class="n-table-align-right">1.3</td>
                 </tr>
               
                 <tr class="">
@@ -574,8 +633,8 @@
                     
                   </td>
                   <td>Ice</td>
-                  <td class="n-table-align-right">144,000</td>
-                  <td class="n-table-align-right">83.3</td>
+                  <td class="n-table-align-right">72,000</td>
+                  <td class="n-table-align-right">41.7</td>
                 </tr>
               
                 <tr class="">
@@ -587,8 +646,8 @@
                     
                   </td>
                   <td>Karnite Crystal</td>
-                  <td class="n-table-align-right">6,487</td>
-                  <td class="n-table-align-right">3.8</td>
+                  <td class="n-table-align-right">226</td>
+                  <td class="n-table-align-right">0.1</td>
                 </tr>
               
                 <tr class="">
@@ -600,21 +659,8 @@
                     
                   </td>
                   <td>Kutonium Ore</td>
-                  <td class="n-table-align-right">12,106</td>
-                  <td class="n-table-align-right">7</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/lukium.png" alt="Lukium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Lukium Ore</td>
-                  <td class="n-table-align-right">15,481</td>
-                  <td class="n-table-align-right">9</td>
+                  <td class="n-table-align-right">260</td>
+                  <td class="n-table-align-right">0.2</td>
                 </tr>
               
                 <tr class="">
@@ -626,8 +672,8 @@
                     
                   </td>
                   <td>Nhurgite Crystal</td>
-                  <td class="n-table-align-right">133,476</td>
-                  <td class="n-table-align-right">77.2</td>
+                  <td class="n-table-align-right">70,838</td>
+                  <td class="n-table-align-right">41</td>
                 </tr>
               
                 <tr class="">
@@ -639,21 +685,8 @@
                     
                   </td>
                   <td>Vokarium Ore</td>
-                  <td class="n-table-align-right">102,449</td>
-                  <td class="n-table-align-right">59.3</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/ymrium.png" alt="Ymrium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Ymrium Ore</td>
-                  <td class="n-table-align-right">22,882</td>
-                  <td class="n-table-align-right">13.2</td>
+                  <td class="n-table-align-right">124,761</td>
+                  <td class="n-table-align-right">72.2</td>
                 </tr>
               
                 <tr class="n-font-weight-strong n-color-surface-lowered">
@@ -661,8 +694,8 @@
                     
                   </td>
                   <td>Total ore</td>
-                  <td class="n-table-align-right">922,636</td>
-                  <td class="n-table-align-right">533.9</td>
+                  <td class="n-table-align-right">847,307</td>
+                  <td class="n-table-align-right">490.3</td>
                 </tr>
               
             </tbody>
@@ -682,15 +715,15 @@
             <tbody>
               <tr>
                 <td>Assembly</td>
-                <td class="n-table-align-right">247,402</td>
+                <td class="n-table-align-right">349,943</td>
               </tr>
               <tr>
                 <td>Manufacturing</td>
-                <td class="n-table-align-right">864,387</td>
+                <td class="n-table-align-right">880,946</td>
               </tr>
               <tr class="n-font-weight-strong n-color-surface-lowered">
                 <td>Total</td>
-                <td class="n-table-align-right">1,111,788</td>
+                <td class="n-table-align-right">1,230,888</td>
               </tr>
             </tbody>
           </table>
@@ -707,9 +740,9 @@
   <nord-stack>
     
       <h1 id="download">Download Blueprint</h1>
-      <nord-button href="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/blueprints/fisher.fbe" variant="primary" onclick="gaEvent('download', { ship: 'Fisher', version: '1.0.1', download_ref: 'website' })">
+      <nord-button href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker.fbe" variant="primary" onclick="gaEvent('download', { ship: 'Stocker', version: '1.1.2', download_ref: 'website' })">
         <i slot="start" class="fa-solid fa-download n-color-text"></i>
-        Download v1.0.1 (current)
+        Download v1.1.2 (current)
       </nord-button>
       <nord-card padding="none" style="width: 400px">
         <h2 slot="header">All Blueprints</h2>
@@ -725,13 +758,97 @@
             <tbody>
               
                 <tr>
-                  <td>v1.0.1</td>
+                  <td>v1.1.2</td>
                   <td>
                     <nord-badge variant="warning">Current</nord-badge>
                     
                   </td>
                   <td class="n-table-align-right">
-                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/blueprints/fisher.fbe" onclick="gaEvent('download', { ship: 'Fisher', version: '1.0.1', download_ref: 'website' })">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.1.2', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.1.1</td>
+                  <td>
+                    
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.1.1.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.1.1', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.1.0</td>
+                  <td>
+                    
+                    <nord-badge>Ship Shop Version</nord-badge>
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.1.0.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.1.0', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.0.4</td>
+                  <td>
+                    
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.0.4.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.0.4', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.0.3</td>
+                  <td>
+                    
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.0.3.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.0.3', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.0.2</td>
+                  <td>
+                    
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.0.2.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.0.2', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.0.1</td>
+                  <td>
+                    
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.0.1.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.0.1', download_ref: 'website' })">
                       <i slot="start" class="fa-solid fa-download n-color-text"></i>
                       Download
                     </nord-button>
@@ -745,7 +862,7 @@
                     
                   </td>
                   <td class="n-table-align-right">
-                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/blueprints/fisher_v1.0.0.fbe" onclick="gaEvent('download', { ship: 'Fisher', version: '1.0.0', download_ref: 'website' })">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/blueprints/stocker_v1.0.0.fbe" onclick="gaEvent('download', { ship: 'Stocker', version: '1.0.0', download_ref: 'website' })">
                       <i slot="start" class="fa-solid fa-download n-color-text"></i>
                       Download
                     </nord-button>
@@ -760,9 +877,9 @@
   </nord-stack>
   <nord-stack id="usage" class="info-page">
     <h1><a id="usage" class="anchor" href="#usage" aria-hidden="true"></a>Usage</h1>
-<p>To enter the ship, there is a button on top of the ship that will open <code>Hatch</code>. Once inside you can also open and close the cockpit glass <code>Canopy</code>. Buttons for these are available in the pilot left side console.</p>
+<p>To enter the ship, there is a button on top of the center of the ship that will open a <code>Hatch</code>. Once inside you can also open and close the cockpit glass <code>Canopy</code>. The pilot <code>Chair</code> can be rotated around for easy access. Buttons for these are available in the pilot side consoles and also on the ceiling above the pilot seat.</p>
 <h2><a id="flying-the-ship" class="anchor" href="#flying-the-ship" aria-hidden="true"></a>Flying the Ship</h2>
-<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/images/pilot_center_console.jpg" alt="Pilot Console"></p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/images/pilot_center_console.jpg" alt="Pilot Center Console"></p>
 <p>The left lever on the center console controls backwards thrust (braking) and the right lever controls forward thrust.</p>
 <nord-table>
 <table>
@@ -774,24 +891,16 @@
 </thead>
 <tbody>
 <tr>
-<td><code>ForwardThrust</code></td>
-<td>Current forward thrust, maximum of 10,000 units</td>
-</tr>
-<tr>
 <td><code>Speed</code></td>
 <td>Current speed in metres per second.</td>
 </tr>
 <tr>
-<td><code>Range</code> &amp; <code>Distance</code></td>
-<td>Activates center rangefinder, with <code>Distance</code> showing distance to object.</td>
+<td><code>ForwardThrust</code></td>
+<td>Current forward thrust, maximum of 10,000 units</td>
 </tr>
 <tr>
 <td><code>Cruise</code></td>
 <td>Activates cruise control, forward thrust will not reset to zero unless turned down.</td>
-</tr>
-<tr>
-<td><code>Aim</code></td>
-<td>Reduces the response time of key presses for pitch and yaw.</td>
 </tr>
 <tr>
 <td><code>Turtle</code></td>
@@ -799,11 +908,27 @@
 </tr>
 <tr>
 <td><code>Sloth</code></td>
-<td>(Right Console) Activates the low sensitvity mode of pitch and yaw by limiting thrust. Use the <code>Sensitivity</code> switch to set the maximum thrust rate of sloth mode.</td>
+<td>Activates the low sensitvity mode of pitch and yaw by limiting thrust. Use the <code>Sensitivity</code> switch to set the maximum thrust rate of sloth mode.</td>
 </tr>
 <tr>
-<td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
-<td>Transponder controls, <code>Toggle</code> turns on and off ship transponder while <code>Ping</code> will activate transponder for three seconds</td>
+<td><code>Aim</code></td>
+<td>Reduces the response time of key presses for pitch and yaw.</td>
+</tr>
+<tr>
+<td><code>Guides</code></td>
+<td>Activates rangefinders (except center one which can be activated separately). Can be used as guide lasers. <code>Red</code> warning lights show location of obstacles (left, right and centre).</td>
+</tr>
+<tr>
+<td><code>Range</code> &amp; <code>Distance</code></td>
+<td>Activates center rangefinder, with <code>Distance</code> showing distance to object.</td>
+</tr>
+<tr>
+<td><code>Material Scanner</code> &amp; <code>Materials</code></td>
+<td>Turns on the <a href="#ore-scanner">Ore Scanner</a> and shows results of scan.</td>
+</tr>
+<tr>
+<td><code>Approach</code>, <code>Collect</code>, <code>Mine</code>, <code>Mining Lasers</code>, <code>Eco</code>, <code>Laser Sweep Height</code> &amp; <code>Laser Sweep Depth</code></td>
+<td>Mining controls. See <a href="#mining">Mining</a>.</td>
 </tr>
 <tr>
 <td><code>Nav</code>, <code>Autopilot</code>, <code>Avoidance</code> &amp; <code>Target</code></td>
@@ -818,18 +943,6 @@
 <td><a href="https://github.com/pcbennion/starbase-navgrid">NavGrid</a> system, see <a href="#using-the-waypoint-system">Using the Waypoint System</a>.</td>
 </tr>
 <tr>
-<td><code>Tow Status</code>, <code>Tow Mass</code>, <code>Tow</code> &amp; <code>Auto Gen</code></td>
-<td>Towing controls, see <a href="#towing-ships">Towing ships</a>.</td>
-</tr>
-<tr>
-<td><code>Timer</code></td>
-<td>See <a href="#timer">Timer</a>.</td>
-</tr>
-<tr>
-<td><code>Odometer</code></td>
-<td>See <a href="#odometer">Odometer</a>.</td>
-</tr>
-<tr>
 <td><code>SafeZone</code></td>
 <td>Whether current location is in the safe zone.</td>
 </tr>
@@ -838,16 +951,12 @@
 <td>Current strength of ship. May fluctuate as ore crates are filled. Anything below 1.0 means ship is damaged.</td>
 </tr>
 <tr>
-<td><code>Canopy</code></td>
-<td>Open and closes the cockpit glass canopy.</td>
+<td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
+<td>Transponder controls, <code>Toggle</code> turns on and off ship transponder while <code>Ping</code> will activate transponder for three seconds</td>
 </tr>
 <tr>
-<td><code>Hatch</code></td>
-<td>Open and closes the hatch on top of the ship.</td>
-</tr>
-<tr>
-<td><code>Chair</code></td>
-<td>Spins the pilot chair between forward facing and backwards facing.</td>
+<td><code>Timer</code></td>
+<td>See <a href="#timer">Timer</a>.</td>
 </tr>
 </tbody>
 </table>
@@ -856,7 +965,7 @@
 <p><strong>NOTE:</strong> For safety, firing full braking thrust will deactivate <code>Cruise</code>.</p>
 </nord-banner>
 <h2><a id="using-the-waypoint-system" class="anchor" href="#using-the-waypoint-system" aria-hidden="true"></a>Using the Waypoint System</h2>
-<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/images/pilot_left_console.jpg" alt="Pilot Left Console"></p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/images/pilot_left_console.jpg" alt="Pilot Left Console"></p>
 <h3><a id="viewing-and-selecting-waypoints" class="anchor" href="#viewing-and-selecting-waypoints" aria-hidden="true"></a>Viewing and Selecting Waypoints</h3>
 <p>This uses the <a href="https://github.com/pcbennion/starbase-navgrid">NavGrid</a> system. Use the <code>Down</code> and <code>Up</code> waypoints selectors to select waypoint. The selected waypoint information is shown on <code>NavP</code> and <code>NavC</code> panels.</p>
 <p>On the pilot center console, <code>NavGrid</code> will show the compass towards the selected waypoint while <code>Attitude</code> will show the ship's pitch, heading and roll directions. <code>NavGrid</code> is best used while not moving.</p>
@@ -876,14 +985,27 @@
 </nord-banner>
 <p><code>Avoidance</code> will activate <code>Guides</code>. If the guides detect objects it will cut thrust and strafe up or down (will flash either the top or bottom <code>Blue</code> warning lights on the pilot center console according to the direction) while sounding an alarm (check game settings if you do not hear the alarm).
 It will also flash <code>Red</code> warning lights on the pilot center console according to the position of obstacle detected. If <code>Autopilot</code> is activated, it will readjust and continue its flight.</p>
-<p><code>Avoids</code> will show the counters for number of avoidances. The <code>Trip</code> counter can be reset by holding down the <code>Avoids</code> <code>Reset Trips</code> button.</p>
+<p><code>Avoids</code> will show the counters for number of avoidances. The <code>Trip</code> counter can be reset by clearing the panel value using the <code>U</code> tool.</p>
 <nord-banner variant="warning">
 <p><strong>NOTE:</strong> There is very limited coverage of range finders for the crash avoidance system. <strong>Use at your own risk!</strong></p>
 </nord-banner>
 <h2><a id="resetting-navigation" class="anchor" href="#resetting-navigation" aria-hidden="true"></a>Resetting Navigation</h2>
 <p>If ISAN or NavGrid is not working, it can be reset using the <code>Reset ISAN</code> button. Press once to take ISAN offline, then press again to reset.</p>
-<h3><a id="managing-power" class="anchor" href="#managing-power" aria-hidden="true"></a>Managing Power</h3>
-<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/images/pilot_right_console.jpg" alt="Pilot Right Console"></p>
+<p>For v1.0.2 and below, do this by using your universal tool on the ISAN panel on the pilot console and clearing the value of the <code>_</code> field.
+The first time will show ISAN as offline, repeat clearing the value again to reset ISAN and NavGrid.</p>
+<h2><a id="mining" class="anchor" href="#mining" aria-hidden="true"></a>Mining</h2>
+<p>To approach an asteroid, point the center range finder at an asteroid and activate <code>Approach</code>. Once in range (optimum range is 10 to 14m on <code>Distance</code>), activate <code>Mining Lasers</code> to turn on the mining lasers.
+<code>Laser Sweep Height</code> and <code>Laser Sweep Depth</code> will adjust sweeping distances of the lasers. <code>Eco</code> mode will only use the top two lasers to conserve power if needed.</p>
+<p><code>Mine</code> is a button which will activate automated mining. Point the center range finder at an asteroid and activate. It will activate <code>Material Scanner</code> and <code>Approach</code>, and once in range it will automatically activate <code>Lasers</code>.</p>
+<p><code>Collect</code> turns on the two ore collectors. Ore collectors automatically adjust to point towards objects detected by the center range finder.</p>
+<p>If batteries start running out of charge while mining, turn on <code>Min Gen</code>. Continous use of the lasers and collectors at the same time requires a <code>Min Generator Limit</code> of around 90%.</p>
+<nord-banner variant="warning">
+<p><strong>NOTE:</strong> For safety, lasers will turn off if the total fuel is less that 2,000 units.</p>
+</nord-banner>
+<h3><a id="ore-scanner" class="anchor" href="#ore-scanner" aria-hidden="true"></a>Ore Scanner</h3>
+<p>Activate using the <code>Material Scanner</code> button. The laser will try to adjust to point at the objects detected by the center range finder. Scan results will show on the <code>Materials</code> panel in number of stacks. It has a maximum range of 100m.</p>
+<h2><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h2>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/stocker/images/pilot_right_console.jpg" alt="Pilot Right Console"></p>
 <nord-table>
 <table>
 <thead>
@@ -894,32 +1016,8 @@ It will also flash <code>Red</code> warning lights on the pilot center console a
 </thead>
 <tbody>
 <tr>
-<td><code>Battery</code></td>
-<td>Shows current battery charge of the batteries, maximum of 10,000 units.</td>
-</tr>
-<tr>
-<td><code>Generator</code></td>
-<td>Current generator rate, maximum of 100%.</td>
-</tr>
-<tr>
-<td><code>Min Generator Limit</code> &amp; <code>Min Gen</code></td>
-<td>Toggle and sets minimum generator rate.</td>
-</tr>
-<tr>
-<td><code>Fuel Rod 1</code> to <code>Fuel Rod 20</code></td>
-<td>Fuel remaining on fuel rods in individual fuel chambers, maximum of 300,000 units for each.</td>
-</tr>
-<tr>
-<td><code>Shutdown</code></td>
-<td>Turns off fuel chambers.</td>
-</tr>
-<tr>
-<td><code>HeatTransferRate</code></td>
-<td>Current heat transfer rate of the heat sinks, maximum of 100%.</td>
-</tr>
-<tr>
 <td><code>Propellant</code></td>
-<td>Total propellant remaining in propellant tanks, maximum of 144,000,000 units.</td>
+<td>Total propellant remaining in propellant tanks, maximum of 70,000,000 units.</td>
 </tr>
 <tr>
 <td><code>PropTime</code></td>
@@ -931,68 +1029,89 @@ It will also flash <code>Red</code> warning lights on the pilot center console a
 </tr>
 <tr>
 <td><code>WithBackup</code></td>
-<td>Same as FuelTime but takes into account backup rods available. Use the switch for <code>Backup Rods</code> to set the number of backup rods available. As standard there are 12 extra rods.</td>
+<td>Same as FuelTime but takes into account backup rods available. Use the switch for <code>Backup Rods</code> to set the number of backup rods available. As standard there are 20 extra rods.</td>
+</tr>
+<tr>
+<td><code>Fuel Rod 1</code> to <code>Fuel Rod 12</code></td>
+<td>Fuel remaining on fuel rods in individual fuel chambers, maximum of 300,000 units for each.</td>
+</tr>
+<tr>
+<td><code>Generator</code></td>
+<td>Current generator rate, maximum of <code>Generator Limit</code>.</td>
+</tr>
+<tr>
+<td><code>Min Gen</code> &amp; <code>Min Generator Limit</code></td>
+<td>Toggle and sets minimum generator rate. See <a href="#managing-power">Managing Power</a>.</td>
+</tr>
+<tr>
+<td><code>Shutdown</code></td>
+<td>Will turn off all fuel chambers thus shutting down generators.</td>
+</tr>
+<tr>
+<td><code>Battery</code></td>
+<td>Shows current battery charge of the batteries, maximum of 10,000 units.</td>
+</tr>
+<tr>
+<td><code>HeatTransferRate</code></td>
+<td>Current heat transfer rate of the heat sinks, maximum of 100%.</td>
+</tr>
+<tr>
+<td><code>StoredHeat</code></td>
+<td>Current stored heat in the heat sinks, maximum of 15,000 units.</td>
+</tr>
+<tr>
+<td><code>Flow In</code> &amp; <code>Flow Out</code></td>
+<td>Toggle flow modes of resource bridges. See <a href="#refueling-propellant">Refueling Propellant</a>.</td>
+</tr>
+<tr>
+<td><code>Lights</code></td>
+<td>Turns on and off internal lights.</td>
+</tr>
+<tr>
+<td><code>Canopy</code></td>
+<td>Opens or closes glass canopy.</td>
+</tr>
+<tr>
+<td><code>Hatch</code></td>
+<td>Opens or closes ship entry hatch.</td>
+</tr>
+<tr>
+<td><code>Chair</code></td>
+<td>Rotates pilot chair.</td>
 </tr>
 </tbody>
 </table>
 </nord-table>
+<h3><a id="managing-power" class="anchor" href="#managing-power" aria-hidden="true"></a>Managing Power</h3>
 <p>By default the generator will only run and ramp up when the batteries need charging so there is minimum management needed. But you can set a minimum generate rate by setting the <code>Min Generator Limit</code> value using the switch for the minimum rate and turning on <code>Min Gen</code>.</p>
-<p><code>Shutdown</code> will turn off the fuel chambers.</p>
-<h3><a id="towing-ships" class="anchor" href="#towing-ships" aria-hidden="true"></a>Towing Ships</h3>
-<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fisher/images/pilot_back_console.jpg" alt="Pilot Back Console"></p>
-<nord-table>
-<table>
-<thead>
-<tr>
-<th>Interface</th>
-<th>Function</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>Tow Status</code></td>
-<td>Status of tow beam, <code>0</code> is off, <code>1</code> is on and <code>2</code> is locked on.</td>
-</tr>
-<tr>
-<td><code>Tow Mass</code></td>
-<td>Mass of locked on ship, in kilograms.</td>
-</tr>
-<tr>
-<td><code>Tow</code></td>
-<td>Activates the tow beam.</td>
-</tr>
-<tr>
-<td><code>Tow Lights</code></td>
-<td>Activates the red flashing lights at the bottom of the ship.</td>
-</tr>
-<tr>
-<td><code>Auto Gen</code></td>
-<td>Activates <code>Min Gen</code> with <code>Min Generator Rate</code> according to <code>Tow Mass</code>.</td>
-</tr>
-<tr>
-<td><code>BackRange</code> &amp; <code>Back Distance</code></td>
-<td>Activates the back facing rangefinders and displays the distance.</td>
-</tr>
-</tbody>
-</table>
-</nord-table>
-<p>The tow beam faces out the back of the ship so position the Fisher in front of, with the back facing the ship you wish to tow. Spin the <code>Chair</code> around to look out the back window and activate <code>Tow</code> to turn on the tow beam. Once the tow beam is locked on the ship, the <code>Tow Status</code> will be <code>2</code> and the mass of the locked ship will be shown as <code>Tow Mass</code> in kilograms.
-Activate <code>Auto Gen</code> which will then turn on <code>Min Gen</code> with a <code>Min Generator Rate</code> based off the <code>Tow Mass</code>. Wait till the generators reach the targeted rate before flying off.</p>
-<p>The Fisher has enough power generation to tow a ship of a mass of up to 20ktons or 20,000,000 kilograms. For large ships, it is recommended to turn on <code>Min Gen</code> to ramp up the generator before locking on and then activating <code>Auto Gen</code> once locked on to adjust the <code>Min Generator Rate</code> accordingly.</p>
-<nord-banner variant="info">
-<p><strong>TIP:</strong> Remember to turn off <code>Min Gen</code> after towing to save on fuel.</p>
-</nord-banner>
+<h3><a id="refueling-propellant" class="anchor" href="#refueling-propellant" aria-hidden="true"></a>Refueling Propellant</h3>
+<p>All four resource bridges can be used for refuelling propellant. To refuel from another ship, turn off <code>Flow Out</code> on the pilot right side console and leave <code>Flow In</code> turned on. Then connect a resource bridge to the other ship. To refuel another ship, do the opposite, <code>Flow Out</code> turned on and <code>Flow In</code> turned off.</p>
+<p>The two red propellant tanks behind the generators can also be used to refuel the ship. Connect the <code>Red</code> resource bridge to the <code>Green</code> resource bridge to transfer propellant.
+You can then unbolt the red tanks and craft refills for the tanks using ice and then bolt the tank back to the support. Rinse and repeat until full. The <code>Red</code> and <code>Green</code> buttons toggles the respective resource bridges.</p>
+<p>Remember to turn <code>Flow In</code> and <code>Flow Out</code> back on if you are using the Endo to collect ore via any of the ship's resource bridges.</p>
 <h2><a id="other-stuff" class="anchor" href="#other-stuff" aria-hidden="true"></a>Other Stuff</h2>
 <h3><a id="timer" class="anchor" href="#timer" aria-hidden="true"></a>Timer</h3>
-<p>On the pilot left console there is a <code>Timer</code> panel which acts as a timer. It will run when the ship is active and show total time in years, weeks, days, hours, minutes and seconds. To reset the timer, use your universal tool (<code>U</code> key) and clear the value of the <code>Timer</code> field.</p>
+<p>On the pilot center console there is a <code>Timer</code> panel which acts as a timer. It will run when the ship is active and show total time in years, weeks, days, hours, minutes and seconds. To reset the timer, use your universal tool (<code>U</code> key) and clear the value of the <code>Timer</code> field.</p>
 <h3><a id="odometer" class="anchor" href="#odometer" aria-hidden="true"></a>Odometer</h3>
-<p>On the pilot left console there is a <code>Odometer</code> panel which will keep track of the ship's estimated flight distance based on speed. To reset the trip odometer, use your universal tool (<code>U</code> key) and clear the value of the <code>Odometer</code> field.</p>
+<p>On the pilot right console there is a <code>Odometer</code> panel which will keep track of the ship's estimated flight distance based on speed. To reset the trip odometer, use your universal tool (<code>U</code> key) and clear the value of the <code>Odometer</code> field.</p>
 
   </nord-stack>
   
+    <nord-stack id="known-issues">
+      <h1><a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"></a>Known Issues</h1>
+<ul>
+<li>There is limited coverage of range finders for the crash avoidance system. <strong>Use at your own risk!</strong></li>
+<li>Autopilot doesn't seem to point ship directly to destination (a bit off), use in conjunction with NavGrid.</li>
+</ul>
+
+    </nord-stack>
+  
   <nord-stack id="faq">
     
-      <h1>Frequently Asked Questions</h1>
+      <h1><a id="frequently-asked-questions" class="anchor" href="#frequently-asked-questions" aria-hidden="true"></a>Frequently Asked Questions</h1>
+<h2><a id="why-does-navgrid-show-an-error" class="anchor" href="#why-does-navgrid-show-an-error" aria-hidden="true"></a>Why does NavGrid show an error?</h2>
+<p>This usually happens after travelling to the moon via the warp gate where ISAN is not available. After returning, this can be fixed by reseting ISAN.</p>
+
     
     <nord-banner>For more general questions, please check the FAQ <a href="/pages/faq">here</a>.</nord-banner>
   </nord-stack>
@@ -1000,20 +1119,62 @@ Activate <code>Auto Gen</code> which will then turn on <code>Min Gen</code> with
     <h1>Links</h1>
     <ul>
       
-        <li><a href="https://sb-creators.org/makers/Egomaniac/ship/%5BFREE%5D%20Fisher">Starbase Ship Shop Page</a></li>
+        <li><a href="https://sb-creators.org/makers/Egomaniac/ship/%5BFREE%5D%20Stocker">Starbase Ship Shop Page</a></li>
       
-        <li><a href="https://github.com/EGO-Tech/starbase-ships/tree/main/fisher">Ship GitHub Page</a></li>
+        <li><a href="https://github.com/EGO-Tech/starbase-ships/tree/main/stocker">Ship GitHub Page</a></li>
       
     </ul>
   </nord-stack>
   <nord-stack id="changelog">
     <h1><a id="changelog" class="anchor" href="#changelog" aria-hidden="true"></a>Changelog</h1>
-<h2><a id="v101-current---29122022" class="anchor" href="#v101-current---29122022" aria-hidden="true"></a>v1.0.1 (Current) - 29/12/2022</h2>
+<h2><a id="v112-current---29122022" class="anchor" href="#v112-current---29122022" aria-hidden="true"></a>v1.1.2 (Current) - 29/12/2022</h2>
 <ul>
 <li>Added Discord link to help chip</li>
 <li>Added cruise safety chip</li>
+<li>Added laser safety chip</li>
+<li>Added EGOTech logo decal</li>
+<li>Removed laser pulse function</li>
 </ul>
-<h2><a id="v100---10082022" class="anchor" href="#v100---10082022" aria-hidden="true"></a>v1.0.0 - 10/08/2022</h2>
+<h2><a id="v111---27052022" class="anchor" href="#v111---27052022" aria-hidden="true"></a>v1.1.1 - 27/05/2022</h2>
+<ul>
+<li>Replaced speedometer by MoriWatari with new speedometer</li>
+<li>Removed fast travel core</li>
+<li>Moved red tanks for easier access</li>
+<li>Added 16 extra ore crates</li>
+<li>Added eight extra small propellant tanks</li>
+<li>Removed four heat sinks</li>
+</ul>
+<h2><a id="v110-ship-shop-version---27052022" class="anchor" href="#v110-ship-shop-version---27052022" aria-hidden="true"></a>v1.1.0 (Ship Shop Version) - 27/05/2022</h2>
+<ul>
+<li>Painted thrusters black</li>
+<li>Painted emergency propellant tanks red</li>
+<li>Fixed typo in thruster name</li>
+<li>Added meter upgrade to basic crafting bench</li>
+<li>Added 14 heat sinks</li>
+<li>Reduced radiators to 6 bases and 12 extensions</li>
+<li>Replaced all <code>RadiationRate</code> panels with <code>HeatTransferRate</code></li>
+<li>Added <code>StoredHeat</code> panel</li>
+</ul>
+<h2><a id="v104---16022022" class="anchor" href="#v104---16022022" aria-hidden="true"></a>v1.0.4 - 16/02/2022</h2>
+<ul>
+<li>Fixed sweeping of bottom two lasers</li>
+<li>Switched lights from white to light blue for less glare</li>
+</ul>
+<h2><a id="v103---20122021" class="anchor" href="#v103---20122021" aria-hidden="true"></a>v1.0.3 - 20/12/2021</h2>
+<ul>
+<li>Added Reset ISAN button</li>
+</ul>
+<h2><a id="v102---17122021" class="anchor" href="#v102---17122021" aria-hidden="true"></a>v1.0.2 - 17/12/2021</h2>
+<ul>
+<li>Fixed labels for memory relays</li>
+<li>Painted a small plate black that wasn't painted by mistake</li>
+<li>Painted hardpoints of rangefinders and tools black</li>
+</ul>
+<h2><a id="v101---28102021" class="anchor" href="#v101---28102021" aria-hidden="true"></a>v1.0.1 - 28/10/2021</h2>
+<ul>
+<li>Fixed some broken cables on pilot left console</li>
+</ul>
+<h2><a id="v100---24102021" class="anchor" href="#v100---24102021" aria-hidden="true"></a>v1.0.0 - 24/10/2021</h2>
 <ul>
 <li>Initial release</li>
 </ul>
@@ -1023,8 +1184,164 @@ Activate <code>Auto Gen</code> which will then turn on <code>Min Gen</code> with
     <h1>Similar Ships</h1>
     <nord-stack direction="horizontal" wrap>
       
-        <nord-card class="ship-card ship-tugger" padding="none" style="width: 435px;">
-  <h1 slot="header">Tugger</h1>
+        <nord-card class="ship-card ship-piercer" padding="none" style="width: 435px;">
+  <h1 slot="header">Piercer</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+    <nord-badge variant="highlight">POPULAR</nord-badge>
+  
+  <nord-badge>v1.1.2</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/piercer/photos/20220225204743_1.jpg" alt="20220225204743_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Material Crates</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            342
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Mining Lasers</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            4
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Piercer is a 342 ore crate capacity mining ship with an automated rotating laser drill for mining operations.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#miner"><nord-badge variant="warning">Miner</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser Drill</nord-badge>
+  
+    <nord-badge variant="highlight">ISAN</nord-badge>
+  
+    <nord-badge variant="highlight">Auto Pilot</nord-badge>
+  
+    <nord-badge variant="highlight">Asteroid Avoidance</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/piercer/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+      
+        <nord-card class="ship-card ship-rigger" padding="none" style="width: 435px;">
+  <h1 slot="header">Rigger</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+    <nord-badge variant="highlight">POPULAR</nord-badge>
+  
+  <nord-badge>v1.2.3</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/rigger/photos/20210923110428_1.jpg" alt="20210923110428_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Material Crates</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            100
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Mining Lasers</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            2
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Rigger is a fast medium sized mining ship. Although it has a limited autopilot and crash avoidance systems, it is mainly designed to be used in the safe zone.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#miner"><nord-badge variant="warning">Miner</nord-badge></a>
+  
+    <a href="/#starter"><nord-badge variant="warning">Starter Ship</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">Rando Ship Shop</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
+  
+    <nord-badge variant="highlight">ISAN</nord-badge>
+  
+    <nord-badge variant="highlight">Auto Pilot</nord-badge>
+  
+    <nord-badge variant="highlight">Asteroid Avoidance</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/rigger/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+      
+        <nord-card class="ship-card ship-shifter" padding="none" style="width: 435px;">
+  <h1 slot="header">Shifter</h1>
   <span slot="header-end">
     <nord-stack direction="horizontal" gap="s">
   
@@ -1035,22 +1352,31 @@ Activate <code>Auto Gen</code> which will then turn on <code>Min Gen</code> with
   </span>
   <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
     
-    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/tugger/photos/20220313170411_1.jpg" alt="20220313170411_1.jpg" />
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/shifter/photos/20221126225543_1.jpg" alt="20221126225543_1.jpg" />
   </nord-stack>
   <nord-stack gap="none">
     
       <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
-        <nord-stack>Tow Capacity</nord-stack>
+        <nord-stack>Material Crates</nord-stack>
         <nord-stack style="text-align: right;" class="n-padding-ie-m">
           
-            7,500,000 kg
+            450
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Mining Lasers</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            8
           
         </nord-stack>
       </nord-stack>
     
   </nord-stack>
   <nord-stack class="n-padding-i-m n-padding-b-m">
-    <p>The Tugger is a small tug ship with enough power generation to tow a ship of up to 7,500,000kg at up to 50m/s. The pilot seat can be spun to face the back, looking out the back window for ease of locking on ships using the back facing tow beam.</p>
+    <p>The Shifter is a 450 ore crate capacity mining ship with two automated rotating laser drills for mining operations plus a spacious interior allowing for multi crew operations.</p>
   </nord-stack>
   <div slot="footer">
     <nord-stack direction="horizontal" gap="s" wrap >
@@ -1058,23 +1384,114 @@ Activate <code>Auto Gen</code> which will then turn on <code>Min Gen</code> with
     <nord-badge variant="success">Free</nord-badge>
   
   
-    <a href="/#salvager"><nord-badge variant="warning">Salvager</nord-badge></a>
+    <a href="/#miner"><nord-badge variant="warning">Miner</nord-badge></a>
   
+  
+    <nord-badge variant="highlight">Rando Ship Shop</nord-badge>
   
     <nord-badge variant="highlight">T2 Generators</nord-badge>
   
     <nord-badge variant="highlight">T2 Thrusters</nord-badge>
   
-    <nord-badge variant="highlight">Tow Beam</nord-badge>
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser Drill</nord-badge>
   
     <nord-badge variant="highlight">ISAN</nord-badge>
+  
+    <nord-badge variant="highlight">Auto Pilot</nord-badge>
+  
+    <nord-badge variant="highlight">Asteroid Avoidance</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Advanced Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
   
 </nord-stack>
 
   </div>
   <div slot="footer" class="n-margin-bs-l">
     <nord-stack>
-      <nord-button variant="primary" href="/ships/tugger/" expand>View</nord-button>
+      <nord-button variant="primary" href="/ships/shifter/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+      
+        <nord-card class="ship-card ship-piercer-x" padding="none" style="width: 435px;">
+  <h1 slot="header">Piercer X (Anorak Edition)</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.0.2</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/piercer/premium/photos/20221006153255_1.jpg" alt="20221006153255_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Material Crates</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            342
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Mining Lasers</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            4
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The premium version of the Piercer with T3 generators, fuel chambers, enhancers and thrusters.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="info">For Sale</nord-badge>
+    <nord-badge variant="info">500,000 Credits</nord-badge>
+  
+  
+    <a href="/#miner"><nord-badge variant="warning">Miner</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T3 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T3 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser</nord-badge>
+  
+    <nord-badge variant="highlight">Mining Laser Drill</nord-badge>
+  
+    <nord-badge variant="highlight">ISAN</nord-badge>
+  
+    <nord-badge variant="highlight">Auto Pilot</nord-badge>
+  
+    <nord-badge variant="highlight">Asteroid Avoidance</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+    <nord-badge variant="highlight">Tools Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/piercer-x/" expand>View</nord-button>
     </nord-stack>
   </div>
 </nord-card>
