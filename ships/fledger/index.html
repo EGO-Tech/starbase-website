@@ -1,0 +1,780 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Starbase Ships by EGOTech - Fledger</title>
+
+    <meta property="og:title" content="Starbase Ships by EGOTech - Fledger" />
+    
+      
+      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154127_1.jpg" />
+      <meta property="og:description" content="The Fledger is a starter ship that is targeted towards aspiring mechanics that want to learn about how ships work. It starts with the basic machinery but has plenty of space for upgrades, allowing the ship to grow as the player progresses. With an exposed frame, upgrades and repairs should be easier than most ships." />
+    
+
+    
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VCMHC5R"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HK9VCMHC5R');
+      </script>
+    
+
+    <link rel="icon" type="image/png" href="/images/logos/egotech_logo_dark_favicon.png">
+    <link rel="stylesheet" href="/css/nord.min.css">
+    <link rel="stylesheet" href="/css/nord-dark.css">
+    <link rel="stylesheet" href="/css/fonts/fonts.css">
+    <link rel="stylesheet" href="/css/splide.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/js/nord-components.js"></script>
+    <script src="/js/splide.min.js"></script>
+    <script src="/js/qs.js"></script>
+    <script src="/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      const gaEvent = (event, params) => {
+        if (window.gtag) gtag('event', event, params);
+      }
+    </script>
+    
+    <script>
+      window.ships = [{"name":"Clunker","types":[{"type":"hauler","order":2}],"saleType":"free","version":"1.0.2","slug":"clunker","tags":[{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"large-generator","label":"Large Generator"}],"popular":false,"webPath":"/ships/clunker"},{"name":"Fisher","types":[{"type":"salvager","order":2}],"saleType":"free","version":"1.0.1","slug":"fisher","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"tow-beam","label":"Tow Beam"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/fisher"},{"name":"Fledger","types":[{"type":"starter","order":2}],"saleType":"free","version":"1.0.1","slug":"fledger","tags":[{"id":"t1-generator","label":"T1 Generators"},{"id":"t1-thruster","label":"T1 Thrusters"},{"id":"basic-bench","label":"Basic Crafting Bench"}],"popular":false,"webPath":"/ships/fledger"},{"name":"Jabber","types":[{"type":"fighter","order":1}],"saleType":"free","version":"1.1.0","slug":"jabber","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"laser-cannon","label":"Laser Cannon"},{"id":"isan","label":"ISAN"}],"popular":false,"webPath":"/ships/jabber"},{"name":"Lugger","types":[{"type":"hauler","order":1}],"saleType":"free","version":"1.1.1","slug":"lugger","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/lugger"},{"name":"Quester","types":[{"type":"command-ship","order":1},{"type":"explorer","order":2}],"saleType":"free","version":"1.1.1","slug":"quester","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/quester"}];
+      window.shipTypes = {"list":[{"id":"miner","name":"Miner","label":"Miners"},{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners"},{"id":"starter","name":"Starter Ship","label":"Starter Ships"},{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers"},{"id":"hauler","name":"Hauler","label":"Haulers"},{"id":"salvager","name":"Salvager","label":"Salvagers"},{"id":"fighter","name":"Fighter","label":"Fighters"},{"id":"command-ship","name":"Command Ship","label":"Command Ships"},{"id":"transport","name":"Transport","label":"Transports"},{"id":"explorer","name":"Explorer","label":"Explorers"}],"byId":{"miner":{"id":"miner","name":"Miner","label":"Miners"},"surface-miner":{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners"},"starter":{"id":"starter","name":"Starter Ship","label":"Starter Ships"},"asteroid-hauler":{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers"},"hauler":{"id":"hauler","name":"Hauler","label":"Haulers"},"salvager":{"id":"salvager","name":"Salvager","label":"Salvagers"},"fighter":{"id":"fighter","name":"Fighter","label":"Fighters"},"command-ship":{"id":"command-ship","name":"Command Ship","label":"Command Ships"},"transport":{"id":"transport","name":"Transport","label":"Transports"},"explorer":{"id":"explorer","name":"Explorer","label":"Explorers"}}};
+    </script>
+  
+    
+    <script>
+      window.pages = [{"id":"commissions","label":"Ship Commissions","title":"Ship Commissions","slug":"commissions","webPath":"/pages/commissions"},{"id":"rentals","label":"Ship Rentals","title":"Ship Rentals","slug":"rentals","webPath":"/pages/rentals"},{"id":"faq","label":"FAQ","title":"Frequently Asked Questions","slug":"faq","webPath":"/pages/faq"}];
+    </script>
+  
+  </head>
+  <body class="n-reset">
+    <nord-command-menu></nord-command-menu>
+    <script>
+      const menu = document.querySelector("nord-command-menu");
+      menu.commands = ships.map((ship) => ({
+        id: ship.slug,
+        title: ship.name,
+        section: 'Ships',
+        keywords: `${ship.name} ${ship.saleType} ${ship.types.map(({ type }) => shipTypes.byId[type].label).join(' ')} ${ship.tags.map(({ label }) => label).join(' ')}`,
+        handler: () => window.location.href = ship.webPath,
+      })).concat(pages.map((page) => ({
+        id: page.id,
+        title: page.title,
+        section: 'Information',
+        keywords: `${page.id} ${page.label} ${page.title}`,
+        handler: () => window.location.href = page.webPath,
+      })));
+    </script>
+    <nord-layout padding="none" persist-nav-state sticky>
+      <nord-navigation slot="nav">
+        <nord-stack class="n-padding-be-l">
+          <nord-button class="search-button" variant="default" aria-describedby="nav-search" expand>
+            <i slot="start" class="fa-solid fa-magnifying-glass"></i>
+            <div style="text-align: left;">Search</div>
+          </nord-button>
+          <nord-tooltip id="nav-search">Shortcut: Ctrl+K</nord-tooltip>
+        </nord-stack>
+        <nord-nav-group heading="Ships For Sale">
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Free Ships">
+          
+            <nord-nav-item   href="/ships/clunker/">
+              Clunker
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/fisher/">
+              Fisher
+            </nord-nav-item>
+          
+            <nord-nav-item  active href="/ships/fledger/">
+              Fledger
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/jabber/">
+              Jabber
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/lugger/">
+              Lugger
+            </nord-nav-item>
+          
+            <nord-nav-item   href="/ships/quester/">
+              Quester
+            </nord-nav-item>
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Information">
+          
+            <nord-nav-item  href="/pages/commissions/">
+              Ship Commissions
+            </nord-nav-item>
+          
+            <nord-nav-item  href="/pages/rentals/">
+              Ship Rentals
+            </nord-nav-item>
+          
+            <nord-nav-item  href="/pages/faq/">
+              FAQ
+            </nord-nav-item>
+          
+        </nord-nav-group>
+      </nord-navigation>
+      <nord-header slot="header">
+        <nord-stack direction="horizontal" style="min-width: 550px; width: 550px;">
+          <a href="/">
+            <nord-avatar size="xl" src="/images/logos/egotech_logo_dark.png" name="EGOTech" variant="square">B</nord-avatar>
+          </a>
+          <h1>Starbase Ships by EGOTech</h1>
+        </nord-stack>
+      </nord-header>
+
+      
+<nord-header slot="header">
+  <nord-stack direction="horizontal" wrap>
+    <nord-button-group>
+      <nord-button href="#ship-photos" size="s" variant="default">Photos</nord-button>
+      <nord-button href="#description" size="s" variant="default">Features</nord-button>
+      
+        <nord-button href="#ship-videos" size="s" variant="default">Videos</nord-button>
+      
+      <nord-button href="#build-cost" size="s" variant="default">Build Cost</nord-button>
+      
+        <nord-button href="#download" size="s" variant="primary">Download</nord-button>
+      
+      <nord-button href="#usage" size="s" variant="default">Usage</nord-button>
+      
+      <nord-button href="#faq" size="s" variant="default">FAQ</nord-button>
+      <nord-button href="#ship-links" size="s" variant="default">Links</nord-button>
+      <nord-button href="#changelog" size="s" variant="default">Changelog</nord-button>
+      <nord-button href="#similar-ships" size="s" variant="default">Similar Ships</nord-button>
+  </nord-button-group>
+  </nord-stack>
+</nord-header>
+<nord-stack id="ship-page" gap="l" class="n-padding-i-l n-padding-b-l">
+  <nord-stack>
+    <h1 id="ship-name">
+      <span class="n-font-size-xxxl">Fledger</span>
+      <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.0.1</nord-badge>
+</nord-stack>
+
+    </h1>
+  </nord-stack>
+  <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/#starter"><nord-badge variant="warning">Starter Ship</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T1 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T1 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Basic Crafting Bench</nord-badge>
+  
+</nord-stack>
+
+  <nord-stack id="ship-photos" class="info-page">
+    <nord-card padding="none">
+      <section id="main-carousel" class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154127_1.jpg" alt="20221019154127_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154135_1.jpg" alt="20221019154135_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154158_1.jpg" alt="20221019154158_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154208_1.jpg" alt="20221019154208_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154224_1.jpg" alt="20221019154224_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154259_1.jpg" alt="20221019154259_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154315_1.jpg" alt="20221019154315_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154333_1.jpg" alt="20221019154333_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154503_1.jpg" alt="20221019154503_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019155942_1.jpg" alt="20221019155942_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019160833_1.jpg" alt="20221019160833_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019161140_1.jpg" alt="20221019161140_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019162159_1.jpg" alt="20221019162159_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019162541_1.jpg" alt="20221019162541_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019163402_1.jpg" alt="20221019163402_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019163539_1.jpg" alt="20221019163539_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019163844_1.jpg" alt="20221019163844_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019164254_1.jpg" alt="20221019164254_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019164539_1.jpg" alt="20221019164539_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019164736_1.jpg" alt="20221019164736_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019165249_1.jpg" alt="20221019165249_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019170012_1.jpg" alt="20221019170012_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019170209_1.jpg" alt="20221019170209_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019172415_1.jpg" alt="20221019172415_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019173055_1.jpg" alt="20221019173055_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019173138_1.jpg" alt="20221019173138_1.jpg" /></li>
+            
+          </ul>
+        </div>
+      </section>
+      <section id="thumbnail-carousel" class="splide" aria-label="Splide Basic HTML Example">
+        <div class="splide__track">
+          <ul class="splide__list">
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154127_1.jpg" alt="20221019154127_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154135_1.jpg" alt="20221019154135_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154158_1.jpg" alt="20221019154158_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154208_1.jpg" alt="20221019154208_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154224_1.jpg" alt="20221019154224_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154259_1.jpg" alt="20221019154259_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154315_1.jpg" alt="20221019154315_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154333_1.jpg" alt="20221019154333_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019154503_1.jpg" alt="20221019154503_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019155942_1.jpg" alt="20221019155942_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019160833_1.jpg" alt="20221019160833_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019161140_1.jpg" alt="20221019161140_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019162159_1.jpg" alt="20221019162159_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019162541_1.jpg" alt="20221019162541_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019163402_1.jpg" alt="20221019163402_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019163539_1.jpg" alt="20221019163539_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019163844_1.jpg" alt="20221019163844_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019164254_1.jpg" alt="20221019164254_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019164539_1.jpg" alt="20221019164539_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019164736_1.jpg" alt="20221019164736_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019165249_1.jpg" alt="20221019165249_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019170012_1.jpg" alt="20221019170012_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019170209_1.jpg" alt="20221019170209_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019172415_1.jpg" alt="20221019172415_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019173055_1.jpg" alt="20221019173055_1.jpg" /></li>
+            
+              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/photos/20221019173138_1.jpg" alt="20221019173138_1.jpg" /></li>
+            
+          </ul>
+        </div>
+      </section>
+      <script>
+        const main = new Splide('#main-carousel');
+        const thumbnails = new Splide('#thumbnail-carousel', {
+          fixedWidth: 200,
+          gap       : 0,
+          rewind    : true,
+          pagination: false,
+          isNavigation: true,
+          breakpoints: {
+            600: {
+              fixedWidth : 60,
+            },
+          },
+        });
+
+        main.sync( thumbnails );
+        main.mount();
+        thumbnails.mount();
+      </script>
+    </nord-card>
+  </nord-stack>
+  <nord-stack id="description" class="info-page">
+    <p>The Fledger is a starter ship that is targeted towards aspiring mechanics that want to learn about how ships work. It starts with the basic machinery but has plenty of space for upgrades, allowing the ship to grow as the player progresses. With an exposed frame, upgrades and repairs should be easier than most ships.</p>
+  </nord-stack>
+  <nord-stack id="features">
+    <h1><a id="features" class="anchor" href="#features" aria-hidden="true"></a>Features</h1>
+<ul>
+<li>36 ore crates with designated space for up to 148 crates</li>
+<li>Standard Cruise and Turtle function</li>
+<li>Two resource bridge</li>
+<li>Auto generator rate script</li>
+<li>12 T1 generators with four T1 fuel chambers and nine spare rods on racks</li>
+<li>Radiators and heat sink that provide more than adequate cooling</li>
+<li>Eight small tanks with 8,000,000 units of propellant</li>
+<li>24 batteries</li>
+<li>16 T1 triangle and 16 T1 box thrusters providing forward thrust</li>
+<li>Four T1 triangle thrusters providing braking thrust</li>
+<li>32 T1 maneuver thrusters</li>
+<li>Basic crafting bench with space for other benches</li>
+<li>Exposed frame for easy repairs</li>
+<li>Lots of extra hardpoints for tools and upgrades</li>
+<li>Plenty of space for extra machinery and devices</li>
+<li>Top speed of 140 m/s empty</li>
+</ul>
+
+    <nord-banner>
+      A premium version, the <a href="/ships/undefined/"></a> is available for purchase.
+    </nord-banner>
+  </nord-stack>
+  
+    <nord-stack id="ship-videos">
+      <h1>Videos</h1>
+      <nord-stack direction="horizontal">
+        
+          <nord-card padding="none" style="width: 560px">
+            <h1 slot="header">Starbase 1-50 (Playlist of live streams)</h1>
+            <div style=overflow:hidden;resize:none;max-width:100%;>
+              <div id=embed-google-map style="height:100%; width:100%;max-width:100%;">
+                <iframe src="https://www.youtube.com/embed/kGP1VFeL5Xw" width=560 height=315 frameborder=0 allowfullscreen> </iframe>
+              </div>
+            </div>
+            <small slot="footer">
+              Channel: <a href="https://www.youtube.com/@FarPointe">FarPointe</a>
+            </small>
+          </nord-card>
+        
+      </nord-stack>
+    </nord-stack>
+  
+  <nord-stack id="build-cost">
+    <h1>Build Cost</h1>
+    <nord-stack direction="horizontal">
+      <nord-card padding="none" style="width: 400px">
+        <h2 slot="header">Material Cost</h2>
+        <nord-table density="condensed">
+          <table style="width: 400px">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Material</th>
+                <th class="n-table-align-right">Volume (kv)</th>
+                <th class="n-table-align-right">Stacks</th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr class="">
+                  <td style="padding-right: 0">
+                    
+                      <div class="material-icon">
+                        <img src="/images/materials/ajatite.png" alt="Ajatite Ore" />
+                      </div>
+                    
+                  </td>
+                  <td>Ajatite Ore</td>
+                  <td class="n-table-align-right">6,443</td>
+                  <td class="n-table-align-right">3.7</td>
+                </tr>
+              
+                <tr class="">
+                  <td style="padding-right: 0">
+                    
+                      <div class="material-icon">
+                        <img src="/images/materials/bastium.png" alt="Bastium Ore" />
+                      </div>
+                    
+                  </td>
+                  <td>Bastium Ore</td>
+                  <td class="n-table-align-right">61,777</td>
+                  <td class="n-table-align-right">35.8</td>
+                </tr>
+              
+                <tr class="">
+                  <td style="padding-right: 0">
+                    
+                      <div class="material-icon">
+                        <img src="/images/materials/charodium.png" alt="Charodium Ore" />
+                      </div>
+                    
+                  </td>
+                  <td>Charodium Ore</td>
+                  <td class="n-table-align-right">34,265</td>
+                  <td class="n-table-align-right">19.8</td>
+                </tr>
+              
+                <tr class="">
+                  <td style="padding-right: 0">
+                    
+                      <div class="material-icon">
+                        <img src="/images/materials/ice.png" alt="Ice" />
+                      </div>
+                    
+                  </td>
+                  <td>Ice</td>
+                  <td class="n-table-align-right">8,000</td>
+                  <td class="n-table-align-right">4.6</td>
+                </tr>
+              
+                <tr class="">
+                  <td style="padding-right: 0">
+                    
+                      <div class="material-icon">
+                        <img src="/images/materials/nhurgite.png" alt="Nhurgite Crystal" />
+                      </div>
+                    
+                  </td>
+                  <td>Nhurgite Crystal</td>
+                  <td class="n-table-align-right">17,423</td>
+                  <td class="n-table-align-right">10.1</td>
+                </tr>
+              
+                <tr class="">
+                  <td style="padding-right: 0">
+                    
+                      <div class="material-icon">
+                        <img src="/images/materials/vokarium.png" alt="Vokarium Ore" />
+                      </div>
+                    
+                  </td>
+                  <td>Vokarium Ore</td>
+                  <td class="n-table-align-right">40,146</td>
+                  <td class="n-table-align-right">23.2</td>
+                </tr>
+              
+                <tr class="n-font-weight-strong n-color-surface-lowered">
+                  <td style="padding-right: 0">
+                    
+                  </td>
+                  <td>Total ore</td>
+                  <td class="n-table-align-right">168,054</td>
+                  <td class="n-table-align-right">97.3</td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </nord-table>
+      </nord-card>
+      <nord-card padding="none" style="width: 400px">
+        <h2 slot="header">Credits Cost</h2>
+        <nord-table density="condensed">
+          <table style="width: 400px">
+            <thead>
+              <tr>
+                <th></th>
+                <th class="n-table-align-right">Credits</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Assembly</td>
+                <td class="n-table-align-right">144,280</td>
+              </tr>
+              <tr>
+                <td>Manufacturing</td>
+                <td class="n-table-align-right">187,548</td>
+              </tr>
+              <tr class="n-font-weight-strong n-color-surface-lowered">
+                <td>Total</td>
+                <td class="n-table-align-right">331,828</td>
+              </tr>
+            </tbody>
+          </table>
+        </nord-table>
+        <nord-banner slot="footer">
+          <span style="text-wrap: wrap">
+            <strong>TIP:</strong>
+            <span>Crafting your own devices, especially crates, generators, thrusters, ship tools and weapons can drastically reduce assembly cost.</span>
+          </span>
+        </nord-banner>
+      </nord-card>
+    </nord-stack>
+  </nord-stack>
+  <nord-stack>
+    
+      <h1 id="download">Download Blueprint</h1>
+      <nord-button href="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/blueprints/fledger.fbe" variant="primary" onclick="gaEvent('download', { ship: 'Fledger', version: '1.0.1', download_ref: 'website' })">
+        <i slot="start" class="fa-solid fa-download n-color-text"></i>
+        Download v1.0.1 (current)
+      </nord-button>
+      <nord-card padding="none" style="width: 400px">
+        <h2 slot="header">All Blueprints</h2>
+        <nord-table density="condensed" striped>
+          <table style="width: 400px">
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              
+                <tr>
+                  <td>v1.0.1</td>
+                  <td>
+                    <nord-badge variant="warning">Current</nord-badge>
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/blueprints/fledger.fbe" onclick="gaEvent('download', { ship: 'Fledger', version: '1.0.1', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+                <tr>
+                  <td>v1.0.0</td>
+                  <td>
+                    
+                    
+                  </td>
+                  <td class="n-table-align-right">
+                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/blueprints/fledger_v1.0.0.fbe" onclick="gaEvent('download', { ship: 'Fledger', version: '1.0.0', download_ref: 'website' })">
+                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
+                      Download
+                    </nord-button>
+                  </td>
+                </tr>
+              
+            </tbody>
+          </table>
+        </nord-table>
+      </nord-card>
+    
+  </nord-stack>
+  <nord-stack id="usage" class="info-page">
+    <h1><a id="usage" class="anchor" href="#usage" aria-hidden="true"></a>Usage</h1>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/pilot_center_console.jpg" alt="Pilot Console"></p>
+<nord-table>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Cruise</code></td>
+<td>Activates cruise control, forward thrust will not reset to zero unless turned down.</td>
+</tr>
+<tr>
+<td><code>Turtle</code></td>
+<td>Activates turtle mode which sets forward thrust to a maximum limit of 20%.</td>
+</tr>
+<tr>
+<td><code>Transponder</code></td>
+<td>Turns on and off ship transponder</td>
+</tr>
+<tr>
+<td><code>StoredBatteryPower</code></td>
+<td>Shows current battery charge of the batteries, maximum of 10,000 units.</td>
+</tr>
+<tr>
+<td><code>GeneratorUnitRate</code></td>
+<td>Current generator rate, maximum of 100%.</td>
+</tr>
+<tr>
+<td><code>FuelChamberFuel</code></td>
+<td>Fuel remaining on fuel rods in fuel chambers, maximum of 300,000 units for each.</td>
+</tr>
+<tr>
+<td><code>GasNetworkStoredResource</code></td>
+<td>Total propellant remaining in propellant tanks, maximum of 8,000,000 units.</td>
+</tr>
+</tbody>
+</table>
+</nord-table>
+<p>Almost all devices are kept with default names and controls kept to a minimum intentionally.</p>
+<h2><a id="upgrading-the-ship" class="anchor" href="#upgrading-the-ship" aria-hidden="true"></a>Upgrading the Ship</h2>
+<p>The following are recommendations on how to add upgrades to the ship. However it is up to the owner how they want to do it, so be creative!</p>
+<h3><a id="cabling-piping-and-ducts" class="anchor" href="#cabling-piping-and-ducts" aria-hidden="true"></a>Cabling, Piping and Ducts</h3>
+<p>The ship is connected throughout on one network using ducts, with many redundant ducts. So running cable or pipe to any duct will connect the hardpoint or device to the the ship's network.</p>
+<h3><a id="adding-more-crates" class="anchor" href="#adding-more-crates" aria-hidden="true"></a>Adding More Crates</h3>
+<p>The beam structure of the ship allows for three rows of ore crates (two crates high) on each side of the ship. Snap the new crates to the piped and cabled ones at the back of the ship, bolt them in and you are good to go. There should be designated space for 148 crates but additional crates can be bolted to the frame. These additional crates will have to be cabled and piped separately.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/crates_upgrade.jpg" alt="Crates Upgrade"></p>
+<nord-banner variant="info">
+<p><strong>TIP:</strong> Make sure to add crates equally on both sides of the ship to maintain its balance.</p>
+</nord-banner>
+<h3><a id="adding-more-thrusters" class="anchor" href="#adding-more-thrusters" aria-hidden="true"></a>Adding More Thrusters</h3>
+<p>As you add more crates you will need to add more thrust to keep up with the ship's mass. This can be done by either adding more thrusters or if you can afford it, replacing existing thrusters with higher tier thrusters. If adding new thrusters, make sure to name the thrusters by using the universal tool (<code>U</code> key) on the thruster body and giving it a unique name.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/naming_thrusters.jpg" alt="Naming Thrusters"></p>
+<p>Then add the thruster name to the main flight computer (located behind the pilot seat) with the universal tool.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/main_flight_computer.jpg" alt="Main Flight Computer"></p>
+<p>If replacing existing thrusters, you can use the same name of the old ones and their names should already be in the main flight computer.</p>
+<p>You can also group thrusters together by giving it the same name, thruster should only be grouped if they are close together and firing in the same direction.</p>
+<p>Triangle thrusters are automatically grouped together if they are snapped together and only need to be connected by one hardpoint. Only the thruster connected to the hardpoint needs to be named.</p>
+<h4><a id="forward-thrusters" class="anchor" href="#forward-thrusters" aria-hidden="true"></a>Forward Thrusters</h4>
+<p>The easiest way to add more forward thrust is to bolt on additional triangle thrusters to existing ones. These should just work once bolted on.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/rear_triangle_thrusters.jpg" alt="Rear Triangle Thrusters"></p>
+<p>Additonally there are extra hardpoints available to bolt on box thrusters. Of course you can add your own hardpoints (remember to cable and pipe them) and thrusters as well. A fully upgraded rear thruster wall would look like below.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/rear_upgraded.jpg" alt="Fully Upgraded Rear Thrusters"></p>
+<h4><a id="brakingbackwards-thrusters" class="anchor" href="#brakingbackwards-thrusters" aria-hidden="true"></a>Braking/Backwards Thrusters</h4>
+<p>Again, the easiest way to upgrade is to bolt on additional triangle thrusters to existing ones.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/front_triangle_thrusters.jpg" alt="Front Triangle Thrusters"></p>
+<p>Additional triangle thrusters can also be added to hardpoints on each side of the ship. These need to be named the same as they are connected together.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/side_triangle_thrusters.jpg" alt="Side Triangle Thrusters"></p>
+<p>Instead of triangle thrusters, maneuver thursters can also be used on the side hardpoints. These can be named separately if you wish.</p>
+<h4><a id="maneuver-thrusters" class="anchor" href="#maneuver-thrusters" aria-hidden="true"></a>Maneuver Thrusters</h4>
+<p>On each of the eight corners of the ships, there are additional hardpoints to add maneuver thrusters. These thrusters should be grouped together so name them the same as the existing ones.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/maneuver_upgraded.jpg" alt="Maneuver Thrusters"></p>
+<h3><a id="adding-more-propellant" class="anchor" href="#adding-more-propellant" aria-hidden="true"></a>Adding More Propellant</h3>
+<p>There is designated space on both sides of the ship to add either add two small tanks or one medium tank. At least one support of each tank needs to be piped. Cables are optional.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/small_tanks.jpg" alt="Small Tanks">
+<img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/medium_tank.jpg" alt="Medium Tank"></p>
+<p>You can also always add tanks to any other space of the ship, just need to pipe the supports.</p>
+<h3><a id="adding-more-power" class="anchor" href="#adding-more-power" aria-hidden="true"></a>Adding More Power</h3>
+<p>The core of the ship is designed for the ship's generator block. There is plenty of space to add more generators and fuel chambers to the exisiting block. There is also enough space to  duplicate and mirror the generator block on the other side facing the back of the ship.
+If connected to the existing block, they should work as the block is already piped and cabled with sockets. Just remember to add enough heat sinks.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/generator_block.jpg" alt="Generator Block"></p>
+<p>If really needed additional generator blocks can be added to the top and bottom of the ship as well, under the radiators. These need to be cabled and piped separately. Additional power can also be done by replacing existing generators with tier three ones or enhanced using enhancers, however keep heat generation and coolling in mind.</p>
+<h3><a id="adding-more-backup-fuel-rods" class="anchor" href="#adding-more-backup-fuel-rods" aria-hidden="true"></a>Adding More Backup Fuel Rods</h3>
+<p>The designated space of fuel rods can hold up to 15 racks and rods. Feel free to add extra racks and rods to any other space you deem suitable.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/fuel_racks.jpg" alt="Fuel Racks"></p>
+<h3><a id="adding-more-radiators" class="anchor" href="#adding-more-radiators" aria-hidden="true"></a>Adding More Radiators</h3>
+<p>There are hardpoints designated for more radiators on the top and bottom of the ship.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/radiators_upgraded.jpg" alt="Radiators"></p>
+<h3><a id="adding-more-batteries" class="anchor" href="#adding-more-batteries" aria-hidden="true"></a>Adding More Batteries</h3>
+<p>Additonal batteries can be added to the existing battery blocks on each side of the ship. Batteries connect when snapped together so it should just work. Again, you can add batteries to any where you can find space, just remember to cable them.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/batteries_upgraded.jpg" alt="Battery Block"></p>
+<h3><a id="adding-other-benches" class="anchor" href="#adding-other-benches" aria-hidden="true"></a>Adding Other Benches</h3>
+<p>There is space designated for the two other benches next to the basic crafting bench.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/benches.jpg" alt="Benches"></p>
+<h3><a id="adding-ship-tools" class="anchor" href="#adding-ship-tools" aria-hidden="true"></a>Adding Ship Tools</h3>
+<p>There are plenty of hardpoints on the front as well as top and bottom of the ship to add any ship tools you need like mining lasers, ore collectors, material scanners, navigation receivers and others. All these hardpoints are already cabled and piped. Additionally the two hardpoints on either side of the cockpit has space for advanced turrets.</p>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/fledger/images/advanced_turret.jpg" alt="Advanced Turret"></p>
+<h3><a id="adding-ship-controls-and-yolol" class="anchor" href="#adding-ship-controls-and-yolol" aria-hidden="true"></a>Adding Ship Controls and YOLOL</h3>
+<p>The cockpit has control tables in the centre and either side of the pilot seat. Feel free to add any other displays or controls you need. YOLOL and memory racks behind the pilot seat have plenty of space to add chips.</p>
+<p>There is only a single YOLOL chip on the ships which will only ramp up the generators when needed.</p>
+<h3><a id="plating" class="anchor" href="#plating" aria-hidden="true"></a>Plating</h3>
+<p>The ship is intentionally left bare, but feel free to spruce up your ship with plates and decorative pieces. Have fun with it!</p>
+
+  </nord-stack>
+  
+  <nord-stack id="faq">
+    
+      <h1>Frequently Asked Questions</h1>
+    
+    <nord-banner>For more general questions, please check the FAQ <a href="/pages/faq">here</a>.</nord-banner>
+  </nord-stack>
+  <nord-stack id="ship-links">
+    <h1>Links</h1>
+    <ul>
+      
+        <li><a href="https://sb-creators.org/makers/Egomaniac/ship/%5BFREE%5D%20Fledger">Starbase Ship Shop Page</a></li>
+      
+        <li><a href="https://github.com/EGO-Tech/starbase-ships/tree/main/fledger">Ship GitHub Page</a></li>
+      
+    </ul>
+  </nord-stack>
+  <nord-stack id="changelog">
+    <h1><a id="changelog" class="anchor" href="#changelog" aria-hidden="true"></a>Changelog</h1>
+<h2><a id="v101-current---22102022" class="anchor" href="#v101-current---22102022" aria-hidden="true"></a>v1.0.1 (Current) - 22/10/2022</h2>
+<ul>
+<li>Fixed <code>Transponder</code> button on and off values</li>
+<li>Added missing beam at the back of the ship</li>
+</ul>
+<h2><a id="v100---19102022" class="anchor" href="#v100---19102022" aria-hidden="true"></a>v1.0.0 - 19/10/2022</h2>
+<ul>
+<li>Initial release</li>
+</ul>
+
+  </nord-stack>
+  <nord-stack id="similar-ships">
+    <h1>Similar Ships</h1>
+    <nord-stack direction="horizontal" wrap>
+      
+    </nord-stack>
+  </nord-stack>
+</nord-stack>
+
+
+      <nord-footer slot="footer" size="m">
+        <nord-stack gap="l">
+          <section class="n-grid-2">
+            <div>
+              <section class="n-grid-2 n-margin-be-xxl">
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    EGOTech
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-discord fa-xl fa-fw"></i>
+                    <a href="https://discord.gg/BKwVGvncmN">Discord</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-github fa-xl fa-fw"></i>
+                    <a href="https://github.com/EGO-Tech/starbase-ships">GitHub</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-youtube fa-xl fa-fw"></i>
+                    <a href="https://www.youtube.com/@ego-tech">YouTube</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-creative-commons-nc fa-xl fa-fw"></i>
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License</a>
+                  </nord-stack>
+                </nord-stack>
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    Starbase Game
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Starbase</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Frozenbyte</a>
+                  </nord-stack>
+                </nord-stack>
+              </section>
+            </div>
+            <div>
+              <p>Copyright <i class="fa-regular fa-copyright"></i> 2024 Vincent Teo</p>
+              <p>Built with <a href="https://www.11ty.dev/">11ty</a> and <a href="https://nordhealth.design/">Nord.</a></p>
+            </div>
+          </section>
+        </nord-stack>
+      </nord-footer>
+    </nord-layout>
+    <script>
+      document.querySelectorAll('.search-button')
+        .forEach((button) =>
+          button.addEventListener("click", () => {
+            menu.show();
+          })
+        );
+    </script>
+  </body>
+</html>
