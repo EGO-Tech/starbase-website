@@ -100,9 +100,11 @@ eleventyComputed:
     {% renderTemplate 'njk,md', ship %}
       {{ featureList.content | safe }}
     {% endrenderTemplate %}
-    <nord-banner>
-      A premium version, the <a href="{{ ('/ships/' + ship.premium.slug + '/') | url }}">{{ship.premium.name}}</a> is available for purchase.
-    </nord-banner>
+    {% if ship.premium %}
+      <nord-banner>
+        A premium version, the <a href="{{ ('/ships/' + ship.premium.slug + '/') | url }}">{{ship.premium.name}}</a> is available for purchase.
+      </nord-banner>
+    {% endif %}
   </nord-stack>
   {% if ship.videos.length %}
     <nord-stack id="ship-videos">
