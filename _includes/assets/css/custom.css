@@ -27,6 +27,7 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
 }
 
 #changelog,
+#faq,
 #features,
 #known-issues,
 #ship-links,
