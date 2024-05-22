@@ -1,7 +1,8 @@
 {
   "repo": {
     "owner": "EGO-Tech",
-    "name": "starbase-ships"
+    "name": "starbase-ships",
+    "ref": "main"
   },
   "googleCredentials": "credentials.json",
   "googleAnalytics": {
