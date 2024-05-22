@@ -12,6 +12,7 @@ process.env.NODE_ENV ??= 'development';
 const repoConfig = {
   owner: nconf.get('repo:owner'),
   repo: nconf.get('repo:name'),
+  ref: nconf.get('repo:ref'),
 };
 const octokit = new Octokit({ auth: nconf.get('repo:token') });
 
@@ -28,8 +29,14 @@ const extendShipContent = async (ship) => {
             ...repoConfig,
             path: path.join(ship.path, ship[field].path),
           });
-          ship[field].content =
-            '\n' + Buffer.from(content, 'base64').toString();
+          let contentString = Buffer.from(content, 'base64').toString();
+          if (repoConfig.ref !== 'main') {
+            contentString = contentString.replace(
+              /\/main\//g,
+              `/${repoConfig.ref}/`,
+            );
+          }
+          ship[field].content = '\n' + contentString;
         })(),
     ),
   );

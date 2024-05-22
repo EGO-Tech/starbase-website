@@ -145,6 +145,16 @@ module.exports = async (data) => {
       .reject(({ weight }) => weight < 8)
       .slice(0, 4)
       .value();
+
+    const ref = nconf.get('repo:ref');
+    if (ref !== 'main') {
+      _.each(ship.photos, (photo) => {
+        photo.url = photo.url.replace(/\/main\//, `/${ref}/`);
+      });
+      _.each(ship.blueprints, (blueprint) => {
+        blueprint.url = blueprint.url.replace(/\/main\//, `/${ref}/`);
+      });
+    }
   });
 
   return {
