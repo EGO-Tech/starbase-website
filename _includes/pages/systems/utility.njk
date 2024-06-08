@@ -1,0 +1,54 @@
+<nord-stack gap="l" class="info-page n-padding-i-l n-padding-b-l">
+  <h1>Utility Systems</h1>
+
+  <h2 id="timer">Timer</h2>
+
+  <p>
+    <img src="{{ ('/images/systems/timer.png') | url }}" alt="Timer Panel" style="height: 236px; display: inline-block;" />
+    <img src="{{ ('/images/systems/timer-clear.png') | url }}" alt="Odometer Panel" style="height: 236px; display: inline-block;" />
+  </p>
+  <p>
+    A <code>Timer</code> panel which acts as a timer and will run when the ship is active. It will show the total time in years, weeks, days, hours, minutes and seconds.
+  </p>
+  <p>
+    <img src="{{ ('/images/systems/hold-to-reset.png') | url }}" alt="Hold to Reset Panel" />
+  </p>
+  <p>
+    There are two ways to reset the timer:
+    <ul>
+      <li>Hold down the <code>Timer</code> button under the <code>Hold to Reset</code> panel.</li>
+      <li>If no such panel is available, use your universal tool (<code>U</code> key) and clear the value of the <code>Timer</code> field.</li>
+    </ul>
+  </p>
+
+  <nord-banner variant="warning">
+    <strong>NOTE:</strong> Repairing the ship at the hanger hall will reset the timer to the point the blueprint was saved.
+  </nord-banner>
+
+  <h2 id="odometer">Odometer</h2>
+
+  <p>
+    <img src="{{ ('/images/systems/odometer.png') | url }}" alt="Odometer Panel" style="height: 234px; display: inline-block;" />
+    <img src="{{ ('/images/systems/odometer-clear.png') | url }}" alt="Odometer Panel" style="height: 234px; display: inline-block;" />
+  </p>
+  <p>
+    A <code>Odometer</code> panel which will keep track of the ship's estimated flight distance in kilometers based on ship's speed.
+    Two distances are recorded, lifetime (top, cannot be reset) and trip distances (bottom, can be reset).
+  </p>
+  <p>
+    <img src="{{ ('/images/systems/hold-to-reset.png') | url }}" alt="Hold to Reset Panel" />
+  </p>
+  <p>
+  <p>
+    There are two ways to reset the odometer <strong>trip</strong> distance:
+    <ul>
+      <li>Hold down the <code>Odometer</code> button under the <code>Hold to Reset</code> panel.</li>
+      <li>If no such panel is available, use your universal tool (<code>U</code> key) and clear the value of the <code>Odometer</code> field.</li>
+    </ul>
+  </p>
+
+  <nord-banner variant="warning">
+    <strong>NOTE:</strong> Repairing the ship at the hanger hall will reset the odometer to the point the blueprint was saved.
+  </nord-banner>
+
+</nord-stack>

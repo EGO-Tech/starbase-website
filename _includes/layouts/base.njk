@@ -67,7 +67,7 @@ title: Starbase Ships by EGOTech
         id: page.id,
         title: page.title,
         section: 'Information',
-        keywords: `${page.id} ${page.label} ${page.title}`,
+        keywords: `${page.id} ${page.label} ${page.title} ${page.keywords}`,
         handler: () => window.location.href = page.webPath,
       })));
     </script>
@@ -96,9 +96,22 @@ title: Starbase Ships by EGOTech
         </nord-nav-group>
         <nord-nav-group heading="Information">
           {% for pge in pages.list %}
-            <nord-nav-item {% if pge.id === pg.id %}active{% endif %} href="{{ ('/pages/' + pge.slug + '/') | url }}">
-              {{pge.label}}
-            </nord-nav-item>
+            {% if pge.subPages %}
+              <nord-nav-item>
+                {{pge.label}}
+                <nord-nav-group slot="subnav">
+                  {% for subpage in pge.subPages %}
+                    <nord-nav-item {% if subpage.id === pg.id %}active{% endif %} href="{{ ('/pages/' + subpage.slug + '/') | url }}">
+                      {{subpage.label}}
+                    </nord-nav-item>
+                  {% endfor %}
+                </nord-nav-group>
+              </nord-nav-item>
+            {% else %}
+              <nord-nav-item {% if pge.id === pg.id %}active{% endif %} href="{{ ('/pages/' + pge.slug + '/') | url }}">
+                {{pge.label}}
+              </nord-nav-item>
+            {% endif %}
           {% endfor %}
         </nord-nav-group>
       </nord-navigation>
