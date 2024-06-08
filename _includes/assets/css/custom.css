@@ -26,6 +26,7 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
   padding-top: 60px;
 }
 
+.info-page,
 #changelog,
 #faq,
 #features,

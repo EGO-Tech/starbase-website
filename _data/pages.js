@@ -2,6 +2,20 @@ const _ = require('lodash');
 
 const pages = [
   {
+    id: 'systems',
+    label: 'Ship Systems',
+    title: 'Ship Systems',
+    subPages: [
+      {
+        id: 'systems/utility',
+        label: 'Utility Systems',
+        title: 'Utility Systems',
+        slug: 'systems/utility',
+        keywords: 'timer odometer',
+      },
+    ],
+  },
+  {
     id: 'commissions',
     label: 'Ship Commissions',
     title: 'Ship Commissions',
@@ -22,5 +36,12 @@ module.exports = ({ pathPrefix }) => {
       page.webPath = `${pathPrefix}pages/${page.slug}`;
       return page;
     }),
+    full: _(pages)
+      .flatMap((page) => page.subPages || [page])
+      .map((page) => {
+        page.webPath = `${pathPrefix}pages/${page.slug}`;
+        return page;
+      })
+      .value(),
   };
 };
