@@ -7,11 +7,18 @@ const pages = [
     title: 'Ship Systems',
     subPages: [
       {
+        id: 'systems/propellant',
+        label: 'Propellant Systems',
+        title: 'Propellant Systems',
+        slug: 'systems/propellant',
+        keywords: 'refill propellant resource bridge flow in out proptime',
+      },
+      {
         id: 'systems/utility',
         label: 'Utility Systems',
         title: 'Utility Systems',
         slug: 'systems/utility',
-        keywords: 'timer odometer',
+        keywords: 'timer odometer transponder ping',
       },
     ],
   },
