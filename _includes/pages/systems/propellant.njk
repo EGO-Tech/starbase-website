@@ -1,0 +1,86 @@
+<nord-stack gap="l" class="info-page n-padding-i-l n-padding-b-l">
+  <h1 id="propellant">Propellant Systems</h1>
+
+  <p>
+    <img src="{{ ('/images/systems/propellant.png') | url }}" alt="Propellant & PropTime Panels" />
+  </p>
+  <p>
+    The <code>Propellant</code> panel shows the current propellant on the ship.
+    The <code>PropTime</code> panel shows the remaing time and distance (in kilometers) based on current propellant and ship speed.
+  </p>
+
+  <h1 id="refilling-propellant">Refilling Propellant</h1>
+
+  <p>There are a few ways to refill the propellant for ships.</p>
+
+  <h2>Developer Stations</h2>
+
+  <h3>At Space Ship Designer Repair Terminals</h3>
+
+  <p>
+    <img src="{{ ('/images/systems/ssc.jpg') | url }}" alt="Space Ship Designer Building" />
+  </p>
+  <p>
+    Propellant can be refilled at Space Ship Designer by reparing ships at repair terminals that are located in the Space Ship Designer buildings (pictured above).
+    These buildings can be found in most but not all developer stations like all the Origin Stations, Markka, Arma, Moon City, Far Belt Outpost and others.
+  </p>
+  <p>
+    Inside these buildings, there is are repair terminals where you can repair ships that are spawned at the hanger terminals.
+    Repairing the ship will refill both fuel and propellant of the ship. Ice for propellant and Nhurgite (T1)/Exorium (T2) for fuel is required.
+  </p>
+  <p>
+    All players should have access to these terminals.
+  </p>
+
+  <h3>At Ore Towers or Refill Stations</h3>
+
+  <p>
+    At ore towers or refill stations at Origin stations have resource bridges that you can connect to your ship via the resource bridge on your ship.
+    After connecting you can buy propellant at the terminals.
+  </p>
+  <p>
+    All players should have access to these terminals.
+  </p>
+
+  <h2>At Player Stations or Capital Ships</h2>
+
+  <p>
+    Similarly to repairing ships at developer stations, it is also possible to repair ships using hanger halls on player stations and capital ships.
+    Repairing the ship will refill both fuel and propellant of the ship. Ice for propellant and Nhurgite (T1)/Exorium (T2) for fuel is required.
+  </p>
+  <p>
+    Players require hanger hall permissions for the station or capital ship to be able to use these halls.
+  </p>
+
+  <h2>From Another Ship</h2>
+
+  <p>
+    <img src="{{ ('/images/systems/resource-bridges.png') | url }}" alt="Resource Bridges Panel" />
+  </p>
+  <p>
+    Resource bridges can be used for refilling propellant of the ship. To refuel from another ship, turn off <code>Flow Out</code> on the <code>Resource Bridges</code> panel
+    and leave <code>Flow In</code> turned on. Then connect a resource bridge to the other ship and the propellant will slowly transfer from the other ship to the ship.
+  </p>
+  <p>
+    To refill another ship, do the opposite with <code>Flow Out</code> turned on and <code>Flow In</code> turned off.
+  </p>
+  <p>
+    After refilling, remember to turn <code>Flow In</code> and <code>Flow Out</code> back on if you are using the Endo to collect ore via any of the ship's resource bridges.
+  </p>
+
+  <nord-banner variant="info">
+    <strong>NOTE:</strong> Some ships do not have the <code>Resource Bridges</code> panel, you can use the your universal tool (<code>U</code> key) on the resource bridge to change the <code>FlowIn</code> and <code>FlowOut</code> manually.
+  </nord-banner>
+
+  <h2>By Crafting Refills</h2>
+
+  <p>
+    If access is available to the propellant tanks on the ship, you can unbolt the tanks from their supports using the bolt tool and then use the tanks to craft refills using the crafting menu.
+    Crafting propellant refills for the tanks requires a basic crafting bench nearby with meter upgrade (for medium tanks) or meter upgrade (for large tanks).
+    After crafting refills, you can then bolt back the tanks to their supports.
+  </p>
+
+  <nord-banner variant="warning">
+    <strong>NOTE:</strong> Unbolting tanks can sometimes break pipe and/or cable connections to their supports.
+  </nord-banner>
+</nord-stack>
