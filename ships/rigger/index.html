@@ -440,7 +440,7 @@ The Rigger (v1.2.0) is also available to buy in game at Hangar Showroom 2 of Ran
 <li>Four T2 triangle thrusters providing braking thrust</li>
 <li>40 T2 maneuver thrusters with plenty of space for more</li>
 <li>Basic crafting bench to craft refills (will need to bolt own meter upgrade for T2 refills)</li>
-<li>Extra small propellant tank with its own resource bridge for emergency refueling</li>
+<li>Extra small propellant tank with its own resource bridge for emergency refilling</li>
 <li>Totally unnecessary amounts of extra hardpoints (all cabled and piped) all over the ship</li>
 <li><a href="https://github.com/Archaegeo/Starbase/tree/45a9bb464cb71d7de7a214f8e665111d6b2b5989/ISAN-Waypoint%20System">ISAN Quad Waypoint System by Archaegeo</a> with custom interface that supports 18 waypoints</li>
 <li><a href="https://github.com/fixerid/sb-projects/tree/main/NavCas">NavCas (Autopilot and Crash Avoidance System) by fixerid</a>, customised to integrate with ISAN Waypoint System, running on separate set of  three ISAN Monos</li>
@@ -965,7 +965,7 @@ The Rigger (v1.2.0) is also available to buy in game at Hangar Showroom 2 of Ran
 </nord-banner>
 <h3><a id="ore-scanner" class="anchor" href="#ore-scanner" aria-hidden="true"></a>Ore Scanner</h3>
 <p>Activate using the <code>Scanner</code> button. The laser will try to adjust to point at the objects detected by the center range finder. Scan results will show on the <code>Scan</code> panel in number of stacks. It has a maximum range of 100m.</p>
-<h2><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h2>
+<h2><a id="managing-power-fuel-and-propellant" class="anchor" href="#managing-power-fuel-and-propellant" aria-hidden="true"></a>Managing Power, Fuel and Propellant</h2>
 <p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/rigger/images/pilot_right_console.jpg" alt="Pilot Right Console"></p>
 <nord-table>
 <table>
@@ -986,7 +986,7 @@ The Rigger (v1.2.0) is also available to buy in game at Hangar Showroom 2 of Ran
 </tr>
 <tr>
 <td><code>Min Generator Limit</code> &amp; <code>Min Gen</code></td>
-<td>Toggle and sets minimum generator rate. See <a href="#managing-power">Managing Power</a>.</td>
+<td>Toggle and sets minimum generator rate. See <a href="#managing-power-and-fuel">Managing Power and Fuel</a>.</td>
 </tr>
 <tr>
 <td><code>HeatTransferRate</code></td>
@@ -1022,7 +1022,7 @@ The Rigger (v1.2.0) is also available to buy in game at Hangar Showroom 2 of Ran
 </tr>
 <tr>
 <td><code>FlowIn</code> &amp; <code>FlowOut</code></td>
-<td>Toggle flow modes of resource bridges. See <a href="#refueling-propellant">Refueling Propellant</a>.</td>
+<td>Toggle flow modes of resource bridges. See <a href="#refilling-propellant">Refilling Propellant</a>.</td>
 </tr>
 <tr>
 <td><code>Lights</code></td>
@@ -1052,13 +1052,11 @@ The Rigger (v1.2.0) is also available to buy in game at Hangar Showroom 2 of Ran
 </table>
 </nord-table>
 <p>*ISAN speed is normally quite conservative and not 100% accurate.</p>
-<h3><a id="managing-power" class="anchor" href="#managing-power" aria-hidden="true"></a>Managing Power</h3>
+<h3><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h3>
 <p>By default the generator will only run and ramp up when the batteries need charging so there is minimum management needed. But you can set a minimum generate rate by setting the <code>Min Generator Limit</code> value using the switch for the minimum rate and turning on <code>Min Gen</code>.</p>
-<h3><a id="refueling-propellant" class="anchor" href="#refueling-propellant" aria-hidden="true"></a>Refueling Propellant</h3>
-<p>All four resource bridges can be used for refuelling propellant. To refuel from another ship, turn off <code>FlowOut</code> on the pilot right side console and leave <code>FlowIn</code> turned on. Then connect a resource bridge to the other ship. To refuel another ship, do the opposite, <code>FlowOut</code> turned on and <code>FlowIn</code> turned off.</p>
-<p>The small propellant tank above the crafting bench can also be used to refuel the ship. Turn off <code>FlowOut</code> and connect the tank's resource bridge to any of the ship's resource bridges, this will transfer the propellant from the tank to the ship. You can then unbolt the tank and craft refills for the tank using ice and then bolt the tank back to the support. Rinse and repeat until full.</p>
-<p>Remember to turn <code>FlowIn</code> and <code>FlowOut</code> back on if you are using the Endo to collect ore via any of the ship's resource bridges.</p>
-<p>If for some reason you need access to the ship's internal tanks, you can unbolt the grates on top of the ship which are marked with circular decals. This will give access to <em>some</em> tanks.</p>
+<h3><a id="refilling-propellant" class="anchor" href="#refilling-propellant" aria-hidden="true"></a>Refilling Propellant</h3>
+<p>See <a href="https://starbase.egotech.space/pages/systems/propellant/">Propellant Systems</a> on how to refill propellant.</p>
+<p>The small propellant tank above the crafting bench can also be used to refill the ship. Turn off <code>FlowOut</code> and connect the tank's resource bridge to any of the ship's resource bridges, this will transfer the propellant from the tank to the ship. You can then unbolt the tank and craft refills for the tank using ice and then bolt the tank back to the support. Rinse and repeat until full.</p>
 
   </nord-stack>
   

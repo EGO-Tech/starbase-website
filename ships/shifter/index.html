@@ -538,7 +538,7 @@ The Shifter is also available to buy in game at Central Showroom of Rando 1 Ship
 <li>48 T2 triangle thrusters providing braking thrust</li>
 <li>Eight T2 maneuver and 72 T2 triangle thrusters for maneuvers</li>
 <li>Basic crafting bench to craft refills with meter upgrade plus the other two benches</li>
-<li>Extra two small propellant tank with its own resource bridge for emergency refueling</li>
+<li>Extra two small propellant tank with its own resource bridge for emergency refilling</li>
 <li>Two extra hardpoints (all cabled and piped)</li>
 <li><a href="https://github.com/pcbennion/starbase-navgrid">NavGrid by StandPeter</a></li>
 <li><a href="https://github.com/fixerid/sb-projects/tree/main/NavCas">NavCas by fixerid</a>, using custom avoidance system and ISAN 3 in 1 from <a href="https://gitlab.com/Firestar99/yolol/-/blob/master/src/compass/README.md">Compass by Firestar99</a>, with ability to load target from NavGrid</li>
@@ -1110,7 +1110,7 @@ The first time will show ISAN as offline, repeat clearing the value again to res
 </nord-banner>
 <h3><a id="ore-scanner" class="anchor" href="#ore-scanner" aria-hidden="true"></a>Ore Scanner</h3>
 <p>Activate using the <code>Material Scanner</code> button. The laser will try to adjust to point at the objects detected by the center range finder. Scan results will show on the <code>Materials</code> panel in number of stacks. It has a maximum range of 100m.</p>
-<h2><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h2>
+<h2><a id="managing-power-fuel-and-propellant" class="anchor" href="#managing-power-fuel-and-propellant" aria-hidden="true"></a>Managing Power, Fuel and Propellant</h2>
 <p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/shifter/images/pilot_right_console.jpg" alt="Pilot Right Console"></p>
 <nord-table>
 <table>
@@ -1147,7 +1147,7 @@ The first time will show ISAN as offline, repeat clearing the value again to res
 </tr>
 <tr>
 <td><code>Min Gen</code> &amp; <code>Min Generator Limit</code></td>
-<td>Toggle and sets minimum generator rate. See <a href="#managing-power">Managing Power</a>.</td>
+<td>Toggle and sets minimum generator rate. See <a href="#managing-power-and-fuel">Managing Power and Fuel</a>.</td>
 </tr>
 <tr>
 <td><code>Shutdown</code></td>
@@ -1167,7 +1167,7 @@ The first time will show ISAN as offline, repeat clearing the value again to res
 </tr>
 <tr>
 <td><code>Flow In</code> &amp; <code>Flow Out</code></td>
-<td>Toggle flow modes of resource bridges. See <a href="#refueling-propellant">Refueling Propellant</a>.</td>
+<td>Toggle flow modes of resource bridges. See <a href="#refilling-propellant">Refilling Propellant</a>.</td>
 </tr>
 <tr>
 <td><code>Lights</code></td>
@@ -1180,13 +1180,12 @@ The first time will show ISAN as offline, repeat clearing the value again to res
 </tbody>
 </table>
 </nord-table>
-<h3><a id="managing-power" class="anchor" href="#managing-power" aria-hidden="true"></a>Managing Power</h3>
+<h3><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h3>
 <p>By default the generator will only run and ramp up when the batteries need charging so there is minimum management needed. But you can set a minimum generate rate by setting the <code>Min Generator Limit</code> value using the switch for the minimum rate and turning on <code>Min Gen</code>.</p>
-<h3><a id="refueling-propellant" class="anchor" href="#refueling-propellant" aria-hidden="true"></a>Refueling Propellant</h3>
-<p>All four resource bridges can be used for refuelling propellant. To refuel from another ship, turn off <code>Flow Out</code> on the pilot right side console and leave <code>Flow In</code> turned on. Then connect a resource bridge to the other ship. To refuel another ship, do the opposite, <code>Flow Out</code> turned on and <code>Flow In</code> turned off.</p>
-<p>The two red propellant tanks on the bottom level at the back of ship can also be used to refuel the ship. Connect the <code>Red</code> resource bridge to the <code>Green</code> resource bridge to transfer propellant.
+<h3><a id="refilling-propellant" class="anchor" href="#refilling-propellant" aria-hidden="true"></a>Refilling Propellant</h3>
+<p>See <a href="https://starbase.egotech.space/pages/systems/propellant/">Propellant Systems</a> on how to refill propellant.</p>
+<p>The two red propellant tanks on the bottom level at the back of ship can also be used to refill the ship. Connect the <code>Red</code> resource bridge to the <code>Green</code> resource bridge to transfer propellant.
 You can then unbolt the red tanks and craft refills for the tanks using ice and then bolt the tank back to the support. Rinse and repeat until full. The <code>Red</code> and <code>Green</code> buttons toggles the respective resource bridges.</p>
-<p>Remember to turn <code>Flow In</code> and <code>Flow Out</code> back on if you are using the Endo to collect ore via any of the ship's resource bridges.</p>
 
   </nord-stack>
   
