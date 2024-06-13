@@ -1,0 +1,107 @@
+<nord-stack gap="l" class="info-page n-padding-i-l n-padding-b-l">
+  <h1 id="power">Power and Fuel Systems</h1>
+
+  <p>
+    <img src="{{ ('/images/systems/fuel_rods.png') | url }}" alt="Fuel Rod Panels" />
+  </p>
+  <p>
+    The <code>Fuel Rod</code> panels shows the current fuel level for each rod in each fuel chamber of the ship. The maximum for each rod is 300,000 units.
+  </p>
+
+  <p>
+    <img src="{{ ('/images/systems/fueltime.png') | url }}" alt="FuelTime and Backup Rods Panels" />
+  </p>
+  <p>
+    The <code>FuelTime</code> panel shows the remaing time and distance (in kilometers) based on current fuel and current ship speed.
+  </p>
+  <p>
+    The <code>WithBackup</code> panel shows the remaing time and distance (in kilometers) based on current fuel plus any backup fuel rods available
+    and current ship speed. The number of available backup fuel rods can be adjusted using the <code>BackupRods</code> panel as they are used up.
+  </p>
+
+  <nord-banner variant="info">
+    Usually ships have two backup fuel rods per fuel chamber but some ships may only have one or none. Check the ship details for the exact number.
+  </nord-banner>
+
+  <h1 id="managing-power">Managing Power</h1>
+
+  <p>
+    <img src="{{ ('/images/systems/generator.png') | url }}" alt="Generator and Battery Panels" />
+  </p>
+  <p>
+    The <code>Generator</code> panel shows the current generator level (percent) used to generate power for the ship.
+    The <code>Battery</code> panel shows the current battery level of the batteries on the ship. The maximum level is 10,000 units.
+  </p>
+
+  <h2>Minimum Generator Rate</h2>
+
+  <p>
+    <img src="{{ ('/images/systems/min_gen.png') | url }}" alt="Min Generator Rate Panel, Min Gen Button and Shutdown Button" />
+  </p>
+  <p>
+    By default the generator will only run and ramp up when the batteries need charging so there is minimum management needed.
+    But you can set a minimum generate rate by setting the <code>Min Generator Rate</code> value on the <code>Min Generator Rate</code> panel
+    and then turning on <code>Min Gen</code>. The generator will run at this minimum level until <code>Min Gen</code> is turned off.
+  </p>
+  <p>
+    <code>Min Gen</code> is usually only needed when you want to guarantee power while using ship tools like mining lasers or towing beams.
+  </p>
+
+  <nord-banner variant="warning">
+    <strong>NOTE:</strong> With <code>Min Gen</code> running, power is wasted if it is not being used so turn it off when not needed to save fuel.
+  </nord-banner>
+
+  <h2>Shutdown</h2>
+
+  <p>
+    The <code>Shutdown</code> button shuts down all fuel chambers and in turn all generators. Therefore generators cannot run while this is active
+    and in turn no power is generated. Only power stored, if any, in batteries is used in this state. Use only in emergency situations.
+  </p>
+
+  <h1 id="refueling">Refueling</h1>
+
+  <p>There are a few ways to refuel ships.</p>
+
+  <h2>At Space Ship Designer Repair Terminals</h2>
+
+  <p>
+    Ships can be refueled at Space Ship Designer by repairing ships at repair terminals that are located in the Space Ship Designer buildings (pictured above).
+    These buildings can be found in most but not all developer stations like all the Origin Stations, Markka, Arma, Moon City, Far Belt Outpost and others.
+  </p>
+  <p>
+    Inside these buildings, there is are repair terminals where you can repair ships that are spawned at the hanger terminals.
+    Repairing the ship will refill both fuel and propellant of the ship. Ice for propellant and Nhurgite (T1)/Exorium (T2) for fuel is required.
+  </p>
+  <p>
+    All players should have access to these terminals.
+  </p>
+
+  <h2>At Player Stations or Capital Ships</h2>
+
+  <p>
+    Similarly to repairing ships at developer stations, it is also possible to repair ships using hanger halls on player stations and capital ships.
+    Repairing the ship will refill both fuel and propellant of the ship. Ice for propellant and Nhurgite (T1)/Exorium (T2) for fuel is required.
+  </p>
+  <p>
+    Players require hanger hall permissions for the station or capital ship to be able to use these halls.
+  </p>
+
+  <nord-banner variant="info">
+    Repairing ships is currently the only reliable way to refuel large tanks for ships using large generators.
+  </nord-banner>
+
+  <h2>By Swapping Fuel Rods</h2>
+
+  <p>
+    Ships can also be refuel by swapping the fuel rods in fuel chambers with the backup rods in the rod racks.
+  </p>
+  <p>
+    Fuel rods can also be refilled by using the crafting system to craft refills for empty rods.
+    Crafting fuel rod refills requires a basic crafting bench nearby with meter upgrade (for T2).
+  </p>
+
+  <nord-banner variant="danger">
+    <strong>NOTE:</strong> Swapping fuel rods in gravity is extremely difficult so it is better to swap fuel rods whie a ship is stationary in space.
+  </nord-banner>
+
+</nord-stack>

@@ -7,11 +7,19 @@ const pages = [
     title: 'Ship Systems',
     subPages: [
       {
+        id: 'systems/power',
+        label: 'Power and Fuel Systems',
+        title: 'Power and Fuel Systems',
+        slug: 'systems/power',
+        keywords:
+          'refuel power fuel rod backup fueltime generator min gen shutdown battery tank',
+      },
+      {
         id: 'systems/propellant',
         label: 'Propellant Systems',
         title: 'Propellant Systems',
         slug: 'systems/propellant',
-        keywords: 'refill propellant resource bridge flow in out proptime',
+        keywords: 'refill propellant resource bridge flow in out proptime tank',
       },
       {
         id: 'systems/utility',
