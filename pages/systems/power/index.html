@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Starbase Ships by EGOTech - Hopper</title>
+    <title>Starbase Ships by EGOTech - Power and Fuel Systems</title>
 
-    <meta property="og:title" content="Starbase Ships by EGOTech - Hopper" />
+    <meta property="og:title" content="Starbase Ships by EGOTech - Power and Fuel Systems" />
     
-      
-      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201746_1.jpg" />
-      <meta property="og:description" content="The Hopper is small personal transport that can be used to quickly get around a station or taking short trips." />
+      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/others/egotech/logos/egotech_logo_dark.png" />
+      <meta property="og:description" content="EGOTech thrives to design various types of Starbase ships that are practical but fun to use." />
     
 
     
@@ -148,7 +147,7 @@
               Hoarder
             </nord-nav-item>
           
-            <nord-nav-item  active href="/ships/hopper/">
+            <nord-nav-item   href="/ships/hopper/">
               Hopper
             </nord-nav-item>
           
@@ -216,7 +215,7 @@
                 Ship Systems
                 <nord-nav-group slot="subnav">
                   
-                    <nord-nav-item  href="/pages/systems/power/">
+                    <nord-nav-item active href="/pages/systems/power/">
                       Power and Fuel Systems
                     </nord-nav-item>
                   
@@ -262,568 +261,114 @@
       </nord-header>
 
       
+<nord-stack gap="l" class="info-page n-padding-i-l n-padding-b-l">
+  <h1 id="power">Power and Fuel Systems</h1>
 
+  <p>
+    <img src="/images/systems/fuel_rods.png" alt="Fuel Rod Panels" />
+  </p>
+  <p>
+    The <code>Fuel Rod</code> panels shows the current fuel level for each rod in each fuel chamber of the ship. The maximum for each rod is 300,000 units.
+  </p>
 
-<nord-header slot="header">
-  <nord-stack direction="horizontal" wrap>
-    <nord-button-group>
-      <nord-button href="#ship-photos" size="s" variant="default">Photos</nord-button>
-      <nord-button href="#description" size="s" variant="default">Features</nord-button>
-      
-      <nord-button href="#build-cost" size="s" variant="default">Build Cost</nord-button>
-      
-        <nord-button href="#download" size="s" variant="primary">Download</nord-button>
-      
-      <nord-button href="#usage" size="s" variant="default">Usage</nord-button>
-      
-      <nord-button href="#faq" size="s" variant="default">FAQ</nord-button>
-      <nord-button href="#ship-links" size="s" variant="default">Links</nord-button>
-      <nord-button href="#changelog" size="s" variant="default">Changelog</nord-button>
-      <nord-button href="#similar-ships" size="s" variant="default">Similar Ships</nord-button>
-  </nord-button-group>
-  </nord-stack>
-</nord-header>
-<nord-stack id="ship-page" gap="l" class="n-padding-i-l n-padding-b-l">
-  <nord-stack>
-    <h1 id="ship-name">
-      <span class="n-font-size-xxxl">Hopper</span>
-      <nord-stack direction="horizontal" gap="s">
-  
-  
-  <nord-badge>v1.1.0</nord-badge>
+  <p>
+    <img src="/images/systems/fueltime.png" alt="FuelTime and Backup Rods Panels" />
+  </p>
+  <p>
+    The <code>FuelTime</code> panel shows the remaing time and distance (in kilometers) based on current fuel and current ship speed.
+  </p>
+  <p>
+    The <code>WithBackup</code> panel shows the remaing time and distance (in kilometers) based on current fuel plus any backup fuel rods available
+    and current ship speed. The number of available backup fuel rods can be adjusted using the <code>BackupRods</code> panel as they are used up.
+  </p>
+
+  <nord-banner variant="info">
+    Usually ships have two backup fuel rods per fuel chamber but some ships may only have one or none. Check the ship details for the exact number.
+  </nord-banner>
+
+  <h1 id="managing-power">Managing Power</h1>
+
+  <p>
+    <img src="/images/systems/generator.png" alt="Generator and Battery Panels" />
+  </p>
+  <p>
+    The <code>Generator</code> panel shows the current generator level (percent) used to generate power for the ship.
+    The <code>Battery</code> panel shows the current battery level of the batteries on the ship. The maximum level is 10,000 units.
+  </p>
+
+  <h2>Minimum Generator Rate</h2>
+
+  <p>
+    <img src="/images/systems/min_gen.png" alt="Min Generator Rate Panel, Min Gen Button and Shutdown Button" />
+  </p>
+  <p>
+    By default the generator will only run and ramp up when the batteries need charging so there is minimum management needed.
+    But you can set a minimum generate rate by setting the <code>Min Generator Rate</code> value on the <code>Min Generator Rate</code> panel
+    and then turning on <code>Min Gen</code>. The generator will run at this minimum level until <code>Min Gen</code> is turned off.
+  </p>
+  <p>
+    <code>Min Gen</code> is usually only needed when you want to guarantee power while using ship tools like mining lasers or towing beams.
+  </p>
+
+  <nord-banner variant="warning">
+    <strong>NOTE:</strong> With <code>Min Gen</code> running, power is wasted if it is not being used so turn it off when not needed to save fuel.
+  </nord-banner>
+
+  <h2>Shutdown</h2>
+
+  <p>
+    The <code>Shutdown</code> button shuts down all fuel chambers and in turn all generators. Therefore generators cannot run while this is active
+    and in turn no power is generated. Only power stored, if any, in batteries is used in this state. Use only in emergency situations.
+  </p>
+
+  <h1 id="refueling">Refueling</h1>
+
+  <p>There are a few ways to refuel ships.</p>
+
+  <h2>At Space Ship Designer Repair Terminals</h2>
+
+  <p>
+    Ships can be refueled at Space Ship Designer by repairing ships at repair terminals that are located in the Space Ship Designer buildings (pictured above).
+    These buildings can be found in most but not all developer stations like all the Origin Stations, Markka, Arma, Moon City, Far Belt Outpost and others.
+  </p>
+  <p>
+    Inside these buildings, there is are repair terminals where you can repair ships that are spawned at the hanger terminals.
+    Repairing the ship will refill both fuel and propellant of the ship. Ice for propellant and Nhurgite (T1)/Exorium (T2) for fuel is required.
+  </p>
+  <p>
+    All players should have access to these terminals.
+  </p>
+
+  <h2>At Player Stations or Capital Ships</h2>
+
+  <p>
+    Similarly to repairing ships at developer stations, it is also possible to repair ships using hanger halls on player stations and capital ships.
+    Repairing the ship will refill both fuel and propellant of the ship. Ice for propellant and Nhurgite (T1)/Exorium (T2) for fuel is required.
+  </p>
+  <p>
+    Players require hanger hall permissions for the station or capital ship to be able to use these halls.
+  </p>
+
+  <nord-banner variant="info">
+    Repairing ships is currently the only reliable way to refuel large tanks for ships using large generators.
+  </nord-banner>
+
+  <h2>By Swapping Fuel Rods</h2>
+
+  <p>
+    Ships can also be refuel by swapping the fuel rods in fuel chambers with the backup rods in the rod racks.
+  </p>
+  <p>
+    Fuel rods can also be refilled by using the crafting system to craft refills for empty rods.
+    Crafting fuel rod refills requires a basic crafting bench nearby with meter upgrade (for T2).
+  </p>
+
+  <nord-banner variant="danger">
+    <strong>NOTE:</strong> Swapping fuel rods in gravity is extremely difficult so it is better to swap fuel rods whie a ship is stationary in space.
+  </nord-banner>
+
 </nord-stack>
 
-    </h1>
-  </nord-stack>
-  <nord-stack direction="horizontal" gap="s" wrap >
-  
-    <nord-badge variant="success">Free</nord-badge>
-  
-  
-    <a href="/#transport"><nord-badge variant="warning">Transport</nord-badge></a>
-  
-  
-    <nord-badge variant="highlight">T2 Generators</nord-badge>
-  
-    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
-  
-</nord-stack>
-
-  <nord-stack id="ship-photos" class="info-page">
-    <nord-card padding="none">
-      <section id="main-carousel" class="splide" aria-label="Splide Basic HTML Example">
-        <div class="splide__track">
-          <ul class="splide__list">
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201746_1.jpg" alt="20220724201746_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173249_1.jpg" alt="20220724173249_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173257_1.jpg" alt="20220724173257_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173314_1.jpg" alt="20220724173314_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173327_1.jpg" alt="20220724173327_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201752_1.jpg" alt="20220724201752_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201806_1.jpg" alt="20220724201806_1.jpg" /></li>
-            
-          </ul>
-        </div>
-      </section>
-      <section id="thumbnail-carousel" class="splide" aria-label="Splide Basic HTML Example">
-        <div class="splide__track">
-          <ul class="splide__list">
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201746_1.jpg" alt="20220724201746_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173249_1.jpg" alt="20220724173249_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173257_1.jpg" alt="20220724173257_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173314_1.jpg" alt="20220724173314_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724173327_1.jpg" alt="20220724173327_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201752_1.jpg" alt="20220724201752_1.jpg" /></li>
-            
-              <li class="splide__slide"><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/photos/20220724201806_1.jpg" alt="20220724201806_1.jpg" /></li>
-            
-          </ul>
-        </div>
-      </section>
-      <script>
-        const main = new Splide('#main-carousel');
-        const thumbnails = new Splide('#thumbnail-carousel', {
-          fixedWidth: 200,
-          gap       : 0,
-          rewind    : true,
-          pagination: false,
-          isNavigation: true,
-          breakpoints: {
-            600: {
-              fixedWidth : 60,
-            },
-          },
-        });
-
-        main.sync( thumbnails );
-        main.mount();
-        thumbnails.mount();
-      </script>
-    </nord-card>
-  </nord-stack>
-  <nord-stack id="description" class="info-page">
-    <p>The Hopper is small personal transport that can be used to quickly get around a station or taking short trips.</p>
-  </nord-stack>
-  <nord-stack id="features">
-    <h1><a id="features" class="anchor" href="#features" aria-hidden="true"></a>Features</h1>
-<ul>
-<li>Standard Cruise function</li>
-<li>Turtle and Sloth functions</li>
-<li>One resource bridge</li>
-<li>Auto generator rate script with adjustable minimum rate</li>
-<li>Three T2 generators with one T2 fuel chamber</li>
-<li>Radiator and heat sink that provide more than adequate cooling</li>
-<li>Two small tanks with 2,000,000 units of propellant</li>
-<li>Four batteries</li>
-<li>Four T2 triangle thrusters providing forward thrust</li>
-<li>Four T2 maneuver thrusters providing braking thrust</li>
-<li>14 T2 maneuver thrusters</li>
-</ul>
-
-    
-  </nord-stack>
-  
-  <nord-stack id="build-cost">
-    <h1>Build Cost</h1>
-    <nord-stack direction="horizontal">
-      <nord-card padding="none" style="width: 400px">
-        <h2 slot="header">Material Cost</h2>
-        <nord-table density="condensed">
-          <table style="width: 400px">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Material</th>
-                <th class="n-table-align-right">Volume (kv)</th>
-                <th class="n-table-align-right">Stacks</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/aegisium.png" alt="Aegisium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Aegisium Ore</td>
-                  <td class="n-table-align-right">2,431</td>
-                  <td class="n-table-align-right">1.4</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/ajatite.png" alt="Ajatite Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Ajatite Ore</td>
-                  <td class="n-table-align-right">1,711</td>
-                  <td class="n-table-align-right">1</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/arkanium.png" alt="Arkanium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Arkanium Ore</td>
-                  <td class="n-table-align-right">38</td>
-                  <td class="n-table-align-right">0</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/bastium.png" alt="Bastium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Bastium Ore</td>
-                  <td class="n-table-align-right">4,833</td>
-                  <td class="n-table-align-right">2.8</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/charodium.png" alt="Charodium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Charodium Ore</td>
-                  <td class="n-table-align-right">5,350</td>
-                  <td class="n-table-align-right">3.1</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/exorium.png" alt="Exorium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Exorium Ore</td>
-                  <td class="n-table-align-right">83</td>
-                  <td class="n-table-align-right">0</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/ice.png" alt="Ice" />
-                      </div>
-                    
-                  </td>
-                  <td>Ice</td>
-                  <td class="n-table-align-right">2,000</td>
-                  <td class="n-table-align-right">1.2</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/nhurgite.png" alt="Nhurgite Crystal" />
-                      </div>
-                    
-                  </td>
-                  <td>Nhurgite Crystal</td>
-                  <td class="n-table-align-right">2,726</td>
-                  <td class="n-table-align-right">1.6</td>
-                </tr>
-              
-                <tr class="">
-                  <td style="padding-right: 0">
-                    
-                      <div class="material-icon">
-                        <img src="/images/materials/vokarium.png" alt="Vokarium Ore" />
-                      </div>
-                    
-                  </td>
-                  <td>Vokarium Ore</td>
-                  <td class="n-table-align-right">7,324</td>
-                  <td class="n-table-align-right">4.2</td>
-                </tr>
-              
-                <tr class="n-font-weight-strong n-color-surface-lowered">
-                  <td style="padding-right: 0">
-                    
-                  </td>
-                  <td>Total ore</td>
-                  <td class="n-table-align-right">26,496</td>
-                  <td class="n-table-align-right">15.3</td>
-                </tr>
-              
-            </tbody>
-          </table>
-        </nord-table>
-      </nord-card>
-      <nord-card padding="none" style="width: 400px">
-        <h2 slot="header">Credits Cost</h2>
-        <nord-table density="condensed">
-          <table style="width: 400px">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="n-table-align-right">Credits</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Assembly</td>
-                <td class="n-table-align-right">19,196</td>
-              </tr>
-              <tr>
-                <td>Manufacturing</td>
-                <td class="n-table-align-right">27,869</td>
-              </tr>
-              <tr class="n-font-weight-strong n-color-surface-lowered">
-                <td>Total</td>
-                <td class="n-table-align-right">47,065</td>
-              </tr>
-            </tbody>
-          </table>
-        </nord-table>
-        <nord-banner slot="footer">
-          <span style="text-wrap: wrap">
-            <strong>TIP:</strong>
-            <span>Crafting your own devices, especially crates, generators, thrusters, ship tools and weapons can drastically reduce assembly cost.</span>
-          </span>
-        </nord-banner>
-      </nord-card>
-    </nord-stack>
-  </nord-stack>
-  <nord-stack>
-    
-      <h1 id="download">Download Blueprint</h1>
-      <nord-button href="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/blueprints/hopper.fbe" variant="primary" onclick="gaEvent('download', { ship: 'Hopper', version: '1.1.0', download_ref: 'website' })">
-        <i slot="start" class="fa-solid fa-download n-color-text"></i>
-        Download v1.1.0 (current)
-      </nord-button>
-      <nord-card padding="none" style="width: 400px">
-        <h2 slot="header">All Blueprints</h2>
-        <nord-table density="condensed" striped>
-          <table style="width: 400px">
-            <thead>
-              <tr>
-                <th>Version</th>
-                <th></th>
-                <th></th>
-              </tr>
-            </thead>
-            <tbody>
-              
-                <tr>
-                  <td>v1.1.0</td>
-                  <td>
-                    <nord-badge variant="warning">Current</nord-badge>
-                    
-                  </td>
-                  <td class="n-table-align-right">
-                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/blueprints/hopper.fbe" onclick="gaEvent('download', { ship: 'Hopper', version: '1.1.0', download_ref: 'website' })">
-                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
-                      Download
-                    </nord-button>
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>v1.0.1</td>
-                  <td>
-                    
-                    
-                  </td>
-                  <td class="n-table-align-right">
-                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/blueprints/hopper_v1.0.1.fbe" onclick="gaEvent('download', { ship: 'Hopper', version: '1.0.1', download_ref: 'website' })">
-                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
-                      Download
-                    </nord-button>
-                  </td>
-                </tr>
-              
-                <tr>
-                  <td>v1.0.0</td>
-                  <td>
-                    
-                    
-                  </td>
-                  <td class="n-table-align-right">
-                    <nord-button size="s" href="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/blueprints/hopper_v1.0.0.fbe" onclick="gaEvent('download', { ship: 'Hopper', version: '1.0.0', download_ref: 'website' })">
-                      <i slot="start" class="fa-solid fa-download n-color-text"></i>
-                      Download
-                    </nord-button>
-                  </td>
-                </tr>
-              
-            </tbody>
-          </table>
-        </nord-table>
-      </nord-card>
-      <nord-banner variant="warning">
-        EGOTech's free blueprints and any of its derivatives can be freely distributed but are not to be sold in game or otherwise.
-        <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License</a>
-      </nord-banner>
-    
-  </nord-stack>
-  <nord-stack id="usage" class="info-page">
-    <h1><a id="usage" class="anchor" href="#usage" aria-hidden="true"></a>Usage</h1>
-<h2><a id="flying-the-ship" class="anchor" href="#flying-the-ship" aria-hidden="true"></a>Flying the Ship</h2>
-<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hopper/images/pilot_console.jpg" alt="Pilot Console"></p>
-<nord-table>
-<table>
-<thead>
-<tr>
-<th>Interface</th>
-<th>Function</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>ForwardThrust</code></td>
-<td>Current forward thrust, maximum of 10,000 units</td>
-</tr>
-<tr>
-<td><code>Cruise</code></td>
-<td>Activates cruise control, forward thrust will not reset to zero unless turned down.</td>
-</tr>
-<tr>
-<td><code>Aim</code></td>
-<td>Reduces the response time of key presses for pitch and yaw.</td>
-</tr>
-<tr>
-<td><code>Turtle</code></td>
-<td>Activates turtle mode which sets forward thrust to a maximum limit of 20% of full thrust.</td>
-</tr>
-<tr>
-<td><code>Sloth</code></td>
-<td>Activates the low sensitvity mode by limiting all thrust to 20%. Using together with <code>Turtle</code> will result in even slower forward thrust.</td>
-</tr>
-<tr>
-<td><code>Fuel</code></td>
-<td>Fuel remaining on fuel rod, maximum of 300,000 units.</td>
-</tr>
-<tr>
-<td><code>Propellant</code></td>
-<td>Total propellant remaining in propellant tanks, maximum of 2,000,000 units.</td>
-</tr>
-<tr>
-<td><code>Battery</code></td>
-<td>Shows current battery charge of the batteries, maximum of 10,000 units.</td>
-</tr>
-<tr>
-<td><code>Generator</code></td>
-<td>Current generator rate, maximum of 100%.</td>
-</tr>
-<tr>
-<td><code>HeatTransferRate</code></td>
-<td>Current heat transfer rate of the heat sinks, maximum of 100%.</td>
-</tr>
-<tr>
-<td><code>ID</code></td>
-<td>Activates transponder</td>
-</tr>
-</tbody>
-</table>
-</nord-table>
-
-  </nord-stack>
-  
-  <nord-stack id="faq">
-    
-      <h1>Frequently Asked Questions</h1>
-    
-    <nord-banner>For more general questions, please check the FAQ <a href="/pages/faq">here</a>.</nord-banner>
-  </nord-stack>
-  <nord-stack id="ship-links">
-    <h1>Links</h1>
-    <ul>
-      
-        <li>
-          
-  
-    <i class="fa-solid fa-globe fa-lg fa-fw"></i>
-  
-
-          <a href="https://sb-creators.org/makers/Egomaniac/ship/%5BFREE%5D%20Hopper" alt="Starbase Ship Shop Page" target="_blank">Starbase Ship Shop Page</a>
-        </li>
-      
-        <li>
-          
-  
-    <i class="fa-brands fa-github fa-lg fa-fw"></i>
-  
-
-          <a href="https://github.com/EGO-Tech/starbase-ships/tree/main/hopper" alt="Ship GitHub Page" target="_blank">Ship GitHub Page</a>
-        </li>
-      
-      
-        <li>
-          
-  
-    <i class="fa-brands fa-discord fa-lg fa-fw"></i>
-  
-
-          <a href="https://discord.com/channels/1013328685564178472/1025295176052252743" alt="EGOTech Discord Server Ship Information" target="_blank">EGOTech Discord Server Ship Information</a>
-        </li>
-      
-    </ul>
-  </nord-stack>
-  <nord-stack id="changelog">
-    <h1><a id="changelog" class="anchor" href="#changelog" aria-hidden="true"></a>Changelog</h1>
-<h2><a id="v110-current---24072022" class="anchor" href="#v110-current---24072022" aria-hidden="true"></a>v1.1.0 (Current) - 24/07/2022</h2>
-<ul>
-<li>Added roll thrusters</li>
-</ul>
-<h2><a id="v101---24072022" class="anchor" href="#v101---24072022" aria-hidden="true"></a>v1.0.1 - 24/07/2022</h2>
-<ul>
-<li>Fixed centering speed of <code>FcuBackwards</code> lever</li>
-</ul>
-<h2><a id="v100---24072022" class="anchor" href="#v100---24072022" aria-hidden="true"></a>v1.0.0 - 24/07/2022</h2>
-<ul>
-<li>Initial release</li>
-</ul>
-
-  </nord-stack>
-  <nord-stack id="similar-ships">
-    <h1>Similar Ships</h1>
-    <nord-stack direction="horizontal" wrap>
-      
-        <nord-card class="ship-card ship-tourer" padding="none" style="width: 435px;">
-  <h1 slot="header">Tourer</h1>
-  <span slot="header-end">
-    <nord-stack direction="horizontal" gap="s">
-  
-  
-  <nord-badge>v2.0.0</nord-badge>
-</nord-stack>
-
-  </span>
-  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
-    
-    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/tourer/photos/20220605013233_1.jpg" alt="20220605013233_1.jpg" />
-  </nord-stack>
-  <nord-stack gap="none">
-    
-  </nord-stack>
-  <nord-stack class="n-padding-i-m n-padding-b-m">
-    <p>The Tourer is a ship that can be used to transport Endos in the style of a tour bus. It has seating for 16 passengers and a cargo lock frame for cargo.</p>
-  </nord-stack>
-  <div slot="footer">
-    <nord-stack direction="horizontal" gap="s" wrap >
-  
-    <nord-badge variant="success">Free</nord-badge>
-  
-  
-    <a href="/#transport"><nord-badge variant="warning">Transport</nord-badge></a>
-  
-  
-    <nord-badge variant="highlight">T2 Generators</nord-badge>
-  
-    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
-  
-    <nord-badge variant="highlight">ISAN</nord-badge>
-  
-    <nord-badge variant="highlight">Cargo Lock Frame</nord-badge>
-  
-</nord-stack>
-
-  </div>
-  <div slot="footer" class="n-margin-bs-l">
-    <nord-stack>
-      <nord-button variant="primary" href="/ships/tourer/" expand>View</nord-button>
-    </nord-stack>
-  </div>
-</nord-card>
-
-      
-    </nord-stack>
-  </nord-stack>
-</nord-stack>
 
 
       <nord-footer slot="footer" size="m">
