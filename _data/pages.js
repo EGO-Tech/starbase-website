@@ -7,6 +7,13 @@ const pages = [
     title: 'Ship Systems',
     subPages: [
       {
+        id: 'systems/flight',
+        label: 'Flight Systems',
+        title: 'Flight Systems',
+        slug: 'systems/flight',
+        keywords: 'flight cruise turtle sloth aim sensitivity profiles lever',
+      },
+      {
         id: 'systems/power',
         label: 'Power and Fuel Systems',
         title: 'Power and Fuel Systems',
