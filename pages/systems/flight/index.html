@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <title>Starbase Ships by EGOTech - Ship Commissions</title>
+    <title>Starbase Ships by EGOTech - Flight Systems</title>
 
-    <meta property="og:title" content="Starbase Ships by EGOTech - Ship Commissions" />
+    <meta property="og:title" content="Starbase Ships by EGOTech - Flight Systems" />
     
       <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/others/egotech/logos/egotech_logo_dark.png" />
       <meta property="og:description" content="EGOTech thrives to design various types of Starbase ships that are practical but fun to use." />
@@ -215,7 +215,7 @@
                 Ship Systems
                 <nord-nav-group slot="subnav">
                   
-                    <nord-nav-item  href="/pages/systems/flight/">
+                    <nord-nav-item active href="/pages/systems/flight/">
                       Flight Systems
                     </nord-nav-item>
                   
@@ -236,7 +236,7 @@
             
           
             
-              <nord-nav-item active href="/pages/commissions/">
+              <nord-nav-item  href="/pages/commissions/">
                 Ship Commissions
               </nord-nav-item>
             
@@ -266,13 +266,105 @@
 
       
 <nord-stack gap="l" class="info-page n-padding-i-l n-padding-b-l">
-  <h1>Ship Commissions</h1>
+  <h1 id="flight">Flight Systems</h1>
 
-  <p>To enquire about custom ship comissions, please join the EGOTech Discord server.</p>
+  <h1 id="flying">Flying the Ship</h1>
 
-  <a href="https://discord.gg/BKwVGvncmN">
-    <img alt="EGOTech Discord Server" src="https://camo.githubusercontent.com/a52557e3b6648630b7bf1f530c22745e510cbed885cff0c1e11fccb64e9c61da/68747470733a2f2f646973636f72646170702e636f6d2f6170692f6775696c64732f313031333332383638353536343137383437322f7769646765742e706e673f7374796c653d62616e6e657232" />
-  </a>
+  <p>
+    On most ships there will be two main levers.
+    The left lever controls backwards thrust (braking) and the right lever controls forward thrust.
+  </p>
+
+  <h2>Cruise</h2>
+
+  <p>
+    The <code>Cruise</code> button activates cruise control, forward thrust will not reset to zero unless turned down.
+    This means the pilot does not need to continually hold down the forward thrust button.
+  </p>
+
+  <nord-banner variant="warning">
+    <strong>NOTE:</strong> For safety, firing full braking thrust will deactivate <code>Cruise</code> on most ships.
+  </nord-banner>
+
+  <h2>Aim</h2>
+
+  <p>
+    The <code>Aim</code> button reduces the response time of key presses for pitch and yaw when activated.
+    This may help with more precise control of the ship's direction.
+  </p>
+
+  <h2>Turtle</h2>
+
+  <p>
+    <img src="/images/systems/turtle.png" alt="Turtle Button and TurtleRate Panel" />
+  </p>
+
+  <p>
+    The <code>Turtle</code> button activates turtle mode which sets forward thrust to a maximum limit of <code>TurtleRate</code> of full thrust.
+    The <code>TurtleRate</code> can be adjusted using the switch on the <code>TurtleRate</code> panel.
+  </p>
+
+  <p>
+    Also see <a href="#flight-profiles">Flight Profiles</a> for quick turtle rate switching.
+  </p>
+
+  <nord-banner variant="info">
+    <strong>TIP:</strong> Save a blueprint for the ship using the U-tool once you have set up your default turtle rate to have it persist after repairs.
+  </nord-banner>
+
+  <h2>Sloth</h2>
+
+  <p>
+    <img src="/images/systems/sloth.png" alt="Sloth Button and Sensitivity Panel" />
+  </p>
+
+  <p>
+    The <code>Sloth</code> button activates the low sensitvity mode of pitch and yaw (and roll depending on the ship) by limiting thrust.
+    The <code>Sensitivity</code> can be adjusted to set the maximum thrust rate of sloth mode using the switch on the <code>Sensitivity</code> panel.
+  </p>
+
+  <p>
+    Also see <a href="#flight-profiles">Flight Profiles</a> for quick sensitivity switching.
+  </p>
+
+  <nord-banner variant="info">
+    <strong>TIP:</strong> Save a blueprint for the ship using the U-tool once you have set up your default sensitivity to have it persist after repairs.
+  </nord-banner>
+
+  <h1 id="flight-profiles">Flight Profiles</h1>
+
+  <p>
+    <img src="/images/systems/flight-profiles.png" alt="Flight Profile Panels" />
+  </p>
+
+  <p>
+    The flight profiles system allows the saving of four preset profiles consisting of <code>TurtleRate</code> and <code>Sensitivity</code> values,
+    named <code>Blue</code>, <code>Red</code>, <code>Green</code> and <code>White</code>.
+    Quickly load a particular profile by pressing one of the coloured buttons with its colour matching the profile name.
+    This is load the <code>TurtleRate</code> and <code>Sensitivity</code> preset values of the profile into the main flight system.
+  </p>
+  <p>
+    Adjust the presets of a profile by selecting the profile on the <code>Profiles</code> panel using the <code>Up</code> and <code>Down</code>
+    (blue buttons) and selecting by using the <code>Select</code> button (white vertical button).
+  </p>
+
+  <p>
+    <img src="/images/systems/flight-profiles2.png" alt="Flight Profile Panels" />
+  </p>
+
+  <p>
+    Once in a profile screen for a profile, use the <code>Up</code> and <code>Down</code> buttons then the <code>Select</code> button to select
+    either <code>Turtle</code> (for turtle rate) or <code>Sens.</code> (for sensitivity) and then using the <code>Up</code> and <code>Down</code> buttons
+    to adjust the values. Press the <code>Select</code> button again to stop adjusting the values.
+  </p>
+
+  <p>
+    Select <code>Back</code> to go back to the profile selection screen.
+  </p>
+
+  <nord-banner variant="info">
+    <strong>TIP:</strong> Save a blueprint for the ship using the U-tool once you have set up your flight profiles to have it persist after repairs.
+  </nord-banner>
 
 </nord-stack>
 
