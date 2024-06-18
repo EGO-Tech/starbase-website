@@ -26,14 +26,8 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
   padding-top: 60px;
 }
 
-.info-page,
-#changelog,
-#faq,
-#features,
-#known-issues,
-#ship-links,
-#usage {
-  ul li {
+.info-page {
+  ul li:not([role="presentation"]) {
     margin-left: 40px;
   }
 }
@@ -45,6 +39,17 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
 
   li {
     margin-left: 20px;
+  }
+}
+
+#changelog,
+#faq,
+#features,
+#known-issues,
+#ship-links,
+#usage {
+  ul li:not([role="presentation"]) {
+    margin-left: 40px;
   }
 }
 
