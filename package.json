@@ -21,7 +21,6 @@
     "@nordhealth/fonts": "^3.0.1",
     "@nordhealth/themes": "^8.0.2",
     "@nordhealth/tokens": "^7.1.1",
-    "@octokit/rest": "^20.1.1",
     "@splidejs/splide": "^4.1.4",
     "google-auth-library": "^9.11.0",
     "google-spreadsheet": "^4.1.2",

@@ -1,9 +1,9 @@
 const _ = require('lodash');
+const fs = require('fs');
 const nconf = require('nconf');
 const path = require('path');
 const markdownItGithubHeading = require('markdown-it-github-headings');
 const { EleventyRenderPlugin } = require('@11ty/eleventy');
-const { Octokit } = require('@octokit/rest');
 
 require('./config');
 
@@ -14,7 +14,8 @@ const repoConfig = {
   repo: nconf.get('repo:name'),
   ref: nconf.get('repo:ref'),
 };
-const octokit = new Octokit({ auth: nconf.get('repo:token') });
+
+const shipsBasePath = path.join(__dirname, nconf.get('ships:basePath'));
 
 const extendShipContent = async (ship) => {
   await Promise.all(
@@ -23,12 +24,10 @@ const extendShipContent = async (ship) => {
       (field) =>
         (async () => {
           if (!ship[field]) return;
-          const {
-            data: { content },
-          } = await octokit.rest.repos.getContent({
-            ...repoConfig,
-            path: path.join(ship.path, ship[field].path),
-          });
+          const content = fs.readFileSync(
+            path.join(shipsBasePath, ship.path, ship[field].path),
+          );
+
           let contentString = Buffer.from(content, 'base64').toString();
           if (repoConfig.ref !== 'main') {
             contentString = contentString.replace(
@@ -43,25 +42,20 @@ const extendShipContent = async (ship) => {
 };
 
 const getShipsData = async ({ pathPrefix }) => {
-  const { data: files } = await octokit.rest.repos.getContent(repoConfig);
+  const files = fs.readdirSync(shipsBasePath, { withFileTypes: true });
 
   const ships = await Promise.all(
     _(files)
-      .filter({ type: 'dir' })
+      .filter((file) => file.isDirectory())
       .map((dir) =>
         (async () => {
-          const shipFilePath = path.join(dir.path, 'ship.json');
+          const shipFilePath = path.join(shipsBasePath, dir.name, 'ship.json');
 
           let ship;
           try {
-            const { data: shipFile } = await octokit.rest.repos.getContent({
-              ...repoConfig,
-              path: shipFilePath,
-            });
+            const shipFile = fs.readFileSync(shipFilePath);
 
-            ship = JSON.parse(
-              Buffer.from(shipFile.content, 'base64').toString(),
-            );
+            ship = JSON.parse(Buffer.from(shipFile, 'base64').toString());
             await extendShipContent(ship);
             ship.webPath = `${pathPrefix}ships/${ship.slug}`;
           } catch {
@@ -69,21 +63,18 @@ const getShipsData = async ({ pathPrefix }) => {
           }
 
           const premiumShipFilePath = path.join(
-            dir.path,
+            shipsBasePath,
+            dir.name,
             'premium',
             'ship.json',
           );
 
           let premiumShip;
           try {
-            const { data: premiumShipFile } =
-              await octokit.rest.repos.getContent({
-                ...repoConfig,
-                path: premiumShipFilePath,
-              });
+            const premiumShipFile = fs.readFileSync(premiumShipFilePath);
 
             premiumShip = JSON.parse(
-              Buffer.from(premiumShipFile.content, 'base64').toString(),
+              Buffer.from(premiumShipFile, 'base64').toString(),
             );
             await extendShipContent(premiumShip);
             premiumShip.webPath = `${pathPrefix}ships/${premiumShip.slug}`;
