@@ -1,0 +1,12 @@
+<h1><a id="frequently-asked-questions" class="anchor" href="#frequently-asked-questions" aria-hidden="true"></a>Frequently Asked Questions</h1>
+<h2><a id="i-just-printed-the-ship-why-cant-i-control-the-ship-version--101" class="anchor" href="#i-just-printed-the-ship-why-cant-i-control-the-ship-version--101" aria-hidden="true"></a>I just printed the ship, why can't I control the ship (version &lt;= 1.0.1)?</h2>
+<p>If using version 1.0.1 and earlier, please read the note in the <code>Flying the Ship</code> section.</p>
+<h2><a id="why-does-it-need-so-much-aegisium" class="anchor" href="#why-does-it-need-so-much-aegisium" aria-hidden="true"></a>Why does it need so much Aegisium?</h2>
+<p>I converted all external plates to Aegisium for weight and armor, you can use other materials like Bastium for these plates by editing the blueprint in the ship designer.</p>
+<h2><a id="why-is-the-compass-panel-label-g" class="anchor" href="#why-is-the-compass-panel-label-g" aria-hidden="true"></a>Why is the compass panel label G?</h2>
+<p><s>I ran out of single character global variables while both the C and K are used by the ISAN and waypoint system which I was hoping to keep unmodified. I haven't used any digits though, so potentially one of those could be used. Suggestions welcomed.</s></p>
+<p>As of version 1.0.1, I managed to free up a lot of global variables, but decided to keep it as it is. In fact with the panel rotated (see below), if you look closely enough the rotated <code>G</code> kinda looks like a compass pointing north (up/forward) :P</p>
+<h2><a id="why-is-the-compass-panel-rotated-version--101" class="anchor" href="#why-is-the-compass-panel-rotated-version--101" aria-hidden="true"></a>Why is the compass panel rotated (version &gt; 1.0.1)?</h2>
+<p>The original Compass uses front and right receivers, but this ship uses front and bottom receivers. For ease of future upgrades, I just rotated the panel instead of making changes to the original Compass code.</p>
+<h2><a id="why-are-there-so-many-extra-hardpoints" class="anchor" href="#why-are-there-so-many-extra-hardpoints" aria-hidden="true"></a>Why are there so many extra hardpoints?</h2>
+<p>I don't know, I went a bit crazy there, but you can use them to add whatever you want, including weapons.</p>

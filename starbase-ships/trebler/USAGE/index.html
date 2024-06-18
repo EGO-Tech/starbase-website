@@ -1,0 +1,168 @@
+<h1><a id="usage" class="anchor" href="#usage" aria-hidden="true"></a>Usage</h1>
+<p>To enter the ship, there is are buttons on either side of the cockpit of the ship that will open <code>Doors</code>. Once inside you can also open and close the cockpit glass <code>Canopy</code>. Buttons for these are available in the pilot left side console.</p>
+<h2><a id="flying-the-ship" class="anchor" href="#flying-the-ship" aria-hidden="true"></a>Flying the Ship</h2>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/trebler/images/pilot_center_console.jpg" alt="Pilot Center Console"></p>
+<nord-table>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Speed</code></td>
+<td>Current speed in metres per second.</td>
+</tr>
+<tr>
+<td><code>ForwardThrust</code></td>
+<td>Current forward thrust, maximum of 10,000 units</td>
+</tr>
+<tr>
+<td><code>Throttle</code></td>
+<td>Current throttle level, maximum of 100 percent</td>
+</tr>
+<tr>
+<td><code>Cruise</code></td>
+<td>Activates cruise control, forward thrust will not reset to zero unless turned down.</td>
+</tr>
+<tr>
+<td><code>Turtle</code></td>
+<td>Activates turtle mode which sets forward thrust to a maximum limit of <code>TurtleRate</code> of full thrust.</td>
+</tr>
+<tr>
+<td><code>Sloth</code></td>
+<td>Activates the low sensitvity mode of pitch and yaw by limiting thrust. Use the <code>Sensitivity</code> switch to set the maximum thrust rate of sloth mode.</td>
+</tr>
+<tr>
+<td><code>Profiles</code></td>
+<td>Adjusts preset flight profiles. See <a href="https://starbase.egotech.space/pages/systems/flight/#flight-profiles">Flight Profiles</a>.</td>
+</tr>
+<tr>
+<td><code>Aim</code></td>
+<td>Reduces the response time of key presses for pitch and yaw.</td>
+</tr>
+<tr>
+<td><code>Guides</code></td>
+<td>Activates four forward facing rangefinders as guides.</td>
+</tr>
+<tr>
+<td><code>Range</code> &amp; <code>Distance</code></td>
+<td>Activates center rangefinder, with <code>Distance</code> showing distance to object.</td>
+</tr>
+<tr>
+<td><code>Scanner</code> &amp; <code>Materials</code></td>
+<td>Turns on the <a href="#ore-scanner">Ore Scanner</a> and shows results of scan.</td>
+</tr>
+<tr>
+<td><code>Approach</code>, <code>Collect</code>, <code>Mine</code>, <code>Lasers</code>, <code>Rotate</code>, <code>Eco</code>, <code>Drill Mode</code>, <code>Drill Pitch</code> &amp; <code>Drill Count</code></td>
+<td>Mining controls. See <a href="#mining">Mining</a>.</td>
+</tr>
+<tr>
+<td><code>Warnings</code>, <code>SafeZone</code> &amp; <code>StrengthFactor</code></td>
+<td>Warnings for being outside safe zone, ship damage as well as low fuel or propellant. See <a href="https://starbase.egotech.space/pages/systems/utility/#warnings">Warnings Panel</a>.</td>
+</tr>
+<tr>
+<td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
+<td><a href="https://starbase.egotech.space/pages/systems/utility/#transponder">Transponder</a> controls, <code>Toggle</code> turns on and off ship transponder while <code>Ping</code> will activate transponder for three seconds</td>
+</tr>
+<tr>
+<td><code>Timer</code></td>
+<td>See <a href="https://starbase.egotech.space/pages/systems/utility/#timer">Timer</a>.</td>
+</tr>
+<tr>
+<td><code>Odometer</code></td>
+<td>See <a href="https://starbase.egotech.space/pages/systems/utility/#odometer">Odometer</a>.</td>
+</tr>
+</tbody>
+</table>
+</nord-table>
+<p>See <a href="https://starbase.egotech.space/pages/systems/flight/">Flight Systems</a> on how to fly the ship and use its flight systems.</p>
+<h2><a id="mining" class="anchor" href="#mining" aria-hidden="true"></a>Mining</h2>
+<p>To approach an asteroid, point the center range finder at an asteroid and activate <code>Approach</code>. Once in range (optimum range is 16 to 20m on <code>Distance</code>), activate <code>Lasers</code> to turn on the mining lasers. Activating <code>Rotate</code> will rotate the laser drill.</p>
+<p>The laser drill has three modes.</p>
+<ul>
+<li><code>Fixed</code> mode will keep all lasers converged to the asteroid detected by the center range finder.</li>
+<li><code>Manual</code> mode allows adjustment of the <code>Drill Pitch</code>. The pitch range is from <code>-15</code> to <code>20</code> degrees.</li>
+<li><code>Auto</code> mode will activate <code>Rotate</code> and progressively increase the drill pitch with the rotations</li>
+</ul>
+<p><code>Drill Pitch</code> can only be adjusted in <code>Manual</code> mode. <code>Eco</code> mode will only use two lasers to conserve power. <code>Drill Count</code> controls whether one, two or three drills are activated when mining.</p>
+<p><code>Mine</code> is a button which will activate automated mining. Point the center range finder at an asteroid and activate. It will activate <code>Material Scanner</code> and <code>Approach</code>, and once in range it will automatically activate <code>Lasers</code>.</p>
+<p><code>Collect</code> turns on the six ore collectors.</p>
+<p>If batteries start running out of charge while mining, turn on <code>Min Gen</code>. Continous use of the lasers and collectors at the same time requires a <code>Min Generator Rate</code> of around 90%.</p>
+<nord-banner variant="warning">
+<p><strong>NOTE:</strong> For safety, lasers will turn off if the total fuel is less that 2,000 units.</p>
+</nord-banner>
+<h3><a id="ore-scanner" class="anchor" href="#ore-scanner" aria-hidden="true"></a>Ore Scanner</h3>
+<p>Activate using the <code>Material Scanner</code> button. The laser will try to adjust to point at the objects detected by the center range finder. Scan results will show on the <code>Materials</code> panel in number of stacks. It has a maximum range of 100m.</p>
+<h2><a id="managing-power-fuel-and-propellant" class="anchor" href="#managing-power-fuel-and-propellant" aria-hidden="true"></a>Managing Power, Fuel and Propellant</h2>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/trebler/images/pilot_right_console.jpg" alt="Pilot Right Console"></p>
+<nord-table>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Propellant</code></td>
+<td>Total propellant remaining in propellant tanks, maximum of 48,000,000 units.</td>
+</tr>
+<tr>
+<td><code>PropTime</code></td>
+<td>Time and distance remaining of propellant based on current usage. Distance is calculated from speed.</td>
+</tr>
+<tr>
+<td><code>FuelTime</code></td>
+<td>Time and distance remaining of fuel based on current usage. Distance is calculated from speed.</td>
+</tr>
+<tr>
+<td><code>WithBackup</code></td>
+<td>Same as FuelTime but takes into account backup rods available. Use the switch for <code>Backup Rods</code> to set the number of backup rods available. As standard there are 24 extra rods.</td>
+</tr>
+<tr>
+<td><code>Fuel Rod 1</code> to <code>Fuel Rod 12</code></td>
+<td>Fuel remaining on fuel rods in individual fuel chambers, maximum of 300,000 units for each.</td>
+</tr>
+<tr>
+<td><code>Generator</code></td>
+<td>Current generator rate, maximum of <code>Generator Limit</code>.</td>
+</tr>
+<tr>
+<td><code>Min Gen</code> &amp; <code>Min Generator Rate</code></td>
+<td>Toggle and sets minimum generator rate. See <a href="#managing-power-and-fuel">Managing Power and Fuel</a>.</td>
+</tr>
+<tr>
+<td><code>Shutdown</code></td>
+<td>Will turn off all fuel chambers thus shutting down generators.</td>
+</tr>
+<tr>
+<td><code>Battery</code></td>
+<td>Shows current battery charge of the batteries, maximum of 10,000 units.</td>
+</tr>
+<tr>
+<td><code>HeatTransferRate</code></td>
+<td>Current heat transfer rate of the heat sinks, maximum of 100%.</td>
+</tr>
+<tr>
+<td><code>Flow In</code> &amp; <code>Flow Out</code></td>
+<td>Toggle flow modes of resource bridges. See <a href="#refilling-propellant">Refilling Propellant</a>.</td>
+</tr>
+<tr>
+<td><code>Lights</code></td>
+<td>Turns on and off internal lights.</td>
+</tr>
+<tr>
+<td><code>Doors</code></td>
+<td>Opens or closes ship entry doors.</td>
+</tr>
+</tbody>
+</table>
+</nord-table>
+<h3><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h3>
+<p>See <a href="https://starbase.egotech.space/pages/systems/power/">Power and Fuel Systems</a> on how to manage ship power and refuel.</p>
+<h3><a id="refilling-propellant" class="anchor" href="#refilling-propellant" aria-hidden="true"></a>Refilling Propellant</h3>
+<p>See <a href="https://starbase.egotech.space/pages/systems/propellant/">Propellant Systems</a> on how to refill propellant.</p>

@@ -1,0 +1,170 @@
+<h1><a id="usage" class="anchor" href="#usage" aria-hidden="true"></a>Usage</h1>
+<p>To enter the ship, there is a button in front the cockpit that will open the glass <code>Canopy</code>. There is also a button for <code>Hatch</code> below the ship. Buttons for these are available in the pilot console.</p>
+<h2><a id="flying-the-ship" class="anchor" href="#flying-the-ship" aria-hidden="true"></a>Flying the Ship</h2>
+<p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/jabber/images/pilot_center_console.jpg" alt="Pilot Console"></p>
+<nord-table>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>ForwardThrust</code></td>
+<td>Current forward thrust, maximum of 10,000 units</td>
+</tr>
+<tr>
+<td><code>Cruise</code></td>
+<td>Activates cruise control, forward thrust will not reset to zero unless turned down.</td>
+</tr>
+<tr>
+<td><code>Aim</code></td>
+<td>Reduces the response time of key presses for pitch and yaw.</td>
+</tr>
+<tr>
+<td><code>Turtle</code></td>
+<td>Activates turtle mode which sets forward thrust to a maximum limit of <code>TurtleRate</code> of full thrust.</td>
+</tr>
+<tr>
+<td><code>Sloth</code></td>
+<td>(Right Console) Activates the low sensitvity mode of pitch and yaw by limiting thrust. Use the <code>Sensitivity</code> switch to set the maximum thrust rate of sloth mode.</td>
+</tr>
+<tr>
+<td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
+<td><a href="https://starbase.egotech.space/pages/systems/utility/#transponder">Transponder</a> controls, <code>Toggle</code> turns on and off ship transponder while <code>Ping</code> will activate transponder for three seconds</td>
+</tr>
+<tr>
+<td><code>Speed</code></td>
+<td>Current speed of the ship in m/s.</td>
+</tr>
+<tr>
+<td><code>ISAN2</code>, <code>Heading</code>, <code>Dest</code>, <code>DTW</code>, <code>Deltas</code>, <code>WP</code>, <code>Up</code>, <code>Down</code>, <code>Save</code> &amp; <code>Home</code></td>
+<td>See <a href="https://github.com/Archaegeo/Starbase/tree/45a9bb464cb71d7de7a214f8e665111d6b2b5989/ISAN-Waypoint%20System">ISAN Waypoint System</a> for more informaton.</td>
+</tr>
+<tr>
+<td><code>Timer</code></td>
+<td>See <a href="https://starbase.egotech.space/pages/systems/utility/#timer">Timer</a>.</td>
+</tr>
+<tr>
+<td><code>Odometer</code></td>
+<td>See <a href="https://starbase.egotech.space/pages/systems/utility/#odometer">Odometer</a>.</td>
+</tr>
+<tr>
+<td><code>HeatTransferRate</code></td>
+<td>Current heat transfer rate of the heat sinks, maximum of 100%.</td>
+</tr>
+<tr>
+<td><code>StoredHeat</code></td>
+<td>Current stored heat in the heat sinks, maximum of 15,000 units.</td>
+</tr>
+<tr>
+<td><code>Shutdown</code></td>
+<td>Turns off fuel chambers.</td>
+</tr>
+<tr>
+<td><code>Battery</code></td>
+<td>Shows current battery charge of the batteries, maximum of 10,000 units.</td>
+</tr>
+<tr>
+<td><code>Generator</code></td>
+<td>Current generator rate, maximum of 100%.</td>
+</tr>
+<tr>
+<td><code>Min Generator Limit</code> &amp; <code>Min Gen</code></td>
+<td>Toggle and sets minimum generator rate. See <a href="#managing-power-and-fuel">Managing Power and Fuel</a>.</td>
+</tr>
+<tr>
+<td><code>Fuel Rod Left</code> &amp; <code>Fuel Rod Right</code></td>
+<td>Fuel remaining on fuel rods in individual fuel chambers, maximum of 300,000 units for each.</td>
+</tr>
+<tr>
+<td><code>Propellant</code></td>
+<td>Total propellant remaining in propellant tanks, maximum of 8,000,000 units.</td>
+</tr>
+<tr>
+<td><code>PropTime</code></td>
+<td>Time and distance remaining of propellant based on current usage.</td>
+</tr>
+<tr>
+<td><code>FuelTime</code></td>
+<td>Time and distance remaining of fuel based on current usage.</td>
+</tr>
+<tr>
+<td><code>Flow In</code> &amp; <code>Flow Out</code></td>
+<td>Toggle flow modes of resource bridges. See <a href="#refilling-propellant">Refilling Propellant</a>.</td>
+</tr>
+<tr>
+<td><code>Canopy</code></td>
+<td>Open and closes the cockpit glass canopy.</td>
+</tr>
+<tr>
+<td><code>Hatch</code></td>
+<td>Open and closes the hatch below the ship.</td>
+</tr>
+<tr>
+<td><code>Service</code></td>
+<td>Open and closes the service hatches on either side the ship for access to the fuel rods and ammo magazines.</td>
+</tr>
+</tbody>
+</table>
+</nord-table>
+<p>See <a href="https://starbase.egotech.space/pages/systems/flight/">Flight Systems</a> on how to fly the ship and use its flight systems.</p>
+<h2><a id="combat" class="anchor" href="#combat" aria-hidden="true"></a>Combat</h2>
+<nord-table>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Fire</code></td>
+<td>Fire lasers, best bound to a key and held down to fire.</td>
+</tr>
+<tr>
+<td><code>Combat</code></td>
+<td>Activates combat mode which enables lasers and starts charging them.</td>
+</tr>
+<tr>
+<td><code>Crosshair</code></td>
+<td>Activates beam crosshair.</td>
+</tr>
+<tr>
+<td><code>Laser Ammo Right 1</code>, <code>Laser Ammo Right 2</code>, <code>Laser Ammo Left 1</code> &amp; <code>Laser Ammo Left 2</code></td>
+<td>Ammo remaining on lasers, maximum of 600 units for each.</td>
+</tr>
+<tr>
+<td><code>Laser Ammo Heat 1</code>, <code>Laser Heat Right 2</code>, <code>Laser Heat Left 1</code> &amp; <code>Laser Heat Left 2</code></td>
+<td>Heat generated on lasers, maximum of 1,000 units for each.</td>
+</tr>
+<tr>
+<td><code>Laser Ammo Power 1</code>, <code>Laser Power Right 2</code>, <code>Laser Power Left 1</code> &amp; <code>Laser Power Left 2</code></td>
+<td>Power remaining on lasers, maximum of 5,000 units for each.</td>
+</tr>
+<tr>
+<td><code>Red</code> lights</td>
+<td>Each row of four lights for each laser representing heat. Each light represents 200 units of power. Blinks when heat reaches 600 units.</td>
+</tr>
+<tr>
+<td><code>Blue</code> lights</td>
+<td>Each row of four lights for each laser representing ammo. Each light represents 150 ammo. Blinks when ammo drops below reaches 150.</td>
+</tr>
+<tr>
+<td><code>Green</code> lights</td>
+<td>Each row of four lights for each laser representing power. Each light represents 1,250 units of power. Blinks when power drops below 1,250.</td>
+</tr>
+</tbody>
+</table>
+</nord-table>
+<p>When entering combat, activate <code>Combat</code> to turn on lasers and start charging the lasers. <code>Crosshair</code> activates the beam crosshair for target aimming. Use <code>Fire</code> to fire the lasers. It is best used bound to a key and then holding down the key to fire. Lasers fire alternating in pairs of one each of each side.</p>
+<p>For longer sustained firing, activate <code>Min Gen</code> with a <code>Min Generator Rate</code> of 100.</p>
+<p>Open the <code>Service</code> hatches for access to the ammo magazines.</p>
+<h3><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h3>
+<p>See <a href="https://starbase.egotech.space/pages/systems/power/">Power and Fuel Systems</a> on how to manage ship power and refuel.</p>
+<p>Open the <code>Service</code> hatches for access to the fuel rods.</p>
+<h3><a id="refilling-propellant" class="anchor" href="#refilling-propellant" aria-hidden="true"></a>Refilling Propellant</h3>
+<p>See <a href="https://starbase.egotech.space/pages/systems/propellant/">Propellant Systems</a> on how to refill propellant.</p>
