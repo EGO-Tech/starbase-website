@@ -9,12 +9,6 @@ require('./config');
 
 process.env.NODE_ENV ??= 'development';
 
-const repoConfig = {
-  owner: nconf.get('repo:owner'),
-  repo: nconf.get('repo:name'),
-  ref: nconf.get('repo:ref'),
-};
-
 const shipsBasePath = path.join(__dirname, nconf.get('ships:basePath'));
 
 const extendShipContent = async (ship) => {
@@ -29,12 +23,6 @@ const extendShipContent = async (ship) => {
           );
 
           let contentString = Buffer.from(content, 'base64').toString();
-          if (repoConfig.ref !== 'main') {
-            contentString = contentString.replace(
-              /\/main\//g,
-              `/${repoConfig.ref}/`,
-            );
-          }
           ship[field].content = '\n' + contentString;
         })(),
     ),
@@ -89,6 +77,34 @@ const getShipsData = async ({ pathPrefix }) => {
   return _(ships).flatten().compact().orderBy('name').value();
 };
 
+const getModulesData = async ({ pathPrefix }) => {
+  const modulesPath = path.join(shipsBasePath, nconf.get('ships:modulesPath'));
+  const files = fs.readdirSync(modulesPath, { withFileTypes: true });
+
+  const modules = await Promise.all(
+    _(files)
+      .filter((file) => file.isDirectory())
+      .map((dir) =>
+        (async () => {
+          const shipFilePath = path.join(modulesPath, dir.name, 'ship.json');
+
+          let module;
+          try {
+            const shipFile = fs.readFileSync(shipFilePath);
+
+            module = JSON.parse(Buffer.from(shipFile, 'base64').toString());
+            module.webPath = `${pathPrefix}modules/${module.slug}`;
+          } catch {
+            return;
+          }
+          return module;
+        })(),
+      )
+      .value(),
+  );
+  return _(modules).compact().orderBy('name').value();
+};
+
 module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
@@ -124,5 +140,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('year', () => new Date().getFullYear());
   eleventyConfig.addGlobalData('ships', async () =>
     getShipsData(eleventyConfig),
+  );
+  eleventyConfig.addGlobalData('modules', async () =>
+    getModulesData(eleventyConfig),
   );
 };

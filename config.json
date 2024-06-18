@@ -1,11 +1,7 @@
 {
   "ships": {
-    "basePath": "./starbase-ships"
-  },
-  "repo": {
-    "owner": "EGO-Tech",
-    "name": "starbase-ships",
-    "ref": "main"
+    "basePath": "./starbase-ships",
+    "modulesPath": "others/modules"
   },
   "googleCredentials": "credentials.json",
   "googleAnalytics": {
