@@ -100,6 +100,58 @@ eleventyComputed:
     {% renderTemplate 'njk,md', ship %}
       {{ featureList.content | safe }}
     {% endrenderTemplate %}
+    <nord-banner>
+      The listed features reflects the current version of the ship.
+    </nord-banner>
+    {% if ship.specifications.length %}
+      <nord-stack>
+        <h2>Standard Features</h2>
+        <nord-stack direction="horizontal">
+          {% for specType in ship.specifications %}
+            <nord-card class="spec-card spec-{{specType.id}}" padding="none" style="width: 300px;">
+              <nord-stack slot="header">
+                <h3>{{specType.label}}</h3>
+                {% if specType.specs | selectattr('featured') | length %}
+                {% else %}
+                  <i class="{{specIcons[specType.id]}}"></i>
+                {% endif %}
+              </nord-stack>
+              {% for spec in specType.specs %}
+                <nord-stack gap="xs"  class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+                  <nord-stack align-items="start" direction="horizontal">
+                    <nord-stack style="flex: 0 0 200px;">{{spec.label}}</nord-stack>
+                    <nord-stack style="text-align: right;" class="n-padding-ie-m">
+                      {% if spec.value === true %}
+                        <span class="n-color-text-success">
+                          <i class="fa-regular fa-lg fa-circle-check"></i>
+                        </span>
+                      {% elseif spec.unit !== undefined %}
+                        {{spec.value.toLocaleString()}} {{spec.unit}}
+                      {% else %}
+                        {{spec.value}}
+                      {% endif %}
+                    </nord-stack>
+                  </nord-stack>
+                  {% for subSpec in spec.subSpecs %}
+                    <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+                      <nord-stack style="flex: 0 0 200px;">{{subSpec.label}}</nord-stack>
+                      <nord-stack style="text-align: right;" class="n-padding-ie-m">
+                        {% if spec.value === true %}
+                        {% elseif spec.unit !== undefined %}
+                          {{subSpec.value.toLocaleString()}} {{subSpec.unit}}
+                        {% else %}
+                          {{subSpec.value}}
+                        {% endif %}
+                      </nord-stack>
+                    </nord-stack>
+                  {% endfor %}
+                </nord-stack>
+              {% endfor %}
+            </nord-card>
+          {% endfor %}
+        </nord-stack>
+      </nord-stack>
+    {% endif %}
     {% if ship.premium %}
       <nord-banner>
         A premium version, the <a href="{{ ('/ships/' + ship.premium.slug + '/') | url }}">{{ship.premium.name}}</a> is available for purchase.
