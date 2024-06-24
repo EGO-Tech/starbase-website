@@ -140,6 +140,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addGlobalData('year', () => new Date().getFullYear());
   eleventyConfig.addGlobalData('specIcons', () => ({
     crafting: 'fa-solid fa-wrench',
+    flight: 'fa-solid fa-space-shuttle',
     utility: 'fa-solid fa-gear',
   }));
   eleventyConfig.addGlobalData('ships', async () =>

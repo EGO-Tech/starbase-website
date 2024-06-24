@@ -118,7 +118,7 @@ eleventyComputed:
                       <span>{{featured.value.toLocaleString()}}</span>
                       <span class="n-font-size-m">{{featured.unit}}</span>
                     {% else %}
-                      <span>{{featured.value}}</span>
+                      <span>{{featured.value.toLocaleString() if featured.value.toLocaleString else featured.value}}</span>
                     {% endif %}
                   </span>
                   <p class="n-font-weight-active n-color-text-weakest">{{featured.label}}</p>
@@ -129,7 +129,7 @@ eleventyComputed:
               {% for spec in specType.specs | rejectattr('featured') %}
                 <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
                   <nord-stack align-items="start" direction="horizontal">
-                    <nord-stack style="flex: 0 0 200px;">{{spec.label}}</nord-stack>
+                    <nord-stack style="flex: 0 0 180px;">{{spec.label}}</nord-stack>
                     <nord-stack style="text-align: right;" class="n-padding-ie-m">
                       {% if spec.value === true %}
                         <span class="n-color-text-success">
@@ -138,19 +138,22 @@ eleventyComputed:
                       {% elseif spec.unit !== undefined %}
                         {{spec.value.toLocaleString()}} {{spec.unit}}
                       {% else %}
-                        {{spec.value}}
+                        {{spec.value.toLocaleString() if spec.value.toLocaleString else spec.value}}
                       {% endif %}
                     </nord-stack>
                   </nord-stack>
                   {% for subSpec in spec.subSpecs %}
                     <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
-                      <nord-stack style="flex: 0 0 200px;">{{subSpec.label}}</nord-stack>
+                      <nord-stack style="flex: 0 0 180px;">{{subSpec.label}}</nord-stack>
                       <nord-stack style="text-align: right;" class="n-padding-ie-m">
-                        {% if spec.value === true %}
-                        {% elseif spec.unit !== undefined %}
+                        {% if subSpec.value === true %}
+                          <span class="n-color-text-success">
+                            <i class="fa-regular fa-lg fa-circle-check"></i>
+                          </span>
+                        {% elseif subSpec.unit !== undefined %}
                           {{subSpec.value.toLocaleString()}} {{subSpec.unit}}
                         {% else %}
-                          {{subSpec.value}}
+                          {{subSpec.value.toLocaleString() if subSpec.value.toLocaleString else subSpec.value}}
                         {% endif %}
                       </nord-stack>
                     </nord-stack>
