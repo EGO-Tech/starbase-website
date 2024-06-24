@@ -109,15 +109,25 @@ eleventyComputed:
         <nord-stack direction="horizontal">
           {% for specType in ship.specifications %}
             <nord-card class="spec-card spec-{{specType.id}}" padding="none" style="width: 300px;">
-              <nord-stack slot="header">
-                <h3>{{specType.label}}</h3>
+              <nord-stack gap="xs" slot="header" style="height: 130px">
+                <h3 class="n-padding-be-l">{{specType.label}}</h3>
                 {% if specType.specs | selectattr('featured') | length %}
+                  {% set featured = specType.specs | selectattr('featured') | first %}
+                  <span class="n-font-size-xxxl n-font-weight-active">
+                    {% if featured.unit !== undefined %}
+                      <span>{{featured.value.toLocaleString()}}</span>
+                      <span class="n-font-size-m">{{featured.unit}}</span>
+                    {% else %}
+                      <span>{{featured.value}}</span>
+                    {% endif %}
+                  </span>
+                  <p class="n-font-weight-active n-color-text-weakest">{{featured.label}}</p>
                 {% else %}
-                  <i class="{{specIcons[specType.id]}}"></i>
+                  <i class="{{specIcons[specType.id]}} fa-3x"></i>
                 {% endif %}
               </nord-stack>
-              {% for spec in specType.specs %}
-                <nord-stack gap="xs"  class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+              {% for spec in specType.specs | rejectattr('featured') %}
+                <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
                   <nord-stack align-items="start" direction="horizontal">
                     <nord-stack style="flex: 0 0 200px;">{{spec.label}}</nord-stack>
                     <nord-stack style="text-align: right;" class="n-padding-ie-m">
