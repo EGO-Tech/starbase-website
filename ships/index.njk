@@ -123,7 +123,7 @@ eleventyComputed:
                   </span>
                   <p class="n-font-weight-active n-color-text-weakest">{{featured.label}}</p>
                 {% else %}
-                  <i class="{{specIcons[specType.id]}} fa-3x"></i>
+                  <span><i class="{{specIcons[specType.id]}} fa-3x"></i></span>
                 {% endif %}
               </nord-stack>
               {% for spec in specType.specs | rejectattr('featured') %}
