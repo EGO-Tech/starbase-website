@@ -1,0 +1,61 @@
+<nord-card class="spec-card spec-{{specType.id}}" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">{{specType.label}}</h3>
+    {% if specType.specs | selectattr('featured') | length %}
+      {% set featured = specType.specs | selectattr('featured') | first %}
+      <span class="n-font-size-xxxl n-font-weight-active">
+        {% if featured.unit !== undefined %}
+          <span>{{featured.value.toLocaleString()}}</span>
+          <span class="n-font-size-m">{{featured.unit}}</span>
+        {% else %}
+          <span>{{featured.value.toLocaleString() if featured.value.toLocaleString else featured.value}}</span>
+        {% endif %}
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">{{featured.label}}</p>
+    {% else %}
+      <span><i class="{{specType.icon or specIcons[specType.id]}} fa-3x"></i></span>
+    {% endif %}
+  </nord-stack>
+  {% for spec in specType.specs | rejectattr('featured') %}
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        {% if spec.value %}
+          <nord-stack style="flex: 0 0 180px;">{{spec.label}}</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            {% if spec.value === true %}
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            {% elseif spec.unit !== undefined %}
+              {{spec.value.toLocaleString()}} {{spec.unit}}
+            {% else %}
+              {{spec.value.toLocaleString() if spec.value.toLocaleString else spec.value}}
+            {% endif %}
+          </nord-stack>
+        {% else %}
+          <nord-stack>{{spec.label}}</nord-stack>
+        {% endif %}
+      </nord-stack>
+      {% for subSpec in spec.subSpecs %}
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          {% if subSpec.value %}
+            <nord-stack style="flex: 0 0 180px;">{{subSpec.label}}</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              {% if subSpec.value === true %}
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              {% elseif subSpec.unit !== undefined %}
+                {{subSpec.value.toLocaleString()}} {{subSpec.unit}}
+              {% else %}
+                {{subSpec.value.toLocaleString() if subSpec.value.toLocaleString else subSpec.value}}
+              {% endif %}
+            </nord-stack>
+          {% else %}
+            <nord-stack>{{subSpec.label}}</nord-stack>
+          {% endif %}
+        </nord-stack>
+      {% endfor %}
+    </nord-stack>
+  {% endfor %}
+</nord-card>
