@@ -97,70 +97,27 @@ eleventyComputed:
     <p>{{ ship.description | nl2br | safe }}</p>
   </nord-stack>
   <nord-stack id="features">
-    {% renderTemplate 'njk,md', ship %}
-      {{ featureList.content | safe }}
-    {% endrenderTemplate %}
+    <h1>Features</h1>
     <nord-banner>
       The listed features reflects the current version of the ship.
     </nord-banner>
     {% if ship.specifications.length %}
+      {% set keySpecs = ship.specifications | selectattr('key') %}
+      {% if keySpecs.length %}
+        <nord-stack>
+          <h2>Key Features</h2>
+          <nord-stack direction="horizontal" wrap>
+            {% for specType in keySpecs %}
+              {% include 'featureCard.njk' %}
+            {% endfor %}
+          </nord-stack>
+        </nord-stack>
+        {% endif %}
       <nord-stack>
         <h2>Standard Features</h2>
-        <nord-stack direction="horizontal">
-          {% for specType in ship.specifications %}
-            <nord-card class="spec-card spec-{{specType.id}}" padding="none" style="width: 300px;">
-              <nord-stack gap="xs" slot="header" style="height: 130px">
-                <h3 class="n-padding-be-l">{{specType.label}}</h3>
-                {% if specType.specs | selectattr('featured') | length %}
-                  {% set featured = specType.specs | selectattr('featured') | first %}
-                  <span class="n-font-size-xxxl n-font-weight-active">
-                    {% if featured.unit !== undefined %}
-                      <span>{{featured.value.toLocaleString()}}</span>
-                      <span class="n-font-size-m">{{featured.unit}}</span>
-                    {% else %}
-                      <span>{{featured.value.toLocaleString() if featured.value.toLocaleString else featured.value}}</span>
-                    {% endif %}
-                  </span>
-                  <p class="n-font-weight-active n-color-text-weakest">{{featured.label}}</p>
-                {% else %}
-                  <span><i class="{{specIcons[specType.id]}} fa-3x"></i></span>
-                {% endif %}
-              </nord-stack>
-              {% for spec in specType.specs | rejectattr('featured') %}
-                <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
-                  <nord-stack align-items="start" direction="horizontal">
-                    <nord-stack style="flex: 0 0 180px;">{{spec.label}}</nord-stack>
-                    <nord-stack style="text-align: right;" class="n-padding-ie-m">
-                      {% if spec.value === true %}
-                        <span class="n-color-text-success">
-                          <i class="fa-regular fa-lg fa-circle-check"></i>
-                        </span>
-                      {% elseif spec.unit !== undefined %}
-                        {{spec.value.toLocaleString()}} {{spec.unit}}
-                      {% else %}
-                        {{spec.value.toLocaleString() if spec.value.toLocaleString else spec.value}}
-                      {% endif %}
-                    </nord-stack>
-                  </nord-stack>
-                  {% for subSpec in spec.subSpecs %}
-                    <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
-                      <nord-stack style="flex: 0 0 180px;">{{subSpec.label}}</nord-stack>
-                      <nord-stack style="text-align: right;" class="n-padding-ie-m">
-                        {% if subSpec.value === true %}
-                          <span class="n-color-text-success">
-                            <i class="fa-regular fa-lg fa-circle-check"></i>
-                          </span>
-                        {% elseif subSpec.unit !== undefined %}
-                          {{subSpec.value.toLocaleString()}} {{subSpec.unit}}
-                        {% else %}
-                          {{subSpec.value.toLocaleString() if subSpec.value.toLocaleString else subSpec.value}}
-                        {% endif %}
-                      </nord-stack>
-                    </nord-stack>
-                  {% endfor %}
-                </nord-stack>
-              {% endfor %}
-            </nord-card>
+        <nord-stack direction="horizontal" wrap>
+          {% for specType in ship.specifications | rejectattr('key') %}
+            {% include 'featureCard.njk' %}
           {% endfor %}
         </nord-stack>
       </nord-stack>
