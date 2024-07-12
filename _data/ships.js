@@ -90,6 +90,7 @@ const shipTypes = [
   { id: 'command-ship', name: 'Command Ship', label: 'Command Ships' },
   { id: 'transport', name: 'Transport', label: 'Transports' },
   { id: 'explorer', name: 'Explorer', label: 'Explorers' },
+  { id: 'supply-ship', name: 'Supply Ship', label: 'Supply Ships' },
 ];
 
 const similarTagsExclude = ['rando-shop'];
