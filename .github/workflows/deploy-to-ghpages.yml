@@ -1,6 +1,7 @@
 name: Deploy to GitHub Pages
 
 on:
+  #checkov:skip=CKV_GHA_7
   workflow_dispatch:
     inputs:
       test:
@@ -14,11 +15,17 @@ on:
   schedule:
     - cron: 0 0 * * *
 
+permissions: {}
+
 jobs:
   deploy:
     runs-on: ubuntu-22.04
+
     permissions:
-      contents: write
+      contents: read
+      packages: read
+      statuses: write
+
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     steps:
