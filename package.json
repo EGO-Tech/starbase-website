@@ -31,7 +31,7 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^2.0.1",
-    "rollup": "^4.19.1"
+    "rollup": "^4.20.0"
   },
   "prettier": {
     "singleQuote": true
