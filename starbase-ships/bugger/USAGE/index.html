@@ -36,28 +36,28 @@
 <td>Activates the low sensitvity mode of pitch and yaw by limiting thrust. Use the <code>Sensitivity</code> switch to set the maximum thrust rate of sloth mode.</td>
 </tr>
 <tr>
+<td><code>Profiles</code></td>
+<td>Adjusts preset flight profiles. See <a href="https://starbase.egotech.space/pages/systems/flight/#flight-profiles">Flight Profiles</a>.</td>
+</tr>
+<tr>
 <td><code>Aim</code></td>
 <td>Reduces the response time of key presses for pitch and yaw.</td>
 </tr>
 <tr>
-<td><code>Guide</code>, <code>Hover Distance</code>, <code>FrontRight</code>, <code>FrontLeft</code>, <code>BackRight</code> &amp; <code>BackLeft</code></td>
-<td><code>Guide</code> activates rangefinders at each corner of the base of the ship. Each repsective corner shows distance to the ground. <code>Red</code> warning lights flash when ground is less that <code>Hover Distance</code>.</td>
+<td><code>Guide</code>, <code>FrontRight</code>, <code>FrontLeft</code>, <code>BackRight</code> &amp; <code>BackLeft</code></td>
+<td><code>Guide</code> activates rangefinders at each corner of the base of the ship. Each repsective corner shows distance to the ground. <code>Red</code> warning lights flash when ground is less that 5 metres.</td>
 </tr>
 <tr>
 <td><code>Range</code> &amp; <code>Distance</code></td>
 <td>Activates forward rangefinders, with <code>Distance</code> showing distance to object detected by center rangefinder.</td>
 </tr>
 <tr>
-<td><code>Mine</code>, <code>Advance</code>, <code>Advance Thrust</code> &amp; <code>Advance Time</code></td>
+<td><code>Mine</code>, <code>Advance Mode</code>, <code>Advance Thrust</code>,  <code>Advance Time</code> &amp; <code>Min Advance Distance</code></td>
 <td>Mining controls. See <a href="#mining">Mining</a>.</td>
 </tr>
 <tr>
-<td><code>SafeZone</code></td>
-<td>Whether current location is in the safe zone.</td>
-</tr>
-<tr>
-<td><code>StrengthFactor</code></td>
-<td>Current strength of ship. May fluctuate as ore crates are filled. Anything below 1.0 means ship is damaged.</td>
+<td><code>Warnings</code>, <code>SafeZone</code> &amp; <code>StrengthFactor</code></td>
+<td>Warnings for being outside safe zone, ship damage as well as low fuel or propellant. See <a href="https://starbase.egotech.space/pages/systems/utility/#warnings">Warnings Panel</a>.</td>
 </tr>
 <tr>
 <td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
@@ -111,7 +111,7 @@
 <td>Current generator rate.</td>
 </tr>
 <tr>
-<td><code>Min Gen</code> &amp; <code>Min Generator Limit</code></td>
+<td><code>Min Gen</code> &amp; <code>Min Generator Rate</code></td>
 <td>Toggle and sets minimum generator rate. See <a href="#managing-power-and-fuel">Managing Power and Fuel</a>.</td>
 </tr>
 <tr>
@@ -151,14 +151,17 @@
 <p>See <a href="https://starbase.egotech.space/pages/systems/propellant/">Propellant Systems</a> on how to refill propellant.</p>
 <h2><a id="mining" class="anchor" href="#mining" aria-hidden="true"></a>Mining</h2>
 <p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/bugger/images/mining_console.jpg" alt="Mining Console"></p>
-<p>Activate <code>Lasers</code> to turn on the mining lasers which will automatically sweep from side to side. Activating <code>Advance</code> will slowly move the ship forward based on <code>Advance Time</code> and <code>Advance Thrust</code>. Adjust <code>Advance Time</code> (period to wait before each advance in seconds) and <code>Advance Thrust</code> (amount of forward thrust when advancing) if needed.</p>
-<nord-banner variant="info">
-<p><strong>TIP:</strong> Increase <code>Advance Thrust</code> if needed as the ship gains more mass from filling up.</p>
-</nord-banner>
+<p>Activate <code>Lasers</code> to turn on the mining lasers which will automatically sweep from side to side. Switching <code>Advance Mode</code> to <code>Manual</code> or <code>Auto</code> will slowly move the ship forward to dredge the surface.</p>
+<p>Advance has the following options which can be adjusted:</p>
+<ul>
+<li><code>Advance Time</code> will adjust the period to wait before each advance in seconds</li>
+<li><code>Advance Thrust</code> will adjust the amount of forward thrust when advancing</li>
+<li><code>Min Advance Distance</code> will adjust the minimum distance in metres when advancing. If not met and <code>Advance Mode</code> is in <code>Auto</code> mode, the <code>Advance Thrust</code> will be increased.</li>
+</ul>
 <p><code>Collect</code> turns on the four ore collectors.</p>
-<p><code>Mine</code> will activate automated mining, which will activate <code>Lasers</code>, <code>Advance</code> and <code>Collect</code>.</p>
+<p><code>Mine</code> will activate automated mining, which will activate <code>Lasers</code> and <code>Collect</code> plus set <code>Advance Mode</code> to <code>Auto</code>.</p>
 <nord-banner variant="info">
-<p><strong>TIP:</strong> Turn on <code>Min Gen</code> and allow the generators to ramp up before starting to mine. Continous use of the lasers and collectors at the same time requires a <code>Min Generator Limit</code> of around 85%.</p>
+<p><strong>TIP:</strong> Turn on <code>Min Gen</code> and allow the generators to ramp up before starting to mine. Continous use of the lasers and collectors at the same time requires a <code>Min Generator Rate</code> of around 85%.</p>
 </nord-banner>
 <nord-banner variant="warning">
 <p><strong>NOTE:</strong> For safety, lasers will turn off if the total fuel is less that 2,000 units.</p>
