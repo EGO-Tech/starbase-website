@@ -121,14 +121,13 @@ module.exports = async (data) => {
 
   _.each(ships, (ship) => {
     ship.popular ??= _.includes(popular, ship.name);
-    ship.premium = _.find(ships, { path: `${ship.path}/premium` });
     ship.similar = _(ships)
       .reject({ path: ship.path })
       .orderBy(
         (otherShip) => {
           const weight =
-            (_.includes(ship.name, otherShip.name) ||
-              _.includes(otherShip.name, ship.name)) * 20;
+            (_.get(ship, 'series.path') === _.get(otherShip, 'series.path')) *
+            20;
           otherShip.weight =
             weight +
             _.intersectionBy(ship.types, otherShip.types, 'type').length * 8 +
@@ -187,6 +186,7 @@ module.exports = async (data) => {
         byShip: _.keyBy(shipDownloads, 'name'),
       },
     },
+    bySeries: _.groupBy(ships, 'series.name'),
     bySaleType: _.groupBy(ships, 'saleType'),
     byType: _(shipTypes)
       .keyBy('id')

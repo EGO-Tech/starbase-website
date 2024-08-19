@@ -29,15 +29,19 @@ const extendShipContent = async (ship) => {
   );
 };
 
-const getShipsData = async ({ pathPrefix }) => {
-  const files = fs.readdirSync(shipsBasePath, { withFileTypes: true });
-
-  const ships = await Promise.all(
+const getShipsData = async (source, pathPrefix, findVariants = true) => {
+  let files;
+  try {
+    files = fs.readdirSync(source, { withFileTypes: true });
+  } catch {
+    return [];
+  }
+  return Promise.all(
     _(files)
       .filter((file) => file.isDirectory())
       .map((dir) =>
         (async () => {
-          const shipFilePath = path.join(shipsBasePath, dir.name, 'ship.json');
+          const shipFilePath = path.join(source, dir.name, 'ship.json');
 
           let ship;
           try {
@@ -50,31 +54,25 @@ const getShipsData = async ({ pathPrefix }) => {
             return [];
           }
 
-          const premiumShipFilePath = path.join(
-            shipsBasePath,
-            dir.name,
-            'premium',
-            'ship.json',
-          );
-
-          let premiumShip;
-          try {
-            const premiumShipFile = fs.readFileSync(premiumShipFilePath);
-
-            premiumShip = JSON.parse(
-              Buffer.from(premiumShipFile, 'base64').toString(),
+          let variants = [];
+          if (findVariants) {
+            variants = await getShipsData(
+              path.join(source, dir.name, 'variants'),
+              pathPrefix,
+              false,
             );
-            await extendShipContent(premiumShip);
-            premiumShip.webPath = `${pathPrefix}ships/${premiumShip.slug}`;
-            return [ship, premiumShip];
-          } catch {
-            return [ship];
           }
+
+          return [ship, variants];
         })(),
       )
       .value(),
   );
-  return _(ships).flatten().compact().orderBy('name').value();
+};
+
+const getAllShipsData = async ({ pathPrefix }) => {
+  const ships = await getShipsData(shipsBasePath, pathPrefix);
+  return _(ships).flattenDeep().compact().orderBy('name').value();
 };
 
 const getModulesData = async ({ pathPrefix }) => {
@@ -144,7 +142,7 @@ module.exports = function (eleventyConfig) {
     utility: 'fa-solid fa-gear',
   }));
   eleventyConfig.addGlobalData('ships', async () =>
-    getShipsData(eleventyConfig),
+    getAllShipsData(eleventyConfig),
   );
   eleventyConfig.addGlobalData('modules', async () =>
     getModulesData(eleventyConfig),

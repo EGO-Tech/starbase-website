@@ -94,15 +94,35 @@ title: Starbase Ships by EGOTech
               </nord-button>
             </nord-button-group>
           </nord-stack>
-          {% for shipNav in ships.list %}
-            <nord-nav-item
-              class="hide ship-nav-link ship-{{shipNav.slug}}"
-              {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
-              {% if shipNav.slug === ship.slug %}active{% endif %}
-              href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
-            >
-              {{shipNav.name}}
-            </nord-nav-item>
+          {% for seriesName, seriesShips in ships.bySeries %}
+            {% if seriesShips.length > 1 %}
+              <nord-nav-item class="ship-nav-series ship-series-{{seriesShips[0].series.path}}">
+                {{seriesName}} Series
+                <nord-nav-group slot="subnav">
+                  {% for shipNav in seriesShips %}
+                    <nord-nav-item
+                      class="hide ship-nav-link ship-{{shipNav.slug}}"
+                      {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
+                      {% if shipNav.slug === ship.slug %}active{% endif %}
+                      href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
+                    >
+                      {{shipNav.name}}
+                    </nord-nav-item>
+                  {% endfor %}
+                </nord-nav-group>
+              </nord-nav-item>
+            {% else %}
+              {% for shipNav in seriesShips %}
+                <nord-nav-item
+                  class="hide ship-nav-link ship-{{shipNav.slug}}"
+                  {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
+                  {% if shipNav.slug === ship.slug %}active{% endif %}
+                  href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
+                >
+                  {{shipNav.name}}
+                </nord-nav-item>
+              {% endfor %}
+            {% endif %}
           {% endfor %}
         </nord-nav-group>
         <nord-nav-group heading="Information">
@@ -208,7 +228,7 @@ title: Starbase Ships by EGOTech
       const applyShipFilters = (filter) => {
         shipFilter = filter;
         localStorage.setItem('shipFilter', filter);
-        document.querySelectorAll('.ship-nav-link').forEach((item) => {
+        document.querySelectorAll('.ship-nav-link, .ship-nav-series').forEach((item) => {
           item.classList.add('hide');
         });
 
@@ -224,16 +244,22 @@ title: Starbase Ships by EGOTech
           allShipsButton.setAttribute('variant', 'plain');
           saleShipsButton.setAttribute('variant', 'plain');
           _(ships).filter((ship) => ship.saleType === 'free').each((ship) => {
-            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((link) => link.classList.remove('hide'));
           });
         } else if (shipFilter === 'sale') {
           saleShipsButton.setAttribute('variant', 'primary');
           freeShipsButton.setAttribute('variant', 'plain');
           allShipsButton.setAttribute('variant', 'plain');
           _(ships).filter((ship) => ship.saleType === 'for-sale').each((ship) => {
-            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((link) => link.classList.remove('hide'));
           });
         }
+
+        document.querySelectorAll(`.ship-nav-series`).forEach((series) => {
+          if (!_.every(series.querySelectorAll(`.ship-nav-link`), (link) => link.classList.contains('hide'))) {
+            series.classList.remove('hide');
+          }
+        });
       }
 
       applyShipFilters(shipFilter);
