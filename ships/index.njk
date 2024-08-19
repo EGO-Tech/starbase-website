@@ -222,7 +222,7 @@ eleventyComputed:
       <h1 id="download">Download Blueprint</h1>
       {% if ship.retired %}
         <nord-banner variant="danger">
-          This ship has reached end of life status and is retired. It will no longer be updated or supported. Blueprint may no longer be functional, download at your own descretion.
+          This ship has reached end of life status and is retired. It will no longer be updated or supported. Blueprint may no longer be functional, download at your own discretion.
         </nord-banner>
       {% else %}
         <nord-button href="{{ship.blueprints[0].url}}" variant="primary" onclick="gaEvent('download', { ship: '{{ship.name}}', version: '{{ship.version}}', download_ref: 'website' })">
