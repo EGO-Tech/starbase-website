@@ -83,137 +83,307 @@
           </nord-button>
           <nord-tooltip id="nav-search">Shortcut: Ctrl+K</nord-tooltip>
         </nord-stack>
-        <nord-nav-group heading="Ships For Sale">
+        <nord-nav-group heading="Ships">
+          <nord-stack direction="horizontal" class="n-margin-be-m" wrap>
+            <nord-button-group>
+              <nord-button id="all-ships-button" size="s" variant="plain">
+                All
+              </nord-button>
+              <nord-button id="free-ships-button" size="s" variant="plain">
+                Free
+              </nord-button>
+              <nord-button id="sale-ships-button" size="s" variant="plain">
+                For Sale
+              </nord-button>
+            </nord-button-group>
+          </nord-stack>
           
-            <nord-nav-item badge="UPDATED"  href="/ships/bugger-x/">
-              Bugger X
-            </nord-nav-item>
-          
-            <nord-nav-item badge="UPDATED"  href="/ships/crawler/">
-              Crawler
-            </nord-nav-item>
-          
-            <nord-nav-item badge="UPDATED"  href="/ships/crawler-x/">
-              Crawler X
-            </nord-nav-item>
-          
-            <nord-nav-item   href="/ships/piercer-x/">
-              Piercer X (Anorak Edition)
-            </nord-nav-item>
-          
-            <nord-nav-item badge="NEW"  href="/ships/roamer/">
-              Roamer
-            </nord-nav-item>
-          
-            <nord-nav-item   href="/ships/shifter-x/">
-              Shifter X
-            </nord-nav-item>
-          
-            <nord-nav-item   href="/ships/trebler-x/">
-              Trebler X
-            </nord-nav-item>
-          
-            <nord-nav-item   href="/ships/whaler/">
-              Whaler
-            </nord-nav-item>
-          
-        </nord-nav-group>
-        <nord-nav-group heading="Free Ships">
-          
-            <nord-nav-item badge="UPDATED"  href="/ships/bugger/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-bugger"
+              badge="UPDATED"
+              
+              href="/ships/bugger/"
+            >
               Bugger
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/clunker/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-bugger-x"
+              badge="UPDATED"
+              
+              href="/ships/bugger-x/"
+            >
+              Bugger X
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-clunker"
+              
+              
+              href="/ships/clunker/"
+            >
               Clunker
             </nord-nav-item>
           
-            <nord-nav-item badge="NEW"  href="/ships/feeder/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-crawler"
+              badge="UPDATED"
+              
+              href="/ships/crawler/"
+            >
+              Crawler
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-crawler-x"
+              badge="UPDATED"
+              
+              href="/ships/crawler-x/"
+            >
+              Crawler X
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-feeder"
+              badge="NEW"
+              
+              href="/ships/feeder/"
+            >
               Feeder
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/fisher/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-fisher"
+              
+              
+              href="/ships/fisher/"
+            >
               Fisher
             </nord-nav-item>
           
-            <nord-nav-item  active href="/ships/fledger/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-fledger"
+              
+              active
+              href="/ships/fledger/"
+            >
               Fledger
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/flipper/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-flipper"
+              
+              
+              href="/ships/flipper/"
+            >
               Flipper
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/hexxer/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-hexxer"
+              
+              
+              href="/ships/hexxer/"
+            >
               Hexxer
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/hexxer-trio/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-hexxer-trio"
+              
+              
+              href="/ships/hexxer-trio/"
+            >
               Hexxer Trio
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/hoarder/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-hoarder"
+              
+              
+              href="/ships/hoarder/"
+            >
               Hoarder
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/hopper/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-hopper"
+              
+              
+              href="/ships/hopper/"
+            >
               Hopper
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/jabber/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-jabber"
+              
+              
+              href="/ships/jabber/"
+            >
               Jabber
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/lugger/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-lugger"
+              
+              
+              href="/ships/lugger/"
+            >
               Lugger
             </nord-nav-item>
           
-            <nord-nav-item badge="POPULAR"  href="/ships/mapper/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-mapper"
+              badge="POPULAR"
+              
+              href="/ships/mapper/"
+            >
               Mapper
             </nord-nav-item>
           
-            <nord-nav-item badge="POPULAR"  href="/ships/piercer/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-piercer"
+              badge="POPULAR"
+              
+              href="/ships/piercer/"
+            >
               Piercer
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/quester/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-piercer-x"
+              
+              
+              href="/ships/piercer-x/"
+            >
+              Piercer X (Anorak Edition)
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-quester"
+              
+              
+              href="/ships/quester/"
+            >
               Quester
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/rigger/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-rigger"
+              
+              
+              href="/ships/rigger/"
+            >
               Rigger
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/rocker/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-roamer"
+              badge="NEW"
+              
+              href="/ships/roamer/"
+            >
+              Roamer
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-rocker"
+              
+              
+              href="/ships/rocker/"
+            >
               Rocker
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/rocker-duo/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-rocker-duo"
+              
+              
+              href="/ships/rocker-duo/"
+            >
               Rocker Duo
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/shifter/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-shifter"
+              
+              
+              href="/ships/shifter/"
+            >
               Shifter
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/sower/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-shifter-x"
+              
+              
+              href="/ships/shifter-x/"
+            >
+              Shifter X
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-sower"
+              
+              
+              href="/ships/sower/"
+            >
               Sower
             </nord-nav-item>
           
-            <nord-nav-item badge="UPDATED"  href="/ships/stocker/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-stocker"
+              badge="UPDATED"
+              
+              href="/ships/stocker/"
+            >
               Stocker
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/tourer/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-tourer"
+              
+              
+              href="/ships/tourer/"
+            >
               Tourer
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/trebler/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-trebler"
+              
+              
+              href="/ships/trebler/"
+            >
               Trebler
             </nord-nav-item>
           
-            <nord-nav-item   href="/ships/tugger/">
+            <nord-nav-item
+              class="hide ship-nav-link ship-trebler-x"
+              
+              
+              href="/ships/trebler-x/"
+            >
+              Trebler X
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-tugger"
+              
+              
+              href="/ships/tugger/"
+            >
               Tugger
+            </nord-nav-item>
+          
+            <nord-nav-item
+              class="hide ship-nav-link ship-whaler"
+              
+              
+              href="/ships/whaler/"
+            >
+              Whaler
             </nord-nav-item>
           
         </nord-nav-group>
@@ -1533,6 +1703,48 @@ If connected to the existing block, they should work as the block is already pip
             menu.show();
           })
         );
+
+      let shipFilter = localStorage.getItem('shipFilter') || 'all';
+
+      const allShipsButton = document.querySelector("#all-ships-button");
+      allShipsButton.addEventListener("click", () => applyShipFilters('all'));
+      const freeShipsButton = document.querySelector("#free-ships-button");
+      freeShipsButton.addEventListener("click", () => applyShipFilters('free'));
+      const saleShipsButton = document.querySelector("#sale-ships-button");
+      saleShipsButton.addEventListener("click", () => applyShipFilters('sale'));
+
+      const applyShipFilters = (filter) => {
+        shipFilter = filter;
+        localStorage.setItem('shipFilter', filter);
+        document.querySelectorAll('.ship-nav-link').forEach((item) => {
+          item.classList.add('hide');
+        });
+
+        if (shipFilter === 'all') {
+          allShipsButton.setAttribute('variant', 'primary');
+          freeShipsButton.setAttribute('variant', 'plain');
+          saleShipsButton.setAttribute('variant', 'plain');
+          document.querySelectorAll('.ship-nav-link').forEach((item) => {
+            item.classList.remove('hide');
+          });
+        } else if (shipFilter === 'free') {
+          freeShipsButton.setAttribute('variant', 'primary');
+          allShipsButton.setAttribute('variant', 'plain');
+          saleShipsButton.setAttribute('variant', 'plain');
+          _(ships).filter((ship) => ship.saleType === 'free').each((ship) => {
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+          });
+        } else if (shipFilter === 'sale') {
+          saleShipsButton.setAttribute('variant', 'primary');
+          freeShipsButton.setAttribute('variant', 'plain');
+          allShipsButton.setAttribute('variant', 'plain');
+          _(ships).filter((ship) => ship.saleType === 'for-sale').each((ship) => {
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+          });
+        }
+      }
+
+      applyShipFilters(shipFilter);
     </script>
   </body>
 </html>
