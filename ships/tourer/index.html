@@ -456,19 +456,6 @@
             
           
             
-              
-                <nord-nav-item
-                  class="hide ship-nav-link ship-tourer"
-                  
-                  active
-                  href="/ships/tourer/"
-                >
-                  Tourer
-                </nord-nav-item>
-              
-            
-          
-            
               <nord-nav-item class="ship-nav-series ship-series-trebler">
                 Trebler Series
                 <nord-nav-group slot="subnav">
@@ -589,7 +576,7 @@
       
       <nord-button href="#build-cost" size="s" variant="default">Build Cost</nord-button>
       
-        <nord-button href="#download" size="s" variant="primary">Download</nord-button>
+        <nord-button href="#download" size="s" variant="default">Download</nord-button>
       
       <nord-button href="#usage" size="s" variant="default">Usage</nord-button>
       
@@ -632,6 +619,10 @@
   
 </nord-stack>
 
+  
+    <nord-banner variant="danger">
+      This ship has reached end of life status and is retired. It will no longer be updated or supported.
+    </nord-banner>
   
   <nord-stack id="ship-photos" class="info-page">
     <nord-card padding="none">
@@ -1474,10 +1465,9 @@
     
       <h1 id="download">Download Blueprint</h1>
       
-        <nord-button href="https://github.com/EGO-Tech/starbase-ships/raw/main/tourer/blueprints/tourer.fbe" variant="primary" onclick="gaEvent('download', { ship: 'Tourer', version: '2.0.0', download_ref: 'website' })">
-          <i slot="start" class="fa-solid fa-download n-color-text"></i>
-          Download v2.0.0 (current)
-        </nord-button>
+        <nord-banner variant="danger">
+          This ship has reached end of life status and is retired. It will no longer be updated or supported. Blueprint may no longer be functional, download at your own descretion.
+        </nord-banner>
       
       <nord-card padding="none" style="width: 400px">
         <h2 slot="header">All Blueprints</h2>
@@ -1495,7 +1485,7 @@
                 <tr>
                   <td>v2.0.0</td>
                   <td>
-                    <nord-badge variant="warning">Current</nord-badge>
+                    
                     
                   </td>
                   <td class="n-table-align-right">
