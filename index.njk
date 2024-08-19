@@ -117,7 +117,7 @@ currentTitle: Home
     window.history.pushState({}, null, `?${qs}`)
 
     shipsToShow.forEach((ship) => {
-      document.querySelectorAll(`.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+      document.querySelectorAll(`.ship-card.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
     });
 
     document.querySelectorAll('.ship-section').forEach((section) => {

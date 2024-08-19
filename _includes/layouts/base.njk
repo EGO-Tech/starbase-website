@@ -80,17 +80,28 @@ title: Starbase Ships by EGOTech
           </nord-button>
           <nord-tooltip id="nav-search">Shortcut: Ctrl+K</nord-tooltip>
         </nord-stack>
-        <nord-nav-group heading="Ships For Sale">
-          {% for shipForSale in ships.bySaleType['for-sale'] %}
-            <nord-nav-item {% if shipForSale.new %}badge="NEW"{% elseif shipForSale.updated %}badge="UPDATED"{% elseif shipForSale.popular %}badge="POPULAR"{% endif %} {% if shipForSale.slug === ship.slug %}active{% endif %} href="{{ ('/ships/' + shipForSale.slug + '/') | url }}">
-              {{shipForSale.name}}
-            </nord-nav-item>
-          {% endfor %}
-        </nord-nav-group>
-        <nord-nav-group heading="Free Ships">
-          {% for shipFree in ships.bySaleType['free'] %}
-            <nord-nav-item {% if shipFree.new %}badge="NEW"{% elseif shipFree.updated %}badge="UPDATED"{% elseif shipFree.popular %}badge="POPULAR"{% endif %} {% if shipFree.slug === ship.slug %}active{% endif %} href="{{ ('/ships/' + shipFree.slug + '/') | url }}">
-              {{shipFree.name}}
+        <nord-nav-group heading="Ships">
+          <nord-stack direction="horizontal" class="n-margin-be-m" wrap>
+            <nord-button-group>
+              <nord-button id="all-ships-button" size="s" variant="plain">
+                All
+              </nord-button>
+              <nord-button id="free-ships-button" size="s" variant="plain">
+                Free
+              </nord-button>
+              <nord-button id="sale-ships-button" size="s" variant="plain">
+                For Sale
+              </nord-button>
+            </nord-button-group>
+          </nord-stack>
+          {% for shipNav in ships.list %}
+            <nord-nav-item
+              class="hide ship-nav-link ship-{{shipNav.slug}}"
+              {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
+              {% if shipNav.slug === ship.slug %}active{% endif %}
+              href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
+            >
+              {{shipNav.name}}
             </nord-nav-item>
           {% endfor %}
         </nord-nav-group>
@@ -184,6 +195,48 @@ title: Starbase Ships by EGOTech
             menu.show();
           })
         );
+
+      let shipFilter = localStorage.getItem('shipFilter') || 'all';
+
+      const allShipsButton = document.querySelector("#all-ships-button");
+      allShipsButton.addEventListener("click", () => applyShipFilters('all'));
+      const freeShipsButton = document.querySelector("#free-ships-button");
+      freeShipsButton.addEventListener("click", () => applyShipFilters('free'));
+      const saleShipsButton = document.querySelector("#sale-ships-button");
+      saleShipsButton.addEventListener("click", () => applyShipFilters('sale'));
+
+      const applyShipFilters = (filter) => {
+        shipFilter = filter;
+        localStorage.setItem('shipFilter', filter);
+        document.querySelectorAll('.ship-nav-link').forEach((item) => {
+          item.classList.add('hide');
+        });
+
+        if (shipFilter === 'all') {
+          allShipsButton.setAttribute('variant', 'primary');
+          freeShipsButton.setAttribute('variant', 'plain');
+          saleShipsButton.setAttribute('variant', 'plain');
+          document.querySelectorAll('.ship-nav-link').forEach((item) => {
+            item.classList.remove('hide');
+          });
+        } else if (shipFilter === 'free') {
+          freeShipsButton.setAttribute('variant', 'primary');
+          allShipsButton.setAttribute('variant', 'plain');
+          saleShipsButton.setAttribute('variant', 'plain');
+          _(ships).filter((ship) => ship.saleType === 'free').each((ship) => {
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+          });
+        } else if (shipFilter === 'sale') {
+          saleShipsButton.setAttribute('variant', 'primary');
+          freeShipsButton.setAttribute('variant', 'plain');
+          allShipsButton.setAttribute('variant', 'plain');
+          _(ships).filter((ship) => ship.saleType === 'for-sale').each((ship) => {
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((card) => card.classList.remove('hide'));
+          });
+        }
+      }
+
+      applyShipFilters(shipFilter);
     </script>
   </body>
 </html>
