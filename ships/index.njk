@@ -29,7 +29,7 @@ eleventyComputed:
       {% endif %}
       <nord-button href="#build-cost" size="s" variant="default">Build Cost</nord-button>
       {% if ship.saleType === 'free' %}
-        <nord-button href="#download" size="s" variant="primary">Download</nord-button>
+        <nord-button href="#download" size="s" variant="{% if ship.retired !== true %}primary{% else %}default{% endif %}">Download</nord-button>
       {% else %}
         <nord-button href="#purchase" size="s" variant="primary">Purchase</nord-button>
       {% endif %}
@@ -52,6 +52,11 @@ eleventyComputed:
     </h1>
   </nord-stack>
   {% include 'shipTags.njk' %}
+  {% if ship.retired %}
+    <nord-banner variant="danger">
+      This ship has reached end of life status and is retired. It will no longer be updated or supported.
+    </nord-banner>
+  {% endif %}
   <nord-stack id="ship-photos" class="info-page">
     <nord-card padding="none">
       <section id="main-carousel" class="splide" aria-label="Splide Basic HTML Example">
@@ -215,10 +220,16 @@ eleventyComputed:
   <nord-stack>
     {% if ship.saleType === 'free' %}
       <h1 id="download">Download Blueprint</h1>
-      <nord-button href="{{ship.blueprints[0].url}}" variant="primary" onclick="gaEvent('download', { ship: '{{ship.name}}', version: '{{ship.version}}', download_ref: 'website' })">
-        <i slot="start" class="fa-solid fa-download n-color-text"></i>
-        Download v{{ship.version}} (current)
-      </nord-button>
+      {% if ship.retired %}
+        <nord-banner variant="danger">
+          This ship has reached end of life status and is retired. It will no longer be updated or supported. Blueprint may no longer be functional, download at your own descretion.
+        </nord-banner>
+      {% else %}
+        <nord-button href="{{ship.blueprints[0].url}}" variant="primary" onclick="gaEvent('download', { ship: '{{ship.name}}', version: '{{ship.version}}', download_ref: 'website' })">
+          <i slot="start" class="fa-solid fa-download n-color-text"></i>
+          Download v{{ship.version}} (current)
+        </nord-button>
+      {% endif %}
       <nord-card padding="none" style="width: 400px">
         <h2 slot="header">All Blueprints</h2>
         <nord-table density="condensed" striped>
@@ -235,7 +246,7 @@ eleventyComputed:
                 <tr>
                   <td>v{{blueprint.version}}</td>
                   <td>
-                    {% if loop.index === 1 %}<nord-badge variant="warning">Current</nord-badge>{% endif %}
+                    {% if loop.index === 1 and ship.retired !== true %}<nord-badge variant="warning">Current</nord-badge>{% endif %}
                     {% if blueprint.shipShop %}<nord-badge>Ship Shop Version</nord-badge>{% endif %}
                   </td>
                   <td class="n-table-align-right">
