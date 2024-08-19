@@ -186,12 +186,13 @@ module.exports = async (data) => {
         byShip: _.keyBy(shipDownloads, 'name'),
       },
     },
-    bySeries: _.groupBy(ships, 'series.name'),
-    bySaleType: _.groupBy(ships, 'saleType'),
+    bySeries: _(ships).reject('retired').groupBy('series.name').value(),
+    bySaleType: _(ships).reject('retired').groupBy('saleType').value(),
     byType: _(shipTypes)
       .keyBy('id')
       .mapValues(({ id }) =>
         _(ships)
+          .reject('retired')
           .filter(({ types }) => _.find(types, { type: id }))
           .orderBy(({ types }) => _.find(types, { type: id }).order),
       )
