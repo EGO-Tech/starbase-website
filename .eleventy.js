@@ -10,6 +10,7 @@ require('./config');
 process.env.NODE_ENV ??= 'development';
 
 const shipsBasePath = path.join(__dirname, nconf.get('ships:basePath'));
+const data = require(path.join(shipsBasePath, 'data.json'));
 
 const extendShipContent = async (ship) => {
   await Promise.all(
@@ -141,6 +142,7 @@ module.exports = function (eleventyConfig) {
     flight: 'fa-solid fa-space-shuttle',
     utility: 'fa-solid fa-gear',
   }));
+  eleventyConfig.addGlobalData('data', () => data);
   eleventyConfig.addGlobalData('ships', async () =>
     getAllShipsData(eleventyConfig),
   );

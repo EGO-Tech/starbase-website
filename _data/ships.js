@@ -75,29 +75,10 @@ async function runReport() {
   };
 }
 
-const shipTypes = [
-  { id: 'miner', name: 'Miner', label: 'Miners' },
-  { id: 'surface-miner', name: 'Surface Miner', label: 'Surface Miners' },
-  { id: 'starter', name: 'Starter Ship', label: 'Starter Ships' },
-  {
-    id: 'asteroid-hauler',
-    name: 'Asteroid Hauler',
-    label: 'Asteroid Haulers',
-  },
-  { id: 'hauler', name: 'Hauler', label: 'Haulers' },
-  { id: 'salvager', name: 'Salvager', label: 'Salvagers' },
-  { id: 'fighter', name: 'Fighter', label: 'Fighters' },
-  { id: 'command-ship', name: 'Command Ship', label: 'Command Ships' },
-  { id: 'transport', name: 'Transport', label: 'Transports' },
-  { id: 'explorer', name: 'Explorer', label: 'Explorers' },
-  { id: 'supply-ship', name: 'Supply Ship', label: 'Supply Ships' },
-];
-
 const similarTagsExclude = ['rando-shop'];
 
-module.exports = async (data) => {
+module.exports = async ({ data: { shipTypes }, ships }) => {
   const { shipSales, shipDownloads } = await runReport();
-  const { ships } = data;
 
   let popularSale = [];
   if (!_.isEmpty(shipSales)) {
