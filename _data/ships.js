@@ -144,6 +144,33 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
         'webPath',
       ]),
     ),
+    series: {
+      list: _(ships)
+        .groupBy('series.slug')
+        .map((seriesShips) => ({
+          ...seriesShips[0].series,
+          ships: seriesShips,
+          specifications: {
+            key: _(seriesShips)
+              .map(({ specifications }) =>
+                _(specifications).filter('key').map('id').value(),
+              )
+              .compact()
+              .flatten()
+              .uniq()
+              .value(),
+            standard: _(seriesShips)
+              .map(({ specifications }) =>
+                _(specifications).reject('key').map('id').value(),
+              )
+              .compact()
+              .flatten()
+              .uniq()
+              .value(),
+          },
+        }))
+        .value(),
+    },
     types: { list: shipTypes, byId: _.keyBy(shipTypes, 'id') },
     tags: {
       list: _(ships)
@@ -167,7 +194,7 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
         byShip: _.keyBy(shipDownloads, 'name'),
       },
     },
-    bySeries: _(ships).reject('retired').groupBy('series.name').value(),
+    bySeries: _(ships).reject('retired').groupBy('series.slug').value(),
     bySaleType: _(ships).reject('retired').groupBy('saleType').value(),
     byType: _(shipTypes)
       .keyBy('id')

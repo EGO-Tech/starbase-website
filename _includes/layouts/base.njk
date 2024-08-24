@@ -2,6 +2,17 @@
 title: Starbase Ships by EGOTech
 ---
 
+{% macro navItem(shipNav) %}
+  <nord-nav-item
+    class="hide ship-nav-link ship-{{shipNav.slug}}"
+    {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
+    {% if shipNav.slug === ship.slug %}active{% endif %}
+    href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
+  >
+    {{shipNav.name}}
+  </nord-nav-item>
+{% endmacro %}
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -94,33 +105,25 @@ title: Starbase Ships by EGOTech
               </nord-button>
             </nord-button-group>
           </nord-stack>
-          {% for seriesName, seriesShips in ships.bySeries %}
+          {% for seriesSlug, seriesShips in ships.bySeries %}
             {% if seriesShips.length > 1 %}
               <nord-nav-item class="ship-nav-series ship-series-{{seriesShips[0].series.path}}">
-                {{seriesName}} Series
+                {{seriesShips[0].series.name}} Series
                 <nord-nav-group slot="subnav">
                   {% for shipNav in seriesShips %}
-                    <nord-nav-item
-                      class="hide ship-nav-link ship-{{shipNav.slug}}"
-                      {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
-                      {% if shipNav.slug === ship.slug %}active{% endif %}
-                      href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
-                    >
-                      {{shipNav.name}}
-                    </nord-nav-item>
+                    {{ navItem(shipNav) }}
                   {% endfor %}
+                  <nord-nav-item
+                    {% if (ship and shipNav.slug === ship.slug) or seriesSlug === series.slug %}active{% endif %}
+                    href="{{ ('/series/' + seriesSlug + '/') | url }}"
+                  >
+                    Compare Series
+                  </nord-nav-item>
                 </nord-nav-group>
               </nord-nav-item>
             {% else %}
               {% for shipNav in seriesShips %}
-                <nord-nav-item
-                  class="hide ship-nav-link ship-{{shipNav.slug}}"
-                  {% if shipNav.new %}badge="NEW"{% elseif shipNav.updated %}badge="UPDATED"{% elseif shipNav.popular %}badge="POPULAR"{% endif %}
-                  {% if shipNav.slug === ship.slug %}active{% endif %}
-                  href="{{ ('/ships/' + shipNav.slug + '/') | url }}"
-                >
-                  {{shipNav.name}}
-                </nord-nav-item>
+                {{ navItem(shipNav) }}
               {% endfor %}
             {% endif %}
           {% endfor %}

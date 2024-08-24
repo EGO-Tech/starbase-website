@@ -1,0 +1,64 @@
+---
+layout: layouts/base
+pagination:
+  data: ships.series.list
+  size: 1
+  alias: series
+permalink: "series/{{ series.slug }}/"
+eleventyComputed:
+  currentTitle: "Series: {{ series.name }}"
+---
+<nord-stack id="series-page" gap="l" class="n-padding-i-l n-padding-b-l">
+  <nord-stack>
+    <h1 id="ship-name">
+      <span class="n-font-size-xxxl">Series: {{series.name}}</span>
+    </h1>
+  </nord-stack>
+  <nord-stack direction="horizontal">
+    {% for ship in series.ships %}
+      <nord-stack style="width: 435px;">
+        {% include 'shipCard.njk' %}
+      </nord-stack>
+    {% endfor %}
+  </nord-stack>
+  <nord-stack direction="horizontal">
+    {% for ship in series.ships %}
+      <nord-stack style="width: 435px;" align-items="center">
+        <h2>Key Features</h2>
+      </nord-stack>
+    {% endfor %}
+  </nord-stack>
+  {% for spec in series.specifications.key %}
+    <nord-stack direction="horizontal">
+      {% for ship in series.ships %}
+        <nord-stack style="width: 435px;" align-items="center">
+          {% set specs = ship.specifications | groupby('id')  %}
+          {% set specType = specs[spec][0]  %}
+          {% if specType %}
+            {% include 'featureCard.njk' %}
+          {% endif %}
+        </nord-stack>
+      {% endfor %}
+    </nord-stack>
+  {% endfor %}
+  <nord-stack direction="horizontal">
+    {% for ship in series.ships %}
+      <nord-stack style="width: 435px;" align-items="center">
+        <h2>Standard Features</h2>
+      </nord-stack>
+    {% endfor %}
+  </nord-stack>
+  {% for spec in series.specifications.standard %}
+    <nord-stack direction="horizontal">
+      {% for ship in series.ships %}
+        <nord-stack style="width: 435px;" align-items="center">
+          {% set specs = ship.specifications | groupby('id')  %}
+          {% set specType = specs[spec][0]  %}
+          {% if specType %}
+            {% include 'featureCard.njk' %}
+          {% endif %}
+        </nord-stack>
+      {% endfor %}
+    </nord-stack>
+  {% endfor %}
+</nord-stack>
