@@ -128,6 +128,64 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
       .value();
   });
 
+  const shipsByType = _(shipTypes)
+    .keyBy('id')
+    .mapValues(({ id }) =>
+      _(ships)
+        .reject('retired')
+        .filter(({ types }) => _.find(types, { type: id }))
+        .orderBy(({ types }) => _.find(types, { type: id }).order)
+        .value(),
+    )
+    .value();
+
+  _.each(shipTypes, (shipType) => {
+    shipType.specifications = {
+      key: _(shipsByType[shipType.id])
+        .map(({ specifications }) =>
+          _(specifications).filter('key').map('id').value(),
+        )
+        .compact()
+        .flatten()
+        .uniq()
+        .value(),
+      standard: _(shipsByType[shipType.id])
+        .map(({ specifications }) =>
+          _(specifications).reject('key').map('id').value(),
+        )
+        .compact()
+        .flatten()
+        .uniq()
+        .value(),
+    };
+  });
+
+  const series = _(ships)
+    .groupBy('series.slug')
+    .map((seriesShips) => ({
+      ...seriesShips[0].series,
+      ships: seriesShips,
+      specifications: {
+        key: _(seriesShips)
+          .map(({ specifications }) =>
+            _(specifications).filter('key').map('id').value(),
+          )
+          .compact()
+          .flatten()
+          .uniq()
+          .value(),
+        standard: _(seriesShips)
+          .map(({ specifications }) =>
+            _(specifications).reject('key').map('id').value(),
+          )
+          .compact()
+          .flatten()
+          .uniq()
+          .value(),
+      },
+    }))
+    .value();
+
   return {
     list: ships,
     search: _.map(ships, (ship) =>
@@ -145,31 +203,8 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
       ]),
     ),
     series: {
-      list: _(ships)
-        .groupBy('series.slug')
-        .map((seriesShips) => ({
-          ...seriesShips[0].series,
-          ships: seriesShips,
-          specifications: {
-            key: _(seriesShips)
-              .map(({ specifications }) =>
-                _(specifications).filter('key').map('id').value(),
-              )
-              .compact()
-              .flatten()
-              .uniq()
-              .value(),
-            standard: _(seriesShips)
-              .map(({ specifications }) =>
-                _(specifications).reject('key').map('id').value(),
-              )
-              .compact()
-              .flatten()
-              .uniq()
-              .value(),
-          },
-        }))
-        .value(),
+      list: series,
+      bySlug: _.keyBy(series, 'slug'),
     },
     types: { list: shipTypes, byId: _.keyBy(shipTypes, 'id') },
     tags: {
@@ -196,14 +231,6 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
     },
     bySeries: _(ships).reject('retired').groupBy('series.slug').value(),
     bySaleType: _(ships).reject('retired').groupBy('saleType').value(),
-    byType: _(shipTypes)
-      .keyBy('id')
-      .mapValues(({ id }) =>
-        _(ships)
-          .reject('retired')
-          .filter(({ types }) => _.find(types, { type: id }))
-          .orderBy(({ types }) => _.find(types, { type: id }).order),
-      )
-      .value(),
+    byType: shipsByType,
   };
 };

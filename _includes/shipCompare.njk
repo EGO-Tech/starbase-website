@@ -1,0 +1,47 @@
+<nord-stack direction="horizontal" align-items="start">
+  {% for ship in compareShips %}
+    <nord-stack class="compare-ship-card" align-items="center">
+      {% include 'shipCard.njk' %}
+    </nord-stack>
+  {% endfor %}
+</nord-stack>
+<nord-stack direction="horizontal">
+  {% for ship in compareShips %}
+    <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Key Features</h2>
+    </nord-stack>
+  {% endfor %}
+</nord-stack>
+{% for spec in specifications.key %}
+  <nord-stack direction="horizontal">
+    {% for ship in compareShips %}
+      <nord-stack class="compare-feature-card" align-items="center">
+        {% set specs = ship.specifications | groupby('id')  %}
+        {% set specType = specs[spec][0]  %}
+        {% if specType %}
+          {% include 'featureCard.njk' %}
+        {% endif %}
+      </nord-stack>
+    {% endfor %}
+  </nord-stack>
+{% endfor %}
+<nord-stack direction="horizontal">
+  {% for ship in compareShips %}
+    <nord-stack  class="compare-feature-card"  align-items="center">
+      <h2>Standard Features</h2>
+    </nord-stack>
+  {% endfor %}
+</nord-stack>
+{% for spec in specifications.standard %}
+  <nord-stack direction="horizontal">
+    {% for ship in compareShips %}
+      <nord-stack class="compare-feature-card" align-items="center">
+        {% set specs = ship.specifications | groupby('id')  %}
+        {% set specType = specs[spec][0]  %}
+        {% if specType %}
+          {% include 'featureCard.njk' %}
+        {% endif %}
+      </nord-stack>
+    {% endfor %}
+  </nord-stack>
+{% endfor %}

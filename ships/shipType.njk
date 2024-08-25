@@ -1,0 +1,20 @@
+---
+layout: layouts/base
+pagination:
+  data: ships.types.list
+  size: 1
+  alias: type
+permalink: "types/{{ type.id }}/"
+eleventyComputed:
+  currentTitle: "Ship Type: {{ type.label }}"
+---
+<nord-stack id="compare-page" gap="l" class="n-padding-i-l n-padding-b-l">
+  <nord-stack>
+    <h1 id="ship-name">
+      <span class="n-font-size-xxxl">Ship Type: {{type.name}}</span>
+    </h1>
+  </nord-stack>
+  {% set compareShips = ships.byType[type.id]  %}
+  {% set specifications = type.specifications  %}
+  {% include 'shipCompare.njk' %}
+</nord-stack>

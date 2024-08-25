@@ -6,8 +6,11 @@
     <nord-badge variant="info">{{ship.cost.toLocaleString()}} Credits</nord-badge>
   {% endif %}
   {% for type in ship.types %}
-    <a href="{{ '/#' + type.type | url }}"><nord-badge variant="warning">{{ships.types.byId[type.type].name}}</nord-badge></a>
+    <a href="{{ '/types/' + type.type | url }}"><nord-badge variant="warning">{{ships.types.byId[type.type].name}}</nord-badge></a>
   {% endfor %}
+  {% if ships.series.bySlug[ship.series.slug].ships.length > 1 %}
+    <a href="{{ '/series/' + ship.series.slug | url }}"><nord-badge variant="warning">{{ship.series.name}} Series</nord-badge></a>
+  {% endif %}
   {% for tag in ship.tags %}
     <nord-badge variant="highlight">{{tag.label}}</nord-badge>
   {% endfor %}
