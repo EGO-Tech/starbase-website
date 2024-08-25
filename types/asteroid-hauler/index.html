@@ -1,0 +1,3820 @@
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    
+    <title>Starbase Ships by EGOTech - Ship Type: Asteroid Haulers</title>
+
+    <meta property="og:title" content="Starbase Ships by EGOTech - Ship Type: Asteroid Haulers" />
+    
+      <meta property="og:image" content="https://github.com/EGO-Tech/starbase-ships/raw/main/others/egotech/logos/egotech_logo_dark.png" />
+      <meta property="og:description" content="EGOTech thrives to design various types of Starbase ships that are practical but fun to use." />
+    
+
+    
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-HK9VCMHC5R"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-HK9VCMHC5R');
+      </script>
+    
+
+    <link rel="icon" type="image/png" href="/images/logos/egotech_logo_dark_favicon.png">
+    <link rel="stylesheet" href="/css/nord.min.css">
+    <link rel="stylesheet" href="/css/nord-dark.css">
+    <link rel="stylesheet" href="/css/fonts/fonts.css">
+    <link rel="stylesheet" href="/css/splide.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+    <script src="/js/nord-components.js"></script>
+    <script src="/js/splide.min.js"></script>
+    <script src="/js/qs.js"></script>
+    <script src="/js/fontawesome.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      const gaEvent = (event, params) => {
+        if (window.gtag) gtag('event', event, params);
+      }
+    </script>
+    
+    <script>
+      window.ships = [{"name":"Bugger","types":[{"type":"surface-miner","order":1}],"saleType":"free","version":"1.0.4","slug":"bugger","tags":[{"id":"t2-generator","label":"T3 Generators"},{"id":"t2-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":true,"popular":false,"webPath":"/ships/bugger"},{"name":"Bugger X","types":[{"type":"surface-miner","order":2}],"saleType":"for-sale","version":"1.0.3","slug":"bugger-x","tags":[{"id":"t3-generator","label":"T3 Generators"},{"id":"t3-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":true,"popular":false,"webPath":"/ships/bugger-x"},{"name":"Clunker","types":[{"type":"hauler","order":2}],"saleType":"free","version":"1.0.2","slug":"clunker","tags":[{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"large-generator","label":"Large Generator"}],"popular":false,"webPath":"/ships/clunker"},{"name":"Crawler","types":[{"type":"surface-miner","order":3}],"saleType":"for-sale","version":"1.0.2","slug":"crawler","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"mining-laser","label":"Mining Laser"},{"id":"large-generator","label":"Large Generator"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":true,"popular":false,"webPath":"/ships/crawler"},{"name":"Crawler X","types":[{"type":"surface-miner","order":4}],"saleType":"for-sale","version":"1.0.2","slug":"crawler-x","tags":[{"id":"t3-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"large-generator","label":"Large Generator"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":true,"popular":true,"webPath":"/ships/crawler-x"},{"name":"Feeder","types":[{"type":"supply-ship","order":1}],"saleType":"free","version":"1.0.0","slug":"feeder","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"new":true,"popular":false,"webPath":"/ships/feeder"},{"name":"Fisher","types":[{"type":"salvager","order":2}],"saleType":"free","version":"1.0.1","slug":"fisher","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"tow-beam","label":"Tow Beam"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/fisher"},{"name":"Fledger","types":[{"type":"starter","order":2}],"saleType":"free","version":"1.0.1","slug":"fledger","tags":[{"id":"t1-generator","label":"T1 Generators"},{"id":"t1-thruster","label":"T1 Thrusters"},{"id":"basic-bench","label":"Basic Crafting Bench"}],"popular":false,"webPath":"/ships/fledger"},{"name":"Flipper","types":[{"type":"asteroid-hauler","order":5}],"saleType":"free","version":"1.1.1","slug":"flipper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"large-asteroid-hold","label":"Large Asteroid Hold"}],"popular":false,"webPath":"/ships/flipper"},{"name":"Hexxer","types":[{"type":"asteroid-hauler","order":1}],"saleType":"free","version":"1.1.0","slug":"hexxer","tags":[{"id":"rando-shop","label":"Rando Ship Shop"},{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"tractor-beam","label":"Tractor Beam"},{"id":"small-asteroid-hold","label":"Small Asteroid Hold"}],"popular":false,"webPath":"/ships/hexxer"},{"name":"Hexxer Trio","types":[{"type":"asteroid-hauler","order":2}],"saleType":"free","version":"1.1.0","slug":"hexxer-trio","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"large-asteroid-hold","label":"Large Asteroid Hold"}],"updated":false,"popular":false,"webPath":"/ships/hexxer-trio"},{"name":"Hoarder","types":[{"type":"hauler","order":2}],"saleType":"free","version":"1.0.0","slug":"hoarder","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"}],"popular":false,"webPath":"/ships/hoarder"},{"name":"Hopper","types":[{"type":"transport","order":1}],"saleType":"free","version":"1.1.0","slug":"hopper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"}],"popular":false,"webPath":"/ships/hopper"},{"name":"Jabber","types":[{"type":"fighter","order":1}],"saleType":"free","version":"1.1.0","slug":"jabber","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"laser-cannon","label":"Laser Cannon"},{"id":"isan","label":"ISAN"}],"popular":false,"webPath":"/ships/jabber"},{"name":"Lugger","types":[{"type":"hauler","order":1}],"saleType":"free","version":"1.1.1","slug":"lugger","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/lugger"},{"name":"Mapper","types":[{"type":"explorer","order":1}],"saleType":"free","version":"1.0.4","slug":"mapper","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"navigation-data-logger","label":"Navigation Data Logger"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":true,"webPath":"/ships/mapper"},{"name":"Piercer","types":[{"type":"miner","order":3}],"saleType":"free","version":"1.1.2","slug":"piercer","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"mining-laser-drill","label":"Mining Laser Drill"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":true,"webPath":"/ships/piercer"},{"name":"Piercer X (Anorak Edition)","types":[{"type":"miner","order":4}],"saleType":"for-sale","version":"1.0.2","slug":"piercer-x","tags":[{"id":"t3-generator","label":"T3 Generators"},{"id":"t3-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"mining-laser-drill","label":"Mining Laser Drill"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/piercer-x"},{"name":"Quester","types":[{"type":"command-ship","order":1},{"type":"explorer","order":2}],"saleType":"free","version":"1.1.1","slug":"quester","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"},{"id":"reconstruction-machine","label":"Reconstruction Machine"}],"popular":false,"webPath":"/ships/quester"},{"name":"Rigger","types":[{"type":"miner","order":1},{"type":"starter","order":3}],"saleType":"free","version":"1.2.3","slug":"rigger","tags":[{"id":"rando-shop","label":"Rando Ship Shop"},{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"}],"popular":false,"webPath":"/ships/rigger"},{"name":"Roamer","types":[{"type":"transport","order":3}],"saleType":"for-sale","version":"1.0.0","slug":"roamer","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"new":true,"popular":false,"webPath":"/ships/roamer"},{"name":"Rocker","types":[{"type":"asteroid-hauler","order":3}],"saleType":"free","version":"1.1.0","slug":"rocker","tags":[{"id":"rando-shop","label":"Rando Ship Shop"},{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"tractor-beam","label":"Tractor Beam"},{"id":"small-asteroid-hold","label":"Small Asteroid Hold"}],"popular":false,"webPath":"/ships/rocker"},{"name":"Rocker Duo","types":[{"type":"asteroid-hauler","order":4}],"saleType":"free","version":"1.1.0","slug":"rocker-duo","tags":[{"id":"rando-shop","label":"Rando Ship Shop"},{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"cargo-lock-beam","label":"Cargo Lock Beam"},{"id":"tractor-beam","label":"Tractor Beam"},{"id":"small-asteroid-hold","label":"Small Asteroid Hold"}],"popular":false,"webPath":"/ships/rocker-duo"},{"name":"Shifter","types":[{"type":"miner","order":5}],"saleType":"free","version":"2.0.1","slug":"shifter","tags":[{"id":"rando-shop","label":"Rando Ship Shop"},{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"mining-laser-drill","label":"Mining Laser Drill"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/shifter"},{"name":"Shifter X","types":[{"type":"miner","order":6}],"saleType":"for-sale","version":"1.0.1","slug":"shifter-x","tags":[{"id":"t3-generator","label":"T2 Generators"},{"id":"t3-thruster","label":"T2 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"mining-laser-drill","label":"Mining Laser Drill"},{"id":"isan","label":"ISAN"},{"id":"auto-pilot","label":"Auto Pilot"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"popular":false,"webPath":"/ships/shifter-x"},{"name":"Sower","types":[{"type":"starter","order":1}],"saleType":"free","version":"1.1.0","slug":"sower","tags":[{"id":"t1-generator","label":"T1 Generators"},{"id":"t1-thruster","label":"T1 Thrusters"},{"id":"isan","label":"ISAN"}],"popular":false,"webPath":"/ships/sower"},{"name":"Stocker","types":[{"type":"miner","order":2}],"saleType":"free","version":"1.2.0","slug":"stocker","tags":[{"id":"rando-shop","label":"Rando Ship Shop"},{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"isan","label":"ISAN"},{"id":"asteroid-avoidance","label":"Asteroid Avoidance"},{"id":"basic-bench","label":"Basic Crafting Bench"}],"updated":true,"popular":false,"webPath":"/ships/stocker"},{"name":"Tourer","types":[{"type":"transport","order":2}],"saleType":"free","version":"2.0.0","slug":"tourer","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"isan","label":"ISAN"},{"id":"cargo-lock-frame","label":"Cargo Lock Frame"}],"popular":false,"webPath":"/ships/tourer"},{"name":"Trebler","types":[{"type":"miner","order":7}],"saleType":"free","version":"1.0.2","slug":"trebler","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"mining-laser-drill","label":"Mining Laser Drill"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":false,"popular":false,"webPath":"/ships/trebler"},{"name":"Trebler X","types":[{"type":"miner","order":8}],"saleType":"for-sale","version":"1.0.2","slug":"trebler-x","tags":[{"id":"t3-generator","label":"T3 Generators"},{"id":"t3-thruster","label":"T3 Thrusters"},{"id":"mining-laser","label":"Mining Laser"},{"id":"mining-laser-drill","label":"Mining Laser Drill"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"}],"updated":false,"popular":false,"webPath":"/ships/trebler-x"},{"name":"Tugger","types":[{"type":"salvager","order":1}],"saleType":"free","version":"2.0.1","slug":"tugger","tags":[{"id":"t2-generator","label":"T2 Generators"},{"id":"t2-thruster","label":"T2 Thrusters"},{"id":"tow-beam","label":"Tow Beam"},{"id":"isan","label":"ISAN"}],"popular":false,"webPath":"/ships/tugger"},{"name":"Whaler","types":[{"type":"fighter","order":2},{"type":"command-ship","order":2}],"saleType":"for-sale","version":"1.0.0","slug":"whaler","tags":[{"id":"t3-generator","label":"T3 Generators"},{"id":"t3-thruster","label":"T3 Thrusters"},{"id":"plasma-thruster","label":"Plasma Thruster"},{"id":"laser-cannon","label":"Laser Cannon"},{"id":"auto-cannon","label":"Auto Cannon"},{"id":"plasma-cannon","label":"Plasma Cannon"},{"id":"rocket-launcher","label":"Rocket Launcher"},{"id":"mining-laser","label":"Mining Laser"},{"id":"tow-beam","label":"Tow Beam"},{"id":"cargo-lock-frame","label":"Cargo Lock Frame"},{"id":"isan","label":"ISAN"},{"id":"basic-bench","label":"Basic Crafting Bench"},{"id":"advanced-bench","label":"Advanced Crafting Bench"},{"id":"tools-bench","label":"Tools Crafting Bench"},{"id":"reconstruction-machine","label":"Reconstruction Machine"}],"new":false,"popular":false,"webPath":"/ships/whaler"}];
+      window.shipTypes = {"list":[{"id":"miner","name":"Miner","label":"Miners","specifications":{"key":["belt-mining","cargo","Passengers"],"standard":["flight","propulsion","propellant","power","crafting","utility"]}},{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners","specifications":{"key":["surface-mining","cargo"],"standard":["flight","propulsion","propellant","power","crafting","utility"]}},{"id":"starter","name":"Starter Ship","label":"Starter Ships","specifications":{"key":["easy-repair","easy-upgrade","belt-mining","cargo","Passengers"],"standard":["cargo","flight","propulsion","propellant","power","utility","crafting"]}},{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers","specifications":{"key":["asteroid-hauling","asteroid-scanning","total-credits","flipping-directions"],"standard":["flight","propulsion","propellant","power","utility"]}},{"id":"hauler","name":"Hauler","label":"Haulers","specifications":{"key":["cargo","bridge","upward-thrust"],"standard":["flight","propulsion","propellant","power","crafting","utility"]}},{"id":"salvager","name":"Salvager","label":"Salvagers","specifications":{"key":["tow","spinning-pilot-seat"],"standard":["flight","propulsion","propellant","power","utility","cargo","crafting"]}},{"id":"fighter","name":"Fighter","label":"Fighters","specifications":{"key":["weapons","armour","lasers","plasma-cannons","autocannon-turrets","missile-launchers","medbay","engineering","tow","belt-mining","displays-rooms","cargo","easy-repair"],"standard":["flight","propulsion","propellant","power","utility","crafting"]}},{"id":"command-ship","name":"Command Ship","label":"Command Ships","specifications":{"key":["hall","bridge","medbay","lasers","plasma-cannons","autocannon-turrets","missile-launchers","engineering","tow","belt-mining","displays-rooms","cargo","easy-repair"],"standard":["cargo","flight","propulsion","propellant","power","crafting","utility"]}},{"id":"transport","name":"Transport","label":"Transports","specifications":{"key":["Passengers","range"],"standard":["flight","propulsion","propellant","power","utility","cargo","crafting"]}},{"id":"explorer","name":"Explorer","label":"Explorers","specifications":{"key":["nav-chips","range","hall","bridge","medbay"],"standard":["cargo","flight","propulsion","propellant","power","crafting","utility"]}},{"id":"supply-ship","name":"Supply Ship","label":"Supply Ships","specifications":{"key":["fuel-supply","propellant-supply"],"standard":["cargo","flight","propulsion","propellant","power","crafting","utility"]}}],"byId":{"miner":{"id":"miner","name":"Miner","label":"Miners","specifications":{"key":["belt-mining","cargo","Passengers"],"standard":["flight","propulsion","propellant","power","crafting","utility"]}},"surface-miner":{"id":"surface-miner","name":"Surface Miner","label":"Surface Miners","specifications":{"key":["surface-mining","cargo"],"standard":["flight","propulsion","propellant","power","crafting","utility"]}},"starter":{"id":"starter","name":"Starter Ship","label":"Starter Ships","specifications":{"key":["easy-repair","easy-upgrade","belt-mining","cargo","Passengers"],"standard":["cargo","flight","propulsion","propellant","power","utility","crafting"]}},"asteroid-hauler":{"id":"asteroid-hauler","name":"Asteroid Hauler","label":"Asteroid Haulers","specifications":{"key":["asteroid-hauling","asteroid-scanning","total-credits","flipping-directions"],"standard":["flight","propulsion","propellant","power","utility"]}},"hauler":{"id":"hauler","name":"Hauler","label":"Haulers","specifications":{"key":["cargo","bridge","upward-thrust"],"standard":["flight","propulsion","propellant","power","crafting","utility"]}},"salvager":{"id":"salvager","name":"Salvager","label":"Salvagers","specifications":{"key":["tow","spinning-pilot-seat"],"standard":["flight","propulsion","propellant","power","utility","cargo","crafting"]}},"fighter":{"id":"fighter","name":"Fighter","label":"Fighters","specifications":{"key":["weapons","armour","lasers","plasma-cannons","autocannon-turrets","missile-launchers","medbay","engineering","tow","belt-mining","displays-rooms","cargo","easy-repair"],"standard":["flight","propulsion","propellant","power","utility","crafting"]}},"command-ship":{"id":"command-ship","name":"Command Ship","label":"Command Ships","specifications":{"key":["hall","bridge","medbay","lasers","plasma-cannons","autocannon-turrets","missile-launchers","engineering","tow","belt-mining","displays-rooms","cargo","easy-repair"],"standard":["cargo","flight","propulsion","propellant","power","crafting","utility"]}},"transport":{"id":"transport","name":"Transport","label":"Transports","specifications":{"key":["Passengers","range"],"standard":["flight","propulsion","propellant","power","utility","cargo","crafting"]}},"explorer":{"id":"explorer","name":"Explorer","label":"Explorers","specifications":{"key":["nav-chips","range","hall","bridge","medbay"],"standard":["cargo","flight","propulsion","propellant","power","crafting","utility"]}},"supply-ship":{"id":"supply-ship","name":"Supply Ship","label":"Supply Ships","specifications":{"key":["fuel-supply","propellant-supply"],"standard":["cargo","flight","propulsion","propellant","power","crafting","utility"]}}}};
+    </script>
+  
+    
+    <script>
+      window.pages = [{"id":"systems/flight","label":"Flight Systems","title":"Flight Systems","slug":"systems/flight","keywords":"flight cruise turtle sloth aim sensitivity profiles lever","webPath":"/pages/systems/flight"},{"id":"systems/power","label":"Power and Fuel Systems","title":"Power and Fuel Systems","slug":"systems/power","keywords":"refuel power fuel rod backup fueltime generator min gen shutdown battery tank","webPath":"/pages/systems/power"},{"id":"systems/propellant","label":"Propellant Systems","title":"Propellant Systems","slug":"systems/propellant","keywords":"refill propellant resource bridge flow in out proptime tank","webPath":"/pages/systems/propellant"},{"id":"systems/utility","label":"Utility Systems","title":"Utility Systems","slug":"systems/utility","keywords":"timer odometer transponder ping","webPath":"/pages/systems/utility"},{"id":"commissions","label":"Ship Commissions","title":"Ship Commissions","slug":"commissions","webPath":"/pages/commissions"},{"id":"rentals","label":"Ship Rentals","title":"Ship Rentals","slug":"rentals","webPath":"/pages/rentals"},{"id":"faq","label":"FAQ","title":"Frequently Asked Questions","slug":"faq","webPath":"/pages/faq"}];
+    </script>
+  
+  </head>
+  <body class="n-reset">
+    <nord-command-menu></nord-command-menu>
+    <script>
+      const menu = document.querySelector("nord-command-menu");
+      menu.commands = ships.map((ship) => ({
+        id: ship.slug,
+        title: ship.name,
+        section: 'Ships',
+        keywords: `${ship.name} ${ship.saleType} ${ship.types.map(({ type }) => shipTypes.byId[type].label).join(' ')} ${ship.tags.map(({ label }) => label).join(' ')}`,
+        handler: () => window.location.href = ship.webPath,
+      })).concat(pages.map((page) => ({
+        id: page.id,
+        title: page.title,
+        section: 'Information',
+        keywords: `${page.id} ${page.label} ${page.title} ${page.keywords}`,
+        handler: () => window.location.href = page.webPath,
+      })));
+    </script>
+    <nord-layout padding="none" persist-nav-state sticky>
+      <nord-navigation slot="nav">
+        <nord-stack class="n-padding-be-l">
+          <nord-button class="search-button" variant="default" aria-describedby="nav-search" expand>
+            <i slot="start" class="fa-solid fa-magnifying-glass"></i>
+            <div style="text-align: left;">Search</div>
+          </nord-button>
+          <nord-tooltip id="nav-search">Shortcut: Ctrl+K</nord-tooltip>
+        </nord-stack>
+        <nord-nav-group heading="Ships">
+          <nord-stack direction="horizontal" class="n-margin-be-m" wrap>
+            <nord-button-group>
+              <nord-button id="all-ships-button" size="s" variant="plain">
+                All
+              </nord-button>
+              <nord-button id="free-ships-button" size="s" variant="plain">
+                Free
+              </nord-button>
+              <nord-button id="sale-ships-button" size="s" variant="plain">
+                For Sale
+              </nord-button>
+            </nord-button-group>
+          </nord-stack>
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-bugger">
+                Bugger Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-bugger"
+    badge="UPDATED"
+    
+    href="/ships/bugger/"
+  >
+    Bugger
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-bugger-x"
+    badge="UPDATED"
+    
+    href="/ships/bugger-x/"
+  >
+    Bugger X
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/bugger/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-clunker"
+    
+    
+    href="/ships/clunker/"
+  >
+    Clunker
+  </nord-nav-item>
+
+              
+            
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-crawler">
+                Crawler Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-crawler"
+    badge="UPDATED"
+    
+    href="/ships/crawler/"
+  >
+    Crawler
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-crawler-x"
+    badge="UPDATED"
+    
+    href="/ships/crawler-x/"
+  >
+    Crawler X
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/crawler/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-feeder"
+    badge="NEW"
+    
+    href="/ships/feeder/"
+  >
+    Feeder
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-fisher"
+    
+    
+    href="/ships/fisher/"
+  >
+    Fisher
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-fledger"
+    
+    
+    href="/ships/fledger/"
+  >
+    Fledger
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-flipper"
+    
+    
+    href="/ships/flipper/"
+  >
+    Flipper
+  </nord-nav-item>
+
+              
+            
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-hexxer">
+                Hexxer Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-hexxer"
+    
+    
+    href="/ships/hexxer/"
+  >
+    Hexxer
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-hexxer-trio"
+    
+    
+    href="/ships/hexxer-trio/"
+  >
+    Hexxer Trio
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/hexxer/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-hoarder"
+    
+    
+    href="/ships/hoarder/"
+  >
+    Hoarder
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-hopper"
+    
+    
+    href="/ships/hopper/"
+  >
+    Hopper
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-jabber"
+    
+    
+    href="/ships/jabber/"
+  >
+    Jabber
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-lugger"
+    
+    
+    href="/ships/lugger/"
+  >
+    Lugger
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-mapper"
+    badge="POPULAR"
+    
+    href="/ships/mapper/"
+  >
+    Mapper
+  </nord-nav-item>
+
+              
+            
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-piercer">
+                Piercer Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-piercer"
+    badge="POPULAR"
+    
+    href="/ships/piercer/"
+  >
+    Piercer
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-piercer-x"
+    
+    
+    href="/ships/piercer-x/"
+  >
+    Piercer X (Anorak Edition)
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/piercer/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-quester"
+    
+    
+    href="/ships/quester/"
+  >
+    Quester
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-rigger"
+    
+    
+    href="/ships/rigger/"
+  >
+    Rigger
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-roamer"
+    badge="NEW"
+    
+    href="/ships/roamer/"
+  >
+    Roamer
+  </nord-nav-item>
+
+              
+            
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-rocker">
+                Rocker Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-rocker"
+    
+    
+    href="/ships/rocker/"
+  >
+    Rocker
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-rocker-duo"
+    
+    
+    href="/ships/rocker-duo/"
+  >
+    Rocker Duo
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/rocker/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-shifter">
+                Shifter Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-shifter"
+    
+    
+    href="/ships/shifter/"
+  >
+    Shifter
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-shifter-x"
+    
+    
+    href="/ships/shifter-x/"
+  >
+    Shifter X
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/shifter/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-sower"
+    
+    
+    href="/ships/sower/"
+  >
+    Sower
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-stocker"
+    badge="UPDATED"
+    
+    href="/ships/stocker/"
+  >
+    Stocker
+  </nord-nav-item>
+
+              
+            
+          
+            
+              <nord-nav-item class="ship-nav-series ship-series-trebler">
+                Trebler Series
+                <nord-nav-group slot="subnav">
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-trebler"
+    
+    
+    href="/ships/trebler/"
+  >
+    Trebler
+  </nord-nav-item>
+
+                  
+                    
+  <nord-nav-item
+    class="hide ship-nav-link ship-trebler-x"
+    
+    
+    href="/ships/trebler-x/"
+  >
+    Trebler X
+  </nord-nav-item>
+
+                  
+                  <nord-nav-item
+                    
+                    href="/series/trebler/"
+                  >
+                    Compare Series
+                  </nord-nav-item>
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-tugger"
+    
+    
+    href="/ships/tugger/"
+  >
+    Tugger
+  </nord-nav-item>
+
+              
+            
+          
+            
+              
+                
+  <nord-nav-item
+    class="hide ship-nav-link ship-whaler"
+    
+    
+    href="/ships/whaler/"
+  >
+    Whaler
+  </nord-nav-item>
+
+              
+            
+          
+        </nord-nav-group>
+        <nord-nav-group heading="Information">
+          
+            
+              <nord-nav-item>
+                Ship Systems
+                <nord-nav-group slot="subnav">
+                  
+                    <nord-nav-item  href="/pages/systems/flight/">
+                      Flight Systems
+                    </nord-nav-item>
+                  
+                    <nord-nav-item  href="/pages/systems/power/">
+                      Power and Fuel Systems
+                    </nord-nav-item>
+                  
+                    <nord-nav-item  href="/pages/systems/propellant/">
+                      Propellant Systems
+                    </nord-nav-item>
+                  
+                    <nord-nav-item  href="/pages/systems/utility/">
+                      Utility Systems
+                    </nord-nav-item>
+                  
+                </nord-nav-group>
+              </nord-nav-item>
+            
+          
+            
+              <nord-nav-item  href="/pages/commissions/">
+                Ship Commissions
+              </nord-nav-item>
+            
+          
+            
+              <nord-nav-item  href="/pages/rentals/">
+                Ship Rentals
+              </nord-nav-item>
+            
+          
+            
+              <nord-nav-item  href="/pages/faq/">
+                FAQ
+              </nord-nav-item>
+            
+          
+        </nord-nav-group>
+      </nord-navigation>
+      <nord-header slot="header">
+        <nord-stack direction="horizontal" style="min-width: 550px; width: 550px;">
+          <a href="/">
+            <nord-avatar size="xl" src="/images/logos/egotech_logo_dark.png" name="EGOTech" variant="square"></nord-avatar>
+          </a>
+          <h1>Starbase Ships by EGOTech</h1>
+        </nord-stack>
+      </nord-header>
+
+      <nord-stack id="compare-page" gap="l" class="n-padding-i-l n-padding-b-l">
+  <nord-stack>
+    <h1 id="ship-name">
+      <span class="n-font-size-xxxl">Ship Type: Asteroid Hauler</span>
+    </h1>
+  </nord-stack>
+  
+  
+  <nord-stack direction="horizontal" align-items="start">
+  
+    <nord-stack class="compare-ship-card" align-items="center">
+      <nord-card class="ship-card ship-hexxer" padding="none" style="width: 435px;">
+  <h1 slot="header">Hexxer</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.0</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hexxer/photos/20211130203152_1.jpg" alt="20211130203152_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Asteroid Capacity</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            6 x T7
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Loading Speed</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            Moderate
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Hexxer is a ship for hauling small asteroids, designed to be used in the safe zone. It uses six tractor beams to pull asteroids into six compartments of cargo lock beams in a hex pattern. It has load automation to approach and load asteroids in the right order to balance the ship as much as possible as well as a material scanner that gives estimated credits for selling the asteroids. It has similar functions to the Rocker but loads a little quicker and has one more compartment.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/types/asteroid-hauler"><nord-badge variant="warning">Asteroid Hauler</nord-badge></a>
+  
+  
+    <a href="/series/hexxer"><nord-badge variant="warning">Hexxer Series</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">Rando Ship Shop</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Cargo Lock Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Tractor Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Small Asteroid Hold</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/hexxer/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+    </nord-stack>
+  
+    <nord-stack class="compare-ship-card" align-items="center">
+      <nord-card class="ship-card ship-hexxer-trio" padding="none" style="width: 435px;">
+  <h1 slot="header">Hexxer Trio</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.0</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/hexxer/variants/hexxer_trio/photos/20240521144525_1.jpg" alt="20240521144525_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Asteroid Capacity</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            3 x T10
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Loading Speed</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            Fast
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Hexxer Trio is the enlarged version of the Hexxer for hauling the maximum three T10 asteroids, designed to be used in the safe zone. It has load automation to approach and load the asteroid as well as a material scanner that gives estimated credits for selling the asteroids.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/types/asteroid-hauler"><nord-badge variant="warning">Asteroid Hauler</nord-badge></a>
+  
+  
+    <a href="/series/hexxer"><nord-badge variant="warning">Hexxer Series</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Cargo Lock Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Large Asteroid Hold</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/hexxer-trio/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+    </nord-stack>
+  
+    <nord-stack class="compare-ship-card" align-items="center">
+      <nord-card class="ship-card ship-rocker" padding="none" style="width: 435px;">
+  <h1 slot="header">Rocker</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.0</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/rocker/photos/20211002134507_1.jpg" alt="20211002134507_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Asteroid Capacity</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            5 x T7
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Loading Speed</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            Slow
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Rocker is an asteroid hauling ship. It is designed to be used in the safe zone and haul small asteroids. It uses a tractor beam to position asteroids into five compartments of cargo lock beams in a circular pattern. It has load automation to approach and load asteroids in the right order as well as a material scanner that gives estimated credits for selling the asteroids.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/types/asteroid-hauler"><nord-badge variant="warning">Asteroid Hauler</nord-badge></a>
+  
+  
+    <a href="/series/rocker"><nord-badge variant="warning">Rocker Series</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">Rando Ship Shop</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Cargo Lock Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Tractor Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Small Asteroid Hold</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/rocker/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+    </nord-stack>
+  
+    <nord-stack class="compare-ship-card" align-items="center">
+      <nord-card class="ship-card ship-rocker-duo" padding="none" style="width: 435px;">
+  <h1 slot="header">Rocker Duo</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.0</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/rocker/variants/rocker_duo/photos/20211203224915_1.jpg" alt="20211203224915_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Asteroid Capacity</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            10 x T7
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Loading Speed</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            Very Slow
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Rocker Duo is a asteroid hauling ship that is bascially two Rockers mashed together. It is designed to be used in the safe zone and haul small asteroids. It uses two tractor beams to position asteroids into two sets of five compartments of cargo lock beams in a circular pattern so it can hold up to ten asteroids.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/types/asteroid-hauler"><nord-badge variant="warning">Asteroid Hauler</nord-badge></a>
+  
+  
+    <a href="/series/rocker"><nord-badge variant="warning">Rocker Series</nord-badge></a>
+  
+  
+    <nord-badge variant="highlight">Rando Ship Shop</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Cargo Lock Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Tractor Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Small Asteroid Hold</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/rocker-duo/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+    </nord-stack>
+  
+    <nord-stack class="compare-ship-card" align-items="center">
+      <nord-card class="ship-card ship-flipper" padding="none" style="width: 435px;">
+  <h1 slot="header">Flipper</h1>
+  <span slot="header-end">
+    <nord-stack direction="horizontal" gap="s">
+  
+  
+  <nord-badge>v1.1.1</nord-badge>
+</nord-stack>
+
+  </span>
+  <nord-stack style="width: 435px; height: 220px; overflow: hidden;">
+    
+    <img src="https://github.com/EGO-Tech/starbase-ships/raw/main/flipper/photos/20220721142859_1.jpg" alt="20220721142859_1.jpg" />
+  </nord-stack>
+  <nord-stack gap="none">
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Asteroid Capacity</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            1 x T10
+          
+        </nord-stack>
+      </nord-stack>
+    
+      <nord-stack direction="horizontal" align-items="stretch" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+        <nord-stack>Loading Speed</nord-stack>
+        <nord-stack style="text-align: right;" class="n-padding-ie-m">
+          
+            Fast
+          
+        </nord-stack>
+      </nord-stack>
+    
+  </nord-stack>
+  <nord-stack class="n-padding-i-m n-padding-b-m">
+    <p>The Flipper is a ship for hauling a single T10 asteroid, designed to be used in the safe zone. It flies in one direction to easily load the asteroid and then you can flip around and fly load in the opposite direction, still with decent speed.</p>
+  </nord-stack>
+  <div slot="footer">
+    <nord-stack direction="horizontal" gap="s" wrap >
+  
+    <nord-badge variant="success">Free</nord-badge>
+  
+  
+    <a href="/types/asteroid-hauler"><nord-badge variant="warning">Asteroid Hauler</nord-badge></a>
+  
+  
+  
+    <nord-badge variant="highlight">T2 Generators</nord-badge>
+  
+    <nord-badge variant="highlight">T2 Thrusters</nord-badge>
+  
+    <nord-badge variant="highlight">Cargo Lock Beam</nord-badge>
+  
+    <nord-badge variant="highlight">Large Asteroid Hold</nord-badge>
+  
+</nord-stack>
+
+  </div>
+  <div slot="footer" class="n-margin-bs-l">
+    <nord-stack>
+      <nord-button variant="primary" href="/ships/flipper/" expand>View</nord-button>
+    </nord-stack>
+  </div>
+</nord-card>
+
+    </nord-stack>
+  
+</nord-stack>
+<nord-stack direction="horizontal">
+  
+    <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Key Features</h2>
+    </nord-stack>
+  
+    <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Key Features</h2>
+    </nord-stack>
+  
+    <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Key Features</h2>
+    </nord-stack>
+  
+    <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Key Features</h2>
+    </nord-stack>
+  
+    <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Key Features</h2>
+    </nord-stack>
+  
+</nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-hauling" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Hauling</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>6 x T7</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Hauling Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Cargo Lock Beams</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Load Automation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Tractor Beams</nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Load in Order</nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Loading Speed</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              Moderate
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-hauling" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Hauling</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>3 x T10</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Hauling Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Cargo Lock Beams</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Load Automation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Automated Approach</nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Load in Order</nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Loading Speed</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              Fast
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-hauling" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Hauling</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>5 x T7</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Hauling Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Cargo Lock Beams</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Load Automation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Tractor Beam</nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Load in Order</nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Loading Speed</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              Slow
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-hauling" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Hauling</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>10 x T7</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Hauling Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Cargo Lock Beams</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Load Automation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Tractor Beams</nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Load in Order</nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Loading Speed</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              Very Slow
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-hauling" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Hauling</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>1 x T10</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Hauling Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Cargo Lock Beams</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Load Automation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Automated Approach</nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Loading Speed</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              Fast
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-scanning" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Scanning</h3>
+    
+      <span><i class="fa-solid fa-bullseye fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Material scanner that will output the volume in stacks plus the estimated credits paid for dropping the asteroid off at Origin stations</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-scanning" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Scanning</h3>
+    
+      <span><i class="fa-solid fa-bullseye fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Material scanner that will output the volume in stacks plus the estimated credits paid for dropping the asteroid off at Origin stations</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-scanning" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Scanning</h3>
+    
+      <span><i class="fa-solid fa-bullseye fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Material scanner that will output the volume in stacks plus the estimated credits paid for dropping the asteroid off at Origin stations</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-scanning" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Scanning</h3>
+    
+      <span><i class="fa-solid fa-bullseye fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Material scanner that will output the volume in stacks plus the estimated credits paid for dropping the asteroid off at Origin stations</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-asteroid-scanning" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Asteroid Scanning</h3>
+    
+      <span><i class="fa-solid fa-bullseye fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Material scanner that will output the volume in stacks plus the estimated credits paid for dropping the asteroid off at Origin stations</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-total-credits" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Total Credits</h3>
+    
+      <span><i class="fa-solid fa-calculator fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Material scanner for each cargo hold that provides estimated credits for each hold and total credits</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-flipping-directions" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Flipping Forward Directions</h3>
+    
+      <span><i class="fa-solid fa-right-left fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Flies in one direction to easily load the asteroid and then can be flipped around and fly in the opposite direction, still with decent speed</nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+<nord-stack direction="horizontal">
+  
+    <nord-stack  class="compare-feature-card"  align-items="center">
+      <h2>Standard Features</h2>
+    </nord-stack>
+  
+    <nord-stack  class="compare-feature-card"  align-items="center">
+      <h2>Standard Features</h2>
+    </nord-stack>
+  
+    <nord-stack  class="compare-feature-card"  align-items="center">
+      <h2>Standard Features</h2>
+    </nord-stack>
+  
+    <nord-stack  class="compare-feature-card"  align-items="center">
+      <h2>Standard Features</h2>
+    </nord-stack>
+  
+    <nord-stack  class="compare-feature-card"  align-items="center">
+      <h2>Standard Features</h2>
+    </nord-stack>
+  
+</nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-flight" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Flight Systems</h3>
+    
+      <span><i class="fa-solid fa-space-shuttle fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Flight Modes</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Cruise Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Turtle Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Sloth Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-flight" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Flight Systems</h3>
+    
+      <span><i class="fa-solid fa-space-shuttle fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Flight Modes</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Cruise Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Turtle Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Sloth Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Flight Profiles</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-flight" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Flight Systems</h3>
+    
+      <span><i class="fa-solid fa-space-shuttle fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Flight Modes</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Cruise Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Turtle Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Sloth Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-flight" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Flight Systems</h3>
+    
+      <span><i class="fa-solid fa-space-shuttle fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Flight Modes</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Cruise Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Turtle Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Sloth Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-flight" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Flight Systems</h3>
+    
+      <span><i class="fa-solid fa-space-shuttle fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Flight Modes</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Cruise Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                <span class="n-color-text-success">
+                  <i class="fa-regular fa-lg fa-circle-check"></i>
+                </span>
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Turtle Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Sloth Mode</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propulsion" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propulsion</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>148</span>
+          <span class="n-font-size-m">m/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Top Speed (empty)</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Forward Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Triangle Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                72
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Braking Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                32
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                48
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propulsion" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propulsion</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>148</span>
+          <span class="n-font-size-m">m/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Top Speed (empty)</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Speedometer</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Forward Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Triangle Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                122
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Braking Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Triangle Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                16
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Triangle Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                24
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propulsion" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propulsion</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>150</span>
+          <span class="n-font-size-m">m/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Top Speed (empty)</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Forward Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Box Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                12
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Triangle Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                28
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Braking Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                8
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                48
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propulsion" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propulsion</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>150</span>
+          <span class="n-font-size-m">m/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Top Speed (empty)</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Forward Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Box Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                24
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Triangle Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                56
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Braking Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                28
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                96
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propulsion" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propulsion</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>148</span>
+          <span class="n-font-size-m">m/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Top Speed (empty)</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Forward Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Box Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                60
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Braking Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Box Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                20
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Maneuver Thrusters</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                48
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propellant" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propellant</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>16M</span>
+          <span class="n-font-size-m">units</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Propellant Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Propellant Network</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Medium Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                4
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propellant" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propellant</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>16M</span>
+          <span class="n-font-size-m">units</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Propellant Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Propellant Network</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Medium Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                4
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propellant" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propellant</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>10M</span>
+          <span class="n-font-size-m">units</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Propellant Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Propellant Network</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Medium Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                2
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Small Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                2
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propellant" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propellant</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>20M</span>
+          <span class="n-font-size-m">units</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Propellant Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Propellant Network</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Medium Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                4
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Small Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                4
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-propellant" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Propellant</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>48M</span>
+          <span class="n-font-size-m">units</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Propellant Capacity</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack>Propellant Network</nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Large Tanks</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                4
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-power" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Power and Fuel</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>15,000</span>
+          <span class="n-font-size-m">e/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Total Power Generation</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Dynamic Generator Rate</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Min Generator Rate</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Batteries</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              52
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Power Generation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Fuel Chambers</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                5
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Generators</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                15
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Spare Rods</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              10
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-power" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Power and Fuel</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>45,000</span>
+          <span class="n-font-size-m">e/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Total Power Generation</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Dynamic Generator Rate</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Min Generator Rate</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Batteries</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              144
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Power Generation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Fuel Chambers</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                10
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Generators</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                30
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">T1 Enhancers</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                30
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Spare Rods</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              10
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-power" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Power and Fuel</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>12,000</span>
+          <span class="n-font-size-m">e/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Total Power Generation</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Dynamic Generator Rate</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Min Generator Rate</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Batteries</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              40
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Power Generation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Fuel Chambers</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                4
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Generators</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                12
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Spare Rods</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              8
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-power" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Power and Fuel</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>24,000</span>
+          <span class="n-font-size-m">e/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Total Power Generation</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Dynamic Generator Rate</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Min Generator Rate</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Batteries</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              80
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Power Generation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Fuel Chambers</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                8
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Generators</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                24
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Spare Rods</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              16
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-power" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Power and Fuel</h3>
+    
+      
+      <span class="n-font-size-xxxl n-font-weight-active">
+        
+          <span>24,000</span>
+          <span class="n-font-size-m">e/s</span>
+        
+      </span>
+      <p class="n-font-weight-active n-color-text-weakest">Total Power Generation</p>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Dynamic Generator Rate</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Min Generator Rate</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                Variable
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Batteries</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              150
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Power Generation</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              T2
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Fuel Chambers</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                8
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack style="flex: 0 0 180px;">Generators</nord-stack>
+            <nord-stack style="text-align: right;" class="n-padding-ie-m">
+              
+                24
+              
+            </nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Spare Rods</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              16
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+  <nord-stack direction="horizontal">
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-utility" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Utility Systems</h3>
+    
+      <span><i class="fa-solid fa-gear fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Transponder</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Resource Bridge</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-utility" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Utility Systems</h3>
+    
+      <span><i class="fa-solid fa-gear fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Transponder</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+        <nord-stack direction="horizontal" align-items="start" class="n-padding-is-m">
+          
+            <nord-stack>Ping Function</nord-stack>
+          
+        </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Timer Panel</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Resource Bridge</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-utility" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Utility Systems</h3>
+    
+      <span><i class="fa-solid fa-gear fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Transponder</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Resource Bridge</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-utility" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Utility Systems</h3>
+    
+      <span><i class="fa-solid fa-gear fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Transponder</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Resource Bridge</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+      <nord-stack class="compare-feature-card" align-items="center">
+        
+        
+        
+          <nord-card class="spec-card spec-utility" padding="none" style="width: 300px;">
+  <nord-stack gap="xs" slot="header" style="height: 130px">
+    <h3 class="n-padding-be-l">Utility Systems</h3>
+    
+      <span><i class="fa-solid fa-gear fa-3x"></i></span>
+    
+  </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Transponder</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+    <nord-stack gap="xs" class="n-padding-is-m n-padding-b-s n-border-be n-color-surface-raised">
+      <nord-stack align-items="start" direction="horizontal">
+        
+          <nord-stack style="flex: 0 0 180px;">Resource Bridge</nord-stack>
+          <nord-stack style="text-align: right;" class="n-padding-ie-m">
+            
+              <span class="n-color-text-success">
+                <i class="fa-regular fa-lg fa-circle-check"></i>
+              </span>
+            
+          </nord-stack>
+        
+      </nord-stack>
+      
+    </nord-stack>
+  
+</nord-card>
+
+        
+      </nord-stack>
+    
+  </nord-stack>
+
+
+</nord-stack>
+
+
+      <nord-footer slot="footer" size="m">
+        <nord-stack gap="l">
+          <section class="n-grid-2">
+            <div>
+              <section class="n-grid-2 n-margin-be-xxl">
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    EGOTech
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-discord fa-xl fa-fw"></i>
+                    <a href="https://discord.gg/BKwVGvncmN">Discord</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-github fa-xl fa-fw"></i>
+                    <a href="https://github.com/EGO-Tech">GitHub</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-solid fa-heart fa-xl fa-fw"></i>
+                    <a href="https://buymeacoffee.com/egotech">Buy Me a Coffee</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-youtube fa-xl fa-fw"></i>
+                    <a href="https://www.youtube.com/@ego-tech">YouTube</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <i class="fa-brands fa-creative-commons-nc fa-xl fa-fw"></i>
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">License</a>
+                  </nord-stack>
+                </nord-stack>
+                <nord-stack gap="s">
+                  <nord-stack direction="horizontal" gap="s">
+                    Starbase Game
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Starbase</a>
+                  </nord-stack>
+                  <nord-stack direction="horizontal" gap="s">
+                    <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">Frozenbyte</a>
+                  </nord-stack>
+                </nord-stack>
+              </section>
+            </div>
+            <div>
+              <p>Copyright <i class="fa-regular fa-copyright"></i> 2024 Vincent Teo</p>
+              <p>Built with <a href="https://www.11ty.dev/">11ty</a></p>
+            </div>
+          </section>
+        </nord-stack>
+      </nord-footer>
+    </nord-layout>
+    <script>
+      document.querySelectorAll('.search-button')
+        .forEach((button) =>
+          button.addEventListener("click", () => {
+            menu.show();
+          })
+        );
+
+      let shipFilter = localStorage.getItem('shipFilter') || 'all';
+
+      const allShipsButton = document.querySelector("#all-ships-button");
+      allShipsButton.addEventListener("click", () => applyShipFilters('all'));
+      const freeShipsButton = document.querySelector("#free-ships-button");
+      freeShipsButton.addEventListener("click", () => applyShipFilters('free'));
+      const saleShipsButton = document.querySelector("#sale-ships-button");
+      saleShipsButton.addEventListener("click", () => applyShipFilters('sale'));
+
+      const applyShipFilters = (filter) => {
+        shipFilter = filter;
+        localStorage.setItem('shipFilter', filter);
+        document.querySelectorAll('.ship-nav-link, .ship-nav-series').forEach((item) => {
+          item.classList.add('hide');
+        });
+
+        if (shipFilter === 'all') {
+          allShipsButton.setAttribute('variant', 'primary');
+          freeShipsButton.setAttribute('variant', 'plain');
+          saleShipsButton.setAttribute('variant', 'plain');
+          document.querySelectorAll('.ship-nav-link').forEach((item) => {
+            item.classList.remove('hide');
+          });
+        } else if (shipFilter === 'free') {
+          freeShipsButton.setAttribute('variant', 'primary');
+          allShipsButton.setAttribute('variant', 'plain');
+          saleShipsButton.setAttribute('variant', 'plain');
+          _(ships).filter((ship) => ship.saleType === 'free').each((ship) => {
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((link) => link.classList.remove('hide'));
+          });
+        } else if (shipFilter === 'sale') {
+          saleShipsButton.setAttribute('variant', 'primary');
+          freeShipsButton.setAttribute('variant', 'plain');
+          allShipsButton.setAttribute('variant', 'plain');
+          _(ships).filter((ship) => ship.saleType === 'for-sale').each((ship) => {
+            document.querySelectorAll(`.ship-nav-link.ship-${ship.slug}`).forEach((link) => link.classList.remove('hide'));
+          });
+        }
+
+        document.querySelectorAll(`.ship-nav-series`).forEach((series) => {
+          if (!_.every(series.querySelectorAll(`.ship-nav-link`), (link) => link.classList.contains('hide'))) {
+            series.classList.remove('hide');
+          }
+        });
+      }
+
+      applyShipFilters(shipFilter);
+    </script>
+  </body>
+</html>

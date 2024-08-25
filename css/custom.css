@@ -68,6 +68,14 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
   }
 }
 
+#compare-page {
+  .compare-ship-card,
+  .compare-feature-card {
+    min-inline-size: 435px;
+    max-inline-size: 435px;
+  }
+}
+
 /* stylelint-disable selector-class-pattern */
 .splide__slide img {
   width: 100%;
