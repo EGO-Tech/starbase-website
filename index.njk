@@ -188,7 +188,12 @@ currentTitle: Home
   {% for shipType in ships.types.list %}
     <nord-stack id="section-{{shipType.id}}" class="ship-section">
       <nord-stack gap="l" class="n-padding-i-l n-padding-b-l">
-        <h1 id="{{shipType.id}}">{{shipType.label}}</h1>
+        <h1 id="{{shipType.id}}">
+          {{shipType.label}}
+          <nord-button href="{{ '/types/' + shipType.id | url }}" class="compare-button" size="s" variant="plain">
+            Compare All
+          </nord-button>
+        </h1>
         <nord-stack direction="horizontal" wrap>
         {% for ship in ships.byType[shipType.id] %}
           {% include 'shipCard.njk' %}
