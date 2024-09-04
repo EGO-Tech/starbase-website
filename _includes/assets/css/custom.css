@@ -70,6 +70,7 @@ nord-stack#ship-page h1:not(#ship-name, [slot="header"]) {
 
 #compare-page {
   .compare-ship-card,
+  .compare-build-cost-card,
   .compare-feature-card {
     min-inline-size: 435px;
     max-inline-size: 435px;

@@ -8,6 +8,20 @@
 <nord-stack direction="horizontal">
   {% for ship in compareShips %}
     <nord-stack class="compare-feature-card" align-items="center">
+      <h2>Build Cost</h2>
+    </nord-stack>
+  {% endfor %}
+</nord-stack>
+<nord-stack direction="horizontal" align-items="start">
+  {% for ship in compareShips %}
+    <nord-stack class="compare-build-cost-card" align-items="center">
+      {% include 'shipBuildCost.njk' %}
+    </nord-stack>
+  {% endfor %}
+</nord-stack>
+<nord-stack direction="horizontal">
+  {% for ship in compareShips %}
+    <nord-stack class="compare-feature-card" align-items="center">
       <h2>Key Features</h2>
     </nord-stack>
   {% endfor %}
