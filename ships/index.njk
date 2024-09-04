@@ -151,70 +151,8 @@ eleventyComputed:
   <nord-stack id="build-cost">
     <h1>Build Cost</h1>
     <nord-stack direction="horizontal">
-      <nord-card padding="none" style="width: 400px">
-        <h2 slot="header">Material Cost</h2>
-        <nord-table density="condensed">
-          <table style="width: 400px">
-            <thead>
-              <tr>
-                <th></th>
-                <th>Material</th>
-                <th class="n-table-align-right">Volume (kv)</th>
-                <th class="n-table-align-right">Stacks</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% for material in ship.buildCost.materials %}
-                <tr class="{% if loop.index === ship.buildCost.materials.length %}n-font-weight-strong n-color-surface-lowered{% endif %}">
-                  <td style="padding-right: 0">
-                    {% if material.ore !== 'total' %}
-                      <div class="material-icon">
-                        <img src="{{ ('/images/materials/' + material.ore + '.png') | url }}" alt="{{ material.label }}" />
-                      </div>
-                    {% endif %}
-                  </td>
-                  <td>{{material.label}}</td>
-                  <td class="n-table-align-right">{{material.kv.toLocaleString()}}</td>
-                  <td class="n-table-align-right">{{material.stacks.toLocaleString()}}</td>
-                </tr>
-              {% endfor %}
-            </tbody>
-          </table>
-        </nord-table>
-      </nord-card>
-      <nord-card padding="none" style="width: 400px">
-        <h2 slot="header">Credits Cost</h2>
-        <nord-table density="condensed">
-          <table style="width: 400px">
-            <thead>
-              <tr>
-                <th></th>
-                <th class="n-table-align-right">Credits</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Assembly</td>
-                <td class="n-table-align-right">{{ship.buildCost.cost.assembly.toLocaleString()}}</td>
-              </tr>
-              <tr>
-                <td>Manufacturing</td>
-                <td class="n-table-align-right">{{ship.buildCost.cost.manufacturing.toLocaleString()}}</td>
-              </tr>
-              <tr class="n-font-weight-strong n-color-surface-lowered">
-                <td>Total</td>
-                <td class="n-table-align-right">{{ship.buildCost.cost.total.toLocaleString()}}</td>
-              </tr>
-            </tbody>
-          </table>
-        </nord-table>
-        <nord-banner slot="footer">
-          <span style="text-wrap: wrap">
-            <strong>TIP:</strong>
-            <span>Crafting your own devices, especially crates, generators, thrusters, ship tools and weapons can drastically reduce assembly cost.</span>
-          </span>
-        </nord-banner>
-      </nord-card>
+      {% set showBuildCostTip = true %}
+      {% include 'shipBuildCost.njk' %}
     </nord-stack>
   </nord-stack>
   <nord-stack>
