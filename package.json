@@ -14,7 +14,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.6.0",
     "@google-analytics/data": "^4.8.0",
-    "@nordhealth/ag-theme-nord": "^2.0.4",
+    "@nordhealth/ag-theme-nord": "^2.1.1",
     "@nordhealth/color": "^2.1.0",
     "@nordhealth/components": "^3.18.0",
     "@nordhealth/css": "^3.3.0",
