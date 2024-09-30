@@ -17,7 +17,7 @@
     "@nordhealth/ag-theme-nord": "^2.0.4",
     "@nordhealth/color": "^2.1.0",
     "@nordhealth/components": "^3.18.0",
-    "@nordhealth/css": "^3.3.0",
+    "@nordhealth/css": "^3.3.1",
     "@nordhealth/fonts": "^3.0.1",
     "@nordhealth/themes": "^8.1.1",
     "@nordhealth/tokens": "^7.1.1",
