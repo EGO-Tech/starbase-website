@@ -105,7 +105,7 @@ const getModulesData = async ({ pathPrefix }) => {
 
 module.exports = async function (eleventyConfig) {
   const { EleventyRenderPlugin } = await import('@11ty/eleventy');
-  
+
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.amendLibrary('md', (mdLib) =>
