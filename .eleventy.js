@@ -3,7 +3,6 @@ const fs = require('fs');
 const nconf = require('nconf');
 const path = require('path');
 const markdownItGithubHeading = require('markdown-it-github-headings');
-const { EleventyRenderPlugin } = require('@11ty/eleventy');
 
 require('./config');
 
@@ -104,7 +103,9 @@ const getModulesData = async ({ pathPrefix }) => {
   return _(modules).compact().orderBy('name').value();
 };
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+  const { EleventyRenderPlugin } = await import('@11ty/eleventy');
+
   eleventyConfig.addPlugin(EleventyRenderPlugin);
 
   eleventyConfig.amendLibrary('md', (mdLib) =>
