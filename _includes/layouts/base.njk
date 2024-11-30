@@ -107,7 +107,10 @@ title: Starbase Ships by EGOTech
           </nord-stack>
           {% for seriesSlug, seriesShips in ships.bySeries %}
             {% if seriesShips.length > 1 %}
-              <nord-nav-item class="ship-nav-series ship-series-{{seriesShips[0].series.path}}">
+              <nord-nav-item
+                class="ship-nav-series ship-series-{{seriesShips[0].series.path}}"
+                {% if ships.series.bySlug[seriesSlug].new %}badge="NEW"{% elseif ships.series.bySlug[seriesSlug].updated %}badge="UPDATED"{% elseif ships.series.bySlug[seriesSlug].popular %}badge="POPULAR"{% endif %}
+              >
                 {{seriesShips[0].series.name}} Series
                 <nord-nav-group slot="subnav">
                   {% for shipNav in seriesShips %}
