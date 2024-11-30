@@ -30,10 +30,12 @@
   <nord-stack direction="horizontal">
     {% for ship in compareShips %}
       <nord-stack class="compare-feature-card" align-items="center">
-        {% set specs = ship.specifications | groupby('id')  %}
-        {% set specType = specs[spec][0]  %}
-        {% if specType %}
-          {% include 'featureCard.njk' %}
+        {% if ship.specifications %}
+          {% set specs = ship.specifications | groupby('id')  %}
+          {% set specType = specs[spec][0]  %}
+          {% if specType %}
+            {% include 'featureCard.njk' %}
+          {% endif %}
         {% endif %}
       </nord-stack>
     {% endfor %}
@@ -50,10 +52,12 @@
   <nord-stack direction="horizontal">
     {% for ship in compareShips %}
       <nord-stack class="compare-feature-card" align-items="center">
-        {% set specs = ship.specifications | groupby('id')  %}
-        {% set specType = specs[spec][0]  %}
-        {% if specType %}
-          {% include 'featureCard.njk' %}
+        {% if ship.specifications %}
+          {% set specs = ship.specifications | groupby('id')  %}
+          {% set specType = specs[spec][0]  %}
+          {% if specType %}
+            {% include 'featureCard.njk' %}
+          {% endif %}
         {% endif %}
       </nord-stack>
     {% endfor %}
