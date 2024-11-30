@@ -165,6 +165,9 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
     .map((seriesShips) => ({
       ...seriesShips[0].series,
       ships: seriesShips,
+      new: _.some(seriesShips, 'new'),
+      updated: _.some(seriesShips, 'updated'),
+      popular: _.some(seriesShips, 'popular'),
       specifications: {
         key: _(seriesShips)
           .map(({ specifications }) =>
