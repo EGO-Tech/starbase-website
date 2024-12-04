@@ -508,46 +508,6 @@
           
             
               <nord-nav-item
-                class="ship-nav-series ship-series-rocker"
-                
-              >
-                Rocker Series
-                <nord-nav-group slot="subnav">
-                  
-                    
-  <nord-nav-item
-    class="hide ship-nav-link ship-rocker"
-    
-    
-    href="/ships/rocker/"
-  >
-    Rocker
-  </nord-nav-item>
-
-                  
-                    
-  <nord-nav-item
-    class="hide ship-nav-link ship-rocker-duo"
-    
-    active
-    href="/ships/rocker-duo/"
-  >
-    Rocker Duo
-  </nord-nav-item>
-
-                  
-                  <nord-nav-item
-                    
-                    href="/series/rocker/"
-                  >
-                    Compare Series
-                  </nord-nav-item>
-                </nord-nav-group>
-              </nord-nav-item>
-            
-          
-            
-              <nord-nav-item
                 class="ship-nav-series ship-series-shifter"
                 
               >
@@ -756,7 +716,7 @@
       
       <nord-button href="#build-cost" size="s" variant="default">Build Cost</nord-button>
       
-        <nord-button href="#download" size="s" variant="primary">Download</nord-button>
+        <nord-button href="#download" size="s" variant="default">Download</nord-button>
       
       <nord-button href="#usage" size="s" variant="default">Usage</nord-button>
       
@@ -806,6 +766,10 @@
   
 </nord-stack>
 
+  
+    <nord-banner variant="danger">
+      This ship has reached end of life status and is retired. It will no longer be updated or supported.
+    </nord-banner>
   
   <nord-stack id="ship-photos" class="info-page">
     <nord-card padding="none">
@@ -1697,10 +1661,9 @@ The Rocker Duo is also available to buy in game at Central Showroom of Rando 2 S
     
       <h1 id="download">Download Blueprint</h1>
       
-        <nord-button href="https://github.com/EGO-Tech/starbase-ships/raw/main/rocker/variants/rocker_duo/blueprints/rocker_duo.fbe" variant="primary" onclick="gaEvent('download', { ship: 'Rocker Duo', version: '1.1.0', download_ref: 'website' })">
-          <i slot="start" class="fa-solid fa-download n-color-text"></i>
-          Download v1.1.0 (current)
-        </nord-button>
+        <nord-banner variant="danger">
+          This ship has reached end of life status and is retired. It will no longer be updated or supported. Blueprint may no longer be functional, download at your own discretion.
+        </nord-banner>
       
       <nord-card padding="none" style="width: 400px">
         <h2 slot="header">All Blueprints</h2>
@@ -1718,7 +1681,7 @@ The Rocker Duo is also available to buy in game at Central Showroom of Rando 2 S
                 <tr>
                   <td>v1.1.0</td>
                   <td>
-                    <nord-badge variant="warning">Current</nord-badge>
+                    
                     <nord-badge>Ship Shop Version</nord-badge>
                   </td>
                   <td class="n-table-align-right">
@@ -2147,7 +2110,7 @@ The back compartment should be loaded first followed by the left and right back 
     
   </nord-stack>
   <nord-stack class="n-padding-i-m n-padding-b-m">
-    <p>The Hexxer is a ship for hauling small asteroids, designed to be used in the safe zone. It uses six tractor beams to pull asteroids into six compartments of cargo lock beams in a hex pattern. It has load automation to approach and load asteroids in the right order to balance the ship as much as possible as well as a material scanner that gives estimated credits for selling the asteroids. It has similar functions to the Rocker but loads a little quicker and has one more compartment.</p>
+    <p>The Hexxer is a ship for hauling small asteroids, designed to be used in the safe zone. It uses six tractor beams to pull asteroids into six compartments of cargo lock beams in a hex pattern. It has load automation to approach and load asteroids in the right order to balance the ship as much as possible as well as a material scanner that gives estimated credits for selling the asteroids.</p>
   </nord-stack>
   <div slot="footer">
     <nord-stack direction="horizontal" gap="s" wrap >
