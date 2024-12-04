@@ -20,24 +20,20 @@
 <td>Current forward thrust, maximum of 10,000 units</td>
 </tr>
 <tr>
-<td><code>SafeZone</code></td>
-<td>Whether current location is in the safe zone.</td>
-</tr>
-<tr>
-<td><code>StrengthFactor</code></td>
-<td>Current strength of ship. May fluctuate as ore crates are filled. Anything below 1.0 means ship is damaged.</td>
-</tr>
-<tr>
 <td><code>Cruise</code></td>
 <td>Activates cruise control, forward thrust will not reset to zero unless turned down.</td>
 </tr>
 <tr>
-<td><code>Turtle</code>, <code>TurtleRate</code></td>
-<td>Activates turtle mode which sets forward thrust to a maximum limit of <code>TurtleRate</code> (percent) of full thrust.</td>
+<td><code>Turtle</code></td>
+<td>Activates turtle mode which sets forward thrust to a maximum limit of <code>TurtleRate</code> of full thrust.</td>
 </tr>
 <tr>
-<td><code>Sloth</code>, <code>Sensitivity</code></td>
-<td>Activates sloth mode which sets yaw and pitch thrust to a maximum limit of <code>Sensitivity</code> (percent) of full thrust.</td>
+<td><code>Sloth</code></td>
+<td>Activates the low sensitvity mode of pitch and yaw by limiting thrust. Use the <code>Sensitivity</code> switch to set the maximum thrust rate of sloth mode.</td>
+</tr>
+<tr>
+<td><code>Profiles</code></td>
+<td>Adjusts preset flight profiles. See <a href="https://starbase.egotech.space/pages/systems/flight/#flight-profiles">Flight Profiles</a>.</td>
 </tr>
 <tr>
 <td><code>Aim</code></td>
@@ -60,8 +56,12 @@
 <td>Mining controls. See <a href="#mining">Mining</a>.</td>
 </tr>
 <tr>
-<td><code>Nav</code>, <code>Autopilot</code> &amp; <code>Avoidance</code></td>
-<td>Autopilot controls. See <a href="#autopilot-and-crash-avoidance">Autopilot and Crash Avoidance</a>.</td>
+<td><code>Warnings</code>, <code>SafeZone</code> &amp; <code>StrengthFactor</code></td>
+<td>Warnings for being outside safe zone, ship damage as well as low fuel or propellant. See <a href="https://starbase.egotech.space/pages/systems/utility/#warnings">Warnings Panel</a>.</td>
+</tr>
+<tr>
+<td><code>Avoidance</code></td>
+<td>Activates avoidance. See <a href="#crash-avoidance">Crash Avoidance</a>.</td>
 </tr>
 <tr>
 <td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
@@ -83,18 +83,13 @@
 <p><img src="https://github.com/EGO-Tech/starbase-ships/raw/main/rigger/images/pilot_left_console.jpg" alt="Pilot Left Console"></p>
 <p>This is a custom interface for the <a href="https://github.com/Archaegeo/Starbase/tree/45a9bb464cb71d7de7a214f8e665111d6b2b5989/ISAN-Waypoint%20System">ISAN Waypoint System</a>.</p>
 <h3><a id="viewing-loading-and-naming-waypoints" class="anchor" href="#viewing-loading-and-naming-waypoints" aria-hidden="true"></a>Viewing, Loading and Naming Waypoints</h3>
-<p>View a waypoint (<code>WP1</code> to <code>WP18</code>) by pressing the individual buttons. The waypoint will be shown on the <code>WP</code> panel. Load the waypoint in <code>WP</code> to <code>Dest</code> using the <code>Load Dest</code> button. Once in <code>Dest</code>, the waypoint will be used by the compass, ISAN and autopilot systems.</p>
+<p>View a waypoint (<code>WP1</code> to <code>WP18</code>) by pressing the individual buttons. The waypoint will be shown on the <code>WP</code> panel. Load the waypoint in <code>WP</code> to <code>Dest</code> using the <code>Load Dest</code> button. Once in <code>Dest</code>, the waypoint will be used by the compass and ISAN systems.</p>
 <p>To give waypoints a name, use your universal tool to change the panel values with the name you want. This is for display purposes and your own reference only, it is not used anywhere else.</p>
 <h3><a id="saving-waypoints" class="anchor" href="#saving-waypoints" aria-hidden="true"></a>Saving Waypoints</h3>
 <p>Use <code>Save Loc</code> to save waypoint of current location to the waypoint position viewed on the <code>WP</code> panel.</p>
 <p>To manually save coordinates, use your universal tool to add X, Y and Z values to <code>NewX</code>, <code>NewY</code> and <code>NewZ</code> respectively. Then use the button to save the coordinates to the waypoint position viewed on the <code>WP</code> panel.</p>
-<h2><a id="autopilot-and-crash-avoidance" class="anchor" href="#autopilot-and-crash-avoidance" aria-hidden="true"></a>Autopilot and Crash Avoidance</h2>
-<p>The ship uses a modified version of <a href="https://github.com/fixerid/sb-projects/tree/main/NavCas">NavCas</a> which uses the 3 in 1 ISAN from Compass and waypoint from ISAN Waypoint System.</p>
-<p>Use while the ship is stationary. Activating <code>Nav</code> will start point the ship towards <code>Dest</code> waypoint and deactivate itself when done. <code>Autopilot</code> will activate <code>Nav</code> and fly to within 5km of <code>Dest</code> waypoint with <code>Avoidance</code> activated.</p>
-<nord-banner variant="warning">
-<p><strong>NOTE:</strong> <code>Nav</code> needs to be tuned more for accuracy. I recommend using it in conjunction with the compass.</p>
-</nord-banner>
-<p><code>Avoidance</code> will activate <code>Guides</code>. If the guides detect objects it will pitch the ship down and cut forward thrust. If <code>Autopilot</code> is activated, it will readjust and continue its flight.</p>
+<h2><a id="crash-avoidance" class="anchor" href="#crash-avoidance" aria-hidden="true"></a>Crash Avoidance</h2>
+<p><code>Avoidance</code> will activate <code>Guides</code>. If the guides detect objects it will pitch the ship down and cut forward thrust.</p>
 <nord-banner variant="warning">
 <p><strong>NOTE:</strong> There is very limited coverage of range finders for the crash avoidance system. It also hasn't been tested extensively. <strong>Use at your own risk!</strong></p>
 </nord-banner>
@@ -102,7 +97,7 @@
 <p>To approach an asteroid, point the center range finder at an asteroid and activate <code>Approach</code>. Once in range (optimum range is 10 to 14m on <code>Distance</code>), activate <code>Lasers</code> to turn on the mining lasers. <code>Laser Sweep Height</code> and <code>Laser Sweep Depth</code> will adjust sweeping distances of the lasers.</p>
 <p><code>Mine</code> is a button which will activate automated mining. Point the center range finder at an asteroid and activate. It will activate <code>Scanner</code> and <code>Approach</code>, and once in range it will automatically activate <code>Lasers</code>.</p>
 <p><code>Collect</code> turns on the two ore collectors. Ore collectors automatically adjust to point towards objects detected by the center range finder.</p>
-<p>If batteries start running out of charge while mining, turn on <code>Min Gen</code>. Continous use of the lasers and collectors at the same time requires a <code>Min Generator Limit</code> of around 90%.</p>
+<p>If batteries start running out of charge while mining, turn on <code>Min Gen</code>. Continous use of the lasers and collectors at the same time requires a <code>Min Generator Rate</code> of around 90%.</p>
 <nord-banner variant="warning">
 <p><strong>NOTE:</strong> For safety, lasers will turn off if the total fuel is less that 2,000 units.</p>
 </nord-banner>
@@ -128,16 +123,8 @@
 <td>Current generator rate, maximum of 100%.</td>
 </tr>
 <tr>
-<td><code>Min Generator Limit</code> &amp; <code>Min Gen</code></td>
+<td><code>Min Generator Rate</code> &amp; <code>Min Gen</code></td>
 <td>Toggle and sets minimum generator rate. See <a href="#managing-power-and-fuel">Managing Power and Fuel</a>.</td>
-</tr>
-<tr>
-<td><code>HeatTransferRate</code></td>
-<td>Current heat transfer rate of the heat sinks, maximum of 100%.</td>
-</tr>
-<tr>
-<td><code>StoredHeat</code></td>
-<td>Current stored heat in the heat sinks, maximum of 15,000 units.</td>
 </tr>
 <tr>
 <td><code>Fuel Rod 1</code> to <code>Fuel Rod 6</code></td>
@@ -149,11 +136,11 @@
 </tr>
 <tr>
 <td><code>PropTime</code></td>
-<td>Time and distance remaining of propellant based on current usage. Distance is calculated from ISAN speed*.</td>
+<td>Time and distance remaining of propellant based on current usage. Distance is calculated from speed.</td>
 </tr>
 <tr>
 <td><code>FuelTime</code></td>
-<td>Time and distance remaining of fuel based on current usage. Distance is calculated from ISAN speed*.</td>
+<td>Time and distance remaining of fuel based on current usage. Distance is calculated from speed.</td>
 </tr>
 <tr>
 <td><code>WithBackup</code></td>
@@ -194,7 +181,6 @@
 </tbody>
 </table>
 </nord-table>
-<p>*ISAN speed is normally quite conservative and not 100% accurate.</p>
 <h3><a id="managing-power-and-fuel" class="anchor" href="#managing-power-and-fuel" aria-hidden="true"></a>Managing Power and Fuel</h3>
 <p>See <a href="https://starbase.egotech.space/pages/systems/power/">Power and Fuel Systems</a> on how to manage ship power and refuel.</p>
 <h3><a id="refilling-propellant" class="anchor" href="#refilling-propellant" aria-hidden="true"></a>Refilling Propellant</h3>
