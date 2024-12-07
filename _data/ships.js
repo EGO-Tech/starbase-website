@@ -104,6 +104,7 @@ module.exports = async ({ data: { shipTypes }, ships }) => {
     ship.popular ??= _.includes(popular, ship.name);
     ship.similar = _(ships)
       .reject({ path: ship.path })
+      .reject({ retired: true })
       .orderBy(
         (otherShip) => {
           const weight =
