@@ -7,5 +7,9 @@
   {% if ship.popular %}
     <nord-badge variant="highlight">POPULAR</nord-badge>
   {% endif %}
-  <nord-badge>v{{ ship.version }}</nord-badge>
+  {% if ship.retired %}
+    <nord-badge variant="danger">RETIRED</nord-badge>
+  {% else %}
+    <nord-badge>v{{ ship.version }}</nord-badge>
+  {% endif %}
 </nord-stack>
