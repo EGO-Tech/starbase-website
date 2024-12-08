@@ -56,8 +56,8 @@
 <td>Mining controls. See <a href="#mining">Mining</a>.</td>
 </tr>
 <tr>
-<td><code>Nav</code>, <code>Autopilot</code>, <code>Avoidance</code> &amp; <code>Target</code></td>
-<td>Autopilot controls. See <a href="#auto-pilot-and-crash-avoidance">Autopilot and Crash Avoidance</a>.</td>
+<td><code>Avoidance</code></td>
+<td>Activates avoidance. See <a href="#crash-avoidance">Crash Avoidance</a>.</td>
 </tr>
 <tr>
 <td><code>ISAN2</code></td>
@@ -68,12 +68,8 @@
 <td><a href="https://github.com/pcbennion/starbase-navgrid">NavGrid</a> system, see <a href="#using-the-waypoint-system">Using the Waypoint System</a>.</td>
 </tr>
 <tr>
-<td><code>SafeZone</code></td>
-<td>Whether current location is in the safe zone.</td>
-</tr>
-<tr>
-<td><code>StrengthFactor</code></td>
-<td>Current strength of ship. May fluctuate as ore crates are filled. Anything below 1.0 means ship is damaged.</td>
+<td><code>Warnings</code>, <code>SafeZone</code> &amp; <code>StrengthFactor</code></td>
+<td>Warnings for being outside safe zone, ship damage as well as low fuel or propellant. See <a href="https://starbase.egotech.space/pages/systems/utility/#warnings">Warnings Panel</a>.</td>
 </tr>
 <tr>
 <td>Transponder <code>Toggle</code> &amp; <code>Ping</code></td>
@@ -104,16 +100,11 @@
 </nord-banner>
 <h3><a id="loading-waypoint-to-auto-pilot" class="anchor" href="#loading-waypoint-to-auto-pilot" aria-hidden="true"></a>Loading Waypoint to Auto Pilot</h3>
 <p>Use <code>Load to Auto Pilot</code> to load curretnly selected waypoint to <code>Target</code> to be used with the auto pilot system.</p>
-<h2><a id="auto-pilot-and-crash-avoidance" class="anchor" href="#auto-pilot-and-crash-avoidance" aria-hidden="true"></a>Auto Pilot and Crash Avoidance</h2>
-<p>The ship uses a modified version of <a href="https://github.com/fixerid/sb-projects/tree/main/NavCas">NavCas</a> which uses the 3 in 1 ISAN from Compass. Waypoints are loaded from NavGrid waypoint system.</p>
-<p>Use while the ship is stationary. Activating <code>Nav</code> will start point the ship towards <code>Target</code> waypoint and deactivate itself when done. <code>Autopilot</code> will activate <code>Nav</code> and fly to within 5km of <code>Target</code> waypoint with <code>Avoidance</code> activated.</p>
-<nord-banner variant="warning">
-<p><strong>NOTE:</strong> <code>Nav</code> may not be very accurate. I recommend using it in conjunction with the NavGrid compass. The <code>dd</code> panel on the pilot left console shows debugging information for NavCas.</p>
-</nord-banner>
+<h2><a id="crash-avoidance" class="anchor" href="#crash-avoidance" aria-hidden="true"></a>Crash Avoidance</h2>
 <p><code>Avoidance</code> will activate <code>Guides</code>. If the guides detect objects it will cut thrust and strafe up or down (will flash either the top or bottom <code>Blue</code> warning lights on the pilot center console according to the direction) while sounding an alarm (check game settings if you do not hear the alarm).
-It will also flash <code>Red</code> warning lights on the pilot center console according to the position of obstacle detected. If <code>Autopilot</code> is activated, it will readjust and continue its flight.</p>
+It will also flash <code>Red</code> warning lights on the pilot center console according to the position of obstacle detected.</p>
 <nord-banner variant="warning">
-<p><strong>NOTE:</strong> For safety, <code>Avoidance</code> will not activate if the mining lasers are turned on. Do not turn on <code>Avoidance</code>, <code>Autopilot</code> and <code>Nav</code> while lasers are turned on.</p>
+<p><strong>NOTE:</strong> For safety, <code>Avoidance</code> will not activate if the mining lasers are turned on.</p>
 </nord-banner>
 <p><code>Avoids</code> will show the counters for number of avoidances. The <code>Trip</code> counter can be reset by holding down the <code>Avoids</code> <code>Reset Trips</code> button.</p>
 <nord-banner variant="warning">
