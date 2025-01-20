@@ -27,7 +27,7 @@
     "lodash": "^4.17.21",
     "markdown-it-github-headings": "^2.0.1",
     "nconf": "^0.12.1",
-    "qs": "^6.13.1"
+    "qs": "^6.14.0"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
