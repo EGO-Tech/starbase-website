@@ -23,7 +23,7 @@
     "@nordhealth/tokens": "^8.0.0",
     "@splidejs/splide": "^4.1.4",
     "google-auth-library": "^9.15.1",
-    "google-spreadsheet": "^4.1.4",
+    "google-spreadsheet": "^4.1.5",
     "lodash": "^4.17.21",
     "markdown-it-github-headings": "^2.0.1",
     "nconf": "^0.13.0",
