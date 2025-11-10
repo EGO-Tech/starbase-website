@@ -16,7 +16,7 @@
     "@google-analytics/data": "^5.2.1",
     "@nordhealth/ag-theme-nord": "^3.0.2",
     "@nordhealth/color": "^3.0.1",
-    "@nordhealth/components": "^4.8.1",
+    "@nordhealth/components": "^4.9.0",
     "@nordhealth/css": "^4.1.0",
     "@nordhealth/fonts": "^3.0.3",
     "@nordhealth/themes": "^9.0.0",
