@@ -1,6 +1,6 @@
 name: Deploy to GitHub Pages
 
-on:
+on: # yamllint disable-line rule:truthy
   #checkov:skip=CKV_GHA_7
   workflow_dispatch:
     inputs:
@@ -8,10 +8,8 @@ on:
         type: boolean
         default: true
         description: Whether its a test deploy
-  push:
-    branches:
-      - main
-  pull_request:
+  push: null
+  pull_request: null
   schedule:
     - cron: 0 0 * * *
 
