@@ -18,7 +18,7 @@
     "@nordhealth/color": "^3.0.4",
     "@nordhealth/components": "^4.12.0",
     "@nordhealth/css": "^4.4.0",
-    "@nordhealth/fonts": "^3.0.3",
+    "@nordhealth/fonts": "^3.0.4",
     "@nordhealth/themes": "^9.0.1",
     "@nordhealth/tokens": "^8.0.0",
     "@splidejs/splide": "^4.1.4",
