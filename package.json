@@ -22,7 +22,7 @@
     "@nordhealth/themes": "^9.0.2",
     "@nordhealth/tokens": "^8.0.2",
     "@splidejs/splide": "^4.1.4",
-    "google-auth-library": "^10.6.1",
+    "google-auth-library": "^10.6.2",
     "google-spreadsheet": "^4.1.5",
     "lodash": "^4.17.23",
     "markdown-it-github-headings": "^2.0.1",
