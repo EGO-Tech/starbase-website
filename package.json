@@ -30,7 +30,7 @@
     "qs": "^6.15.2"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.1.5",
+    "@11ty/eleventy": "^3.1.6",
     "rollup": "^4.61.0"
   },
   "prettier": {
