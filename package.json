@@ -12,7 +12,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-free": "^7.2.0",
+    "@fortawesome/fontawesome-free": "^7.3.0",
     "@google-analytics/data": "^6.1.0",
     "@nordhealth/ag-theme-nord": "^3.0.18",
     "@nordhealth/color": "^3.0.16",
