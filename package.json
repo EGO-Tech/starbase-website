@@ -15,7 +15,7 @@
     "@fortawesome/fontawesome-free": "^7.3.0",
     "@google-analytics/data": "^6.1.0",
     "@nordhealth/ag-theme-nord": "^3.0.18",
-    "@nordhealth/color": "^3.0.17",
+    "@nordhealth/color": "^3.0.20",
     "@nordhealth/components": "^4.26.2",
     "@nordhealth/css": "^5.1.0",
     "@nordhealth/fonts": "^3.0.4",
