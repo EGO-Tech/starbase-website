@@ -19,7 +19,7 @@
     "@nordhealth/components": "^4.26.2",
     "@nordhealth/css": "^5.2.2",
     "@nordhealth/fonts": "^3.0.4",
-    "@nordhealth/themes": "^9.0.9",
+    "@nordhealth/themes": "^10.0.2",
     "@nordhealth/tokens": "^9.0.2",
     "@splidejs/splide": "^4.1.4",
     "google-auth-library": "^10.9.0",
