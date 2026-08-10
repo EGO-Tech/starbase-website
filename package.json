@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^7.3.1",
-    "@google-analytics/data": "^6.1.0",
+    "@google-analytics/data": "^7.0.0",
     "@nordhealth/ag-theme-nord": "^3.0.23",
     "@nordhealth/color": "^3.0.22",
     "@nordhealth/components": "^5.0.3",
